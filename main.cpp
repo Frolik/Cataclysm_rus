@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 {
  srand(time(NULL));
 
+ setlocale(LC_ALL, "");
+
 // ncurses stuff
  initscr(); // Initialize ncurses
  noecho();  // Don't echo keypresses

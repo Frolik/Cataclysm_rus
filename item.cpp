@@ -266,10 +266,10 @@ void item::load_info(std::string data, game *g)
 std::string item::info(bool showtext)
 {
  std::stringstream dump;
- dump << " Volume: " << volume() << "    Weight: " << weight() << "\n" <<
-         " Bash: " << int(type->melee_dam) <<
-         (has_flag(IF_SPEAR) ? "  Pierce: " : "  Cut: ") <<
-         int(type->melee_cut) << "  To-hit bonus: " <<
+ dump << " Объем: " << volume() << "    Вес: " << weight() << "\n" <<
+         " Удар: " << int(type->melee_dam) <<
+         (has_flag(IF_SPEAR) ? "  Укол: " : "  Рубка: ") <<
+         int(type->melee_cut) << "  Бонус к попаданию: " <<
          (type->m_to_hit > 0 ? "+" : "" ) << int(type->m_to_hit) << "\n" <<
          " Moves per attack: " << attack_time() << "\n";
 
@@ -537,9 +537,10 @@ std::string item::tname(game *g)
   ret << "burnt ";
 
  if (type->id == itm_corpse) {
-  ret << corpse->name << " corpse";
+  //ret << corpse->name << " труп";
+  ret << "труп";
   if (name != "")
-   ret << " of " << name;
+   ret << " " << name;
   return ret.str();
  } else if (type->id == itm_blood) {
   if (corpse == NULL || corpse->id == mon_null)

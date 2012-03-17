@@ -26,7 +26,7 @@ void game::init_itypes ()
   new itype(0, 0, 0, "none", "", '#', c_white, MNULL, MNULL, 0, 0, 0, 0, 0, 0));
 // Corpse - a special item
  itypes.push_back(
-  new itype(1, 0, 0, "corpse", "A dead body.", '%', c_white, MNULL, MNULL, 0, 0,
+  new itype(1, 0, 0, "труп", "Труп.", '%', c_white, MNULL, MNULL, 0, 0,
             0, 0, 0, 0));
 // Fire - only appears in crafting recipes
  itypes.push_back(
@@ -52,7 +52,7 @@ color,LIQUID,2,1,0,0,0,0,quench,nutr,spoils,stim,healthy,addict,charges,\
 fun,container,itm_null,use_func,addict_func));
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("water",		90, 50,	c_ltcyan, itm_bottle_plastic,
+DRINK("вода",		90, 50,	c_ltcyan, itm_bottle_plastic,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	50,  0,  0,  0,  0,  0,  1,  0,&iuse::none,	ADD_NULL, "\
 Water, the stuff of life, the best thirst-quencher available.");
@@ -61,33 +61,33 @@ DRINK("sewage sample",	 5,  5, c_ltgreen, itm_bottle_plastic,
 	 5,  0,  0,  0,-10,  0,  1,-20,&iuse::sewage,	ADD_NULL, "\
 A sample of sewage from a treatment plant.  Gross.");
 
-DRINK("salt water",	20,  5,	c_ltcyan, itm_bottle_plastic,
+DRINK("соленая вода",	20,  5,	c_ltcyan, itm_bottle_plastic,
 	-30, 0,  0,  0,  1,  0,  1, -1,&iuse::none,	ADD_NULL, "\
 Water with salt added.  Not good for drinking.");
 
-DRINK("orange juice",	50, 38,	c_yellow, itm_bottle_plastic,
+DRINK("апельсиновый сок",	50, 38,	c_yellow, itm_bottle_plastic,
 	35,  4,120,  0,  2,  0,  1,  3,&iuse::none,	ADD_NULL, "\
 Fresh squeezed from real oranges!  Tasty and nutritious.");
 
-DRINK("apple cider",	50, 38, c_brown,  itm_bottle_plastic,
+DRINK("яблочный сок",	50, 38, c_brown,  itm_bottle_plastic,
 	35,  6,144,  0,  3,  0,  1,  2,&iuse::none,	ADD_NULL, "\
 Pressed from fresh apples.  Tasty and nutritious.");
 
-DRINK("energy drink",	55, 45,	c_magenta,itm_can_drink,
+DRINK("энергетик",	55, 45,	c_magenta,itm_can_drink,
 	15,  1,  0,  8, -2,  2,  1,  5,&iuse::caff,	ADD_CAFFEINE, "\
 Popular among those who need to stay up late working.");
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("cola",		70, 35,	c_brown,  itm_can_drink,
+DRINK("кола",		70, 35,	c_brown,  itm_can_drink,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	18,  3,  0,  6, -1,  2,  1,  5,&iuse::caff,	ADD_CAFFEINE, "\
 Things go better with cola.  Sugar water with caffeine added.");
 
-DRINK("root beer",	65, 30,	c_brown,  itm_can_drink,
+DRINK("корневое пиво",	65, 30,	c_brown,  itm_can_drink,
 	18,  3,  0,  1, -1,  0,  1,  3,&iuse::none,	ADD_NULL, "\
 Like cola, but without caffeine.  Still not that healthy.");
 
-DRINK("milk",		50, 35,	c_white,  itm_bottle_glass,
+DRINK("молоко",		50, 35,	c_white,  itm_bottle_glass,
 	25,  8,  8,  0,  1,  0,  1,  0,&iuse::none,	ADD_NULL, "\
 Baby cow food, appropriated for adult humans.  Spoils rapidly.");
 
@@ -96,67 +96,67 @@ DRINK("V8",		15, 35,	c_red,    itm_can_drink,
 Contains up to 8 vegetables!  Nutritious and tasty.");
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("broth",		15, 35, c_yellow, itm_can_food,
+DRINK("бульон",		15, 35, c_yellow, itm_can_food,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	10, 15,160,  0,  0,  0,  1,  1,&iuse::none,	ADD_NULL, "\
 Vegetable stock.  Tasty and fairly nutritious.");
 
-DRINK("soup",		15, 60, c_red,    itm_can_food,
+DRINK("суп",		15, 60, c_red,    itm_can_food,
 	10, 60,120,  0,  2,  0,  1,  2,&iuse::none,	ADD_NULL, "\
 A nutritious and delicious hearty vegetable soup.");
 
-DRINK("whiskey",	16, 85,	c_brown,  itm_bottle_glass,
+DRINK("виски",	16, 85,	c_brown,  itm_bottle_glass,
 	-12, 4,  0,-12, -2,  5, 20, 30,&iuse::alcohol,	ADD_ALCOHOL, "\
 Made from, by, and for real Southern colonels!");
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("vodka",		20, 78,	c_ltcyan, itm_bottle_glass,
+DRINK("водка",		20, 78,	c_ltcyan, itm_bottle_glass,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	-10, 2,  0,-12, -2,  5, 20, 30,&iuse::alcohol,	ADD_ALCOHOL, "\
 In Soviet Russia, vodka drinks you!");
 
-DRINK("rum",		14, 85,	c_ltcyan, itm_bottle_glass,
+DRINK("ром",		14, 85,	c_ltcyan, itm_bottle_glass,
 	-12, 2,  0,-10, -2,  5, 20, 30,&iuse::alcohol,	ADD_ALCOHOL, "\
 Drinking this might make you feel like a pirate.  Or not.");
 
-DRINK("tequila",	12, 88,	c_brown,  itm_bottle_glass,
+DRINK("текила",	12, 88,	c_brown,  itm_bottle_glass,
 	-12, 2,  0,-12, -2,  6, 20, 35,&iuse::alcohol,	ADD_ALCOHOL, "\
 Don't eat the worm!  Wait, there's no worm in this bottle.");
 
-DRINK("beer",           60, 35, c_brown,  itm_bottle_glass,
+DRINK("пиво",           60, 35, c_brown,  itm_bottle_glass,
          16, 4,  0, -4, -1,  2,  1, 20, &iuse::alcohol,   ADD_ALCOHOL, "\
 Best served cold, in a glass, and with a lime - but you're not that lucky.");
 
-DRINK("bleach",		20, 18,	c_white,  itm_bottle_plastic,
+DRINK("отбеливатель",		20, 18,	c_white,  itm_bottle_plastic,
 	-96, 0,  0,  0, -8,  0,  1,-30,&iuse::blech,	ADD_NULL, "\
 Don't drink it.  Mixing it with ammonia produces toxic gas.");
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("ammonia",	24, 30,	c_yellow, itm_bottle_plastic,
+DRINK("аммиак",	24, 30,	c_yellow, itm_bottle_plastic,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	-96, 0,  0,  0, -2,  0,  1,-30,&iuse::blech,	ADD_NULL, "\
 Don't drink it.  Mixing it with bleach produces toxic gas.");
 
-DRINK("mutagen",	 8,8000,c_magenta,itm_bottle_glass,
+DRINK("мутаген",	 8,8000,c_magenta,itm_bottle_glass,
 	  0, 0,  0,  0, -2,  0,  1,  0,&iuse::mutagen_3,ADD_NULL, "\
 A rare substance of uncertain origins.  Causes you to mutate.");
 
-DRINK("purifier",	12,16000,c_pink,  itm_bottle_glass,
+DRINK("очиститель",	12,16000,c_pink,  itm_bottle_glass,
 	  0, 0,  0,  0,  1,  0,  1,  0,&iuse::purifier,	ADD_NULL, "\
 A rare stem-cell treatment, which causes mutations and other genetic defects\n\
 to fade away.");
 
-DRINK("tea",		1, 50,	c_green, itm_bottle_plastic,
+DRINK("чай",		1, 50,	c_green, itm_bottle_plastic,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	40,  3,  0,  0,  0,  0,  1, 6,&iuse::none,	ADD_NULL, "\
 Tea, the beverage of gentlemen everywhere.");
 
-DRINK("coffee",		1, 50,	c_brown, itm_bottle_plastic,
+DRINK("кофе",		1, 50,	c_brown, itm_bottle_plastic,
 	40,  3,  0,  12,  0,  0,  1, 6,&iuse::caff,	ADD_CAFFEINE, "\
 Coffee. The morning ritual of the pre-apocalypse world.");
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("blood",		 20,  0, c_red, itm_vacutainer,
+DRINK("кровь",		 20,  0, c_red, itm_vacutainer,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	  5,  5,  0,  0, -8,  0,  1,-50,&iuse::none,	ADD_NULL, "\
 Blood, possibly that of a human.  Disgusting!");
@@ -169,54 +169,54 @@ fun,container,itm_null,use_func,addict_func));
 // FOOD
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("chunk of meat",	50, 50,	c_red,		FLESH,  itm_null,
+FOOD("кусок мяса",	50, 50,	c_red,		FLESH,  itm_null,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     1,  2,  0, 20, 24,  0, -1,  0,  1,-10,	&iuse::none, ADD_NULL, "\
 Freshly butchered meat.  You could eat it raw, but cooking it is better.");
 
-FOOD("chunk of veggy",	30, 60,	c_green,	VEGGY,	itm_null,
+FOOD("обрубок растения",	30, 60,	c_green,	VEGGY,	itm_null,
     1,  2,  0, 20, 80,  0,  1,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 A raw chunk of vegetable.  Fine for eating raw, tastier when cooked.");
 
-FOOD("tainted meat",	60,  4,	c_red,		FLESH,	itm_null,
+FOOD("тухлое мясо",	60,  4,	c_red,		FLESH,	itm_null,
     1,  2,  0, 20,  4,  0,  0,  0,  1,-10,	&iuse::poison, ADD_NULL, "\
 Meat that's obviously unhealthy.  You could eat it, but it will poison you.");
 
-FOOD("tainted veggy",	35,  5,	c_green,	VEGGY,	itm_null,
+FOOD("гнилое растение",	35,  5,	c_green,	VEGGY,	itm_null,
     1,  2,  0, 20, 10,  0,  1,  0,  1,  0,	&iuse::poison, ADD_NULL, "\
 Vegetable that looks poisonous.  You could eat it, but it will poison you.");
 
-FOOD("cooked meat",	 0, 75, c_red,		FLESH,	itm_null,
+FOOD("приготовленное мясо",	 0, 75, c_red,		FLESH,	itm_null,
     1,  2,  0, 50, 24,  0,  0,  0,  1,  8,	&iuse::none,	ADD_NULL, "\
 Freshly cooked meat.  Very nutritious.");
 
-FOOD("cooked veggy",	 0, 70, c_green,	VEGGY,	itm_null,
+FOOD("приготовленное растение",	 0, 70, c_green,	VEGGY,	itm_null,
     1,  2,  0, 40, 50,  0,  1,  0,  1,  0,	&iuse::none,	ADD_NULL, "\
 Freshly cooked vegetables.  Very nutritious.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("apple",		70, 16,	c_red,		VEGGY,  itm_null,
+FOOD("яблоко",		70, 16,	c_red,		VEGGY,  itm_null,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     1,  1,  3, 16,160,  0,  4,  0,  1,  3,	&iuse::none, ADD_NULL, "\
 An apple a day keeps the doctor away.");
 
-FOOD("orange",		65, 18,	c_yellow,	VEGGY,	itm_null,
+FOOD("апельсин",		65, 18,	c_yellow,	VEGGY,	itm_null,
     1,  1,  8, 14, 96,  0,  0,  0,  1,  3,	&iuse::none, ADD_NULL, "\
 Sweet citrus fruit.  Also comes in juice form.");
 
-FOOD("lemon",		50, 12, c_yellow,	VEGGY,	itm_null,
+FOOD("лимон",		50, 12, c_yellow,	VEGGY,	itm_null,
     1,  1,  5,  5,180,  0,  0,  0,  1, -4,	&iuse::none, ADD_NULL, "\
 Very sour citrus.  Can be eaten if you really want.");
 
-FOOD("potato chips",	65, 12,	c_magenta,	VEGGY,	itm_bag_plastic,
+FOOD("картофельные чипсы",	65, 12,	c_magenta,	VEGGY,	itm_bag_plastic,
     2,  1, -2,  8,  0,  0,  0,  0,  3,  6,	&iuse::none, ADD_NULL, "\
 Betcha can't eat just one.");
 
-FOOD("pretzels",	55, 13,	c_brown,	VEGGY,	itm_bag_plastic,
+FOOD("крендельки",	55, 13,	c_brown,	VEGGY,	itm_bag_plastic,
     2,  1, -2,  9,  0,  0,  0,  0,  3,  2,	&iuse::none, ADD_NULL, "\
 A salty treat of a snack.");
 
-FOOD("chocolate bar",	50, 20,	c_brown,	VEGGY,	itm_wrapper,
+FOOD("плитка шоколада",	50, 20,	c_brown,	VEGGY,	itm_wrapper,
     1,  1,  0,  8,  0,  1,  0,  0,  1,  8,	&iuse::none, ADD_NULL, "\
 Chocolate isn't very healthy, but it does make a delicious treat.");
 

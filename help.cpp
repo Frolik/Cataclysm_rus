@@ -20,32 +20,31 @@ void game::help()
  char ch;
  do {
   erase();
-  mvprintz(0, 38, c_red, "HELP");
+  mvprintz(0, 38, c_red, "Помощь");
   mvprintz(1, 0, c_white, "\
-Please press one of the following for\n\
-help on that topic:\n\
+Нажмите нужную клавишу, чтобы прочитать соответсвующий раздел справки\n\
 \n\
-a: Introduction\n\
-b: Movement\n\
-c: Hunger, Thirst, and Sleep\n\
-d: Pain and Stimulants\n\
-e: Addiction\n\
-f: Morale and XP\n\
-g: Radioactivity and Mutation\n\
-h: Bionics\n\
+a: Вступление\n\
+b: Передвижение\n\
+c: Голод, жажда и сон\n\
+d: Боль и стимуляторы\n\
+e: Привыкания\n\
+f: Мораль и опыт\n\
+g: Радиация и мутации\n\
+h: Имплантанты\n\
 i: Crafting\n\
-j: Traps\n\
-k: Items overview\n\
-l: Combat\n\
-m: Survival tips\n\
+j: Ловушки\n\
+k: Обзор предметов\n\
+l: Бой\n\
+m: Пособие по выживанию\n\
 \n\
-1: List of all commands\n\
+1: Список всех команд\n\
 2: List of item types and data\n\
-3: Description of map symbols\n\
-4: Description of gun types\n\
-5: Frequently Asked Questions (Some spoilers!)\n\
+3: Описание символов карты\n\
+4: Описание типов оружия\n\
+5: Часто задаваемые вопросы (Some spoilers!)\n\
 \n\
-q: Return to game");
+q: Вернуться в игру");
  
   ch = getch();
   switch (ch) {

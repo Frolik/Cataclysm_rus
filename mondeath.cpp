@@ -9,7 +9,7 @@ void mdeath::normal(game *g, monster *z)
 {
  int junk;
  if (g->u_see(z, junk))
-  g->add_msg("It dies!");
+  g->add_msg("%s мертв!",z->name().c_str());
  if (z->made_of(FLESH) && z->has_flag(MF_WARM)) {
   if (g->m.field_at(z->posx, z->posy).type == fd_blood &&
       g->m.field_at(z->posx, z->posy).density < 3)
@@ -23,6 +23,7 @@ void mdeath::normal(game *g, monster *z)
      (z->made_of(FLESH) || z->made_of(VEGGY))) {
   item tmp;
   tmp.make_corpse(g->itypes[itm_corpse], z->type, g->turn);
+  tmp.name = z->name1().c_str(); 
   g->m.add_item(z->posx, z->posy, tmp);
  }
 }

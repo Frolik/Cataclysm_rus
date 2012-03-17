@@ -54,6 +54,12 @@ class monster {
 
 // Access
  std::string name(); 		// Returns the monster's formal name
+ std::string name1(); 		// Returns the monster's formal name
+ std::string name2(); 		// Returns the monster's formal name
+ std::string name3(); 		// Returns the monster's formal name
+ std::string name4(); 		// Returns the monster's formal name
+ std::string name5(); 		// Returns the monster's formal name
+
  std::string name_with_armor(); // Name, with whatever our armor is called
  void print_info(game *g, WINDOW* w); // Prints information to w.
  char symbol();			// Just our type's symbol; no context

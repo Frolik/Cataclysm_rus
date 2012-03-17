@@ -153,6 +153,11 @@ MF_MAX		// Sets the length of the flags - obviously MUST be last
 struct mtype {
  int id;
  std::string name;
+        std::string name1;
+        std::string name2;
+        std::string name3;
+        std::string name4;
+        std::string name5;
  std::string description;
  monster_species species;
  char sym;	// Symbol on the map
@@ -216,7 +221,16 @@ struct mtype {
   sp_attack = NULL;
  }
  // Non-default (messy)
- mtype (int pid, std::string pname, monster_species pspecies, char psym,
+ mtype (int pid, 
+        std::string pname,
+
+        std::string pname1,
+        std::string pname2,
+        std::string pname3,
+        std::string pname4,
+        std::string pname5,
+
+        monster_species pspecies, char psym,
         nc_color pcolor, m_size psize, material pmat,
 	unsigned char pfreq, unsigned int pdiff, signed char pagro,
         signed char pmorale, unsigned int pspeed, unsigned char pml_skill,
@@ -229,6 +243,13 @@ struct mtype {
         std::string pdescription ) { 
   id = pid; 
   name = pname; 
+
+  name1 = pname1;
+  name2 = pname2;
+  name3 = pname3;
+  name4 = pname4;
+  name5 = pname5;
+
   species = pspecies;
   sym = psym;
   color = pcolor;

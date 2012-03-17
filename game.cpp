@@ -107,9 +107,9 @@ bool game::opening_screen()
  erase();
  for (int i = 0; i < 80; i++)
   mvwputch(w_open, 21, i, c_white, LINE_OXOX);
- mvwprintz(w_open, 0, 1, c_blue, "Welcome to Cataclysm!");
+ mvwprintz(w_open, 0, 1, c_blue, "Добро пожаловать в Катаклизм!");
  mvwprintz(w_open, 1, 0, c_red, "\
-This alpha release is highly unstable. Please report any crashes or bugs to\n\
+Этот альфа-релиз все еще сильно нестабилен. Сообщайте о любых ошибках на \n\
 fivedozenwhales@gmail.com.");
  refresh();
  wrefresh(w_open);
@@ -165,11 +165,11 @@ fivedozenwhales@gmail.com.");
  do {
   if (layer == 1) {
    mvwprintz(w_open, 4, 1, (sel1 == 0 ? h_white : c_white), "MOTD");
-   mvwprintz(w_open, 5, 1, (sel1 == 1 ? h_white : c_white), "New Game");
-   mvwprintz(w_open, 6, 1, (sel1 == 2 ? h_white : c_white), "Load Game");
-   mvwprintz(w_open, 7, 1, (sel1 == 3 ? h_white : c_white), "Tutorial");
-   mvwprintz(w_open, 8, 1, (sel1 == 4 ? h_white : c_white), "Help");
-   mvwprintz(w_open, 9, 1, (sel1 == 5 ? h_white : c_white), "Quit");
+   mvwprintz(w_open, 5, 1, (sel1 == 1 ? h_white : c_white), "Новая игра");
+   mvwprintz(w_open, 6, 1, (sel1 == 2 ? h_white : c_white), "Загрузить");
+   mvwprintz(w_open, 7, 1, (sel1 == 3 ? h_white : c_white), "Обучение");
+   mvwprintz(w_open, 8, 1, (sel1 == 4 ? h_white : c_white), "Справка");
+   mvwprintz(w_open, 9, 1, (sel1 == 5 ? h_white : c_white), "Выход");
 
    if (sel1 == 0) {	// Print the MOTD.
     for (int i = 0; i < motd.size() && i < 16; i++)
@@ -201,9 +201,9 @@ fivedozenwhales@gmail.com.");
     } else if (sel1 == 4) {
      help();
      clear();
-     mvwprintz(w_open, 0, 1, c_blue, "Welcome to Cataclysm!");
+     mvwprintz(w_open, 0, 1, c_blue, "Добро пожаловать в Катаклизм!");
      mvwprintz(w_open, 1, 0, c_red, "\
-This alpha release is highly unstable. Please report any crashes or bugs to\n\
+Этот альфа-релиз все еще сильно нестабилен. Сообщайте о любых ошибках на \n\
 fivedozenwhales@gmail.com.");
      refresh();
      wrefresh(w_open);
@@ -217,20 +217,20 @@ fivedozenwhales@gmail.com.");
      layer = 2;
     }
     mvwprintz(w_open, 4, 1, (sel1 == 0 ? c_white : c_dkgray), "MOTD");
-    mvwprintz(w_open, 5, 1, (sel1 == 1 ? c_white : c_dkgray), "New Game");
-    mvwprintz(w_open, 6, 1, (sel1 == 2 ? c_white : c_dkgray), "Load Game");
-    mvwprintz(w_open, 7, 1, (sel1 == 3 ? c_white : c_dkgray), "Tutorial");
-    mvwprintz(w_open, 8, 1, (sel1 == 3 ? c_white : c_dkgray), "Help");
-    mvwprintz(w_open, 9, 1, (sel1 == 4 ? c_white : c_dkgray), "Quit");
+    mvwprintz(w_open, 5, 1, (sel1 == 1 ? c_white : c_dkgray), "Новая игра");
+    mvwprintz(w_open, 6, 1, (sel1 == 2 ? c_white : c_dkgray), "Загрузить");
+    mvwprintz(w_open, 7, 1, (sel1 == 3 ? c_white : c_dkgray), "Обучение");
+    mvwprintz(w_open, 8, 1, (sel1 == 3 ? c_white : c_dkgray), "Справка");
+    mvwprintz(w_open, 9, 1, (sel1 == 4 ? c_white : c_dkgray), "Выход");
    }
   } else if (layer == 2) {
    if (sel1 == 1) {	// New Character
     mvwprintz(w_open, 5, 12, (sel2 == 1 ? h_white : c_white),
-              "Custom Character");
+              "Создать персонажа");
     mvwprintz(w_open, 6, 12, (sel2 == 2 ? h_white : c_white),
-              "Preset Character");
+              "Использовать шаблон");
     mvwprintz(w_open, 7, 12, (sel2 == 3 ? h_white : c_white),
-              "Random Character");
+              "Случайная генерация");
     wrefresh(w_open);
     refresh();
     ch = input();
@@ -265,9 +265,9 @@ fivedozenwhales@gmail.com.");
      if (sel2 == 2) {
       layer = 3;
       sel1 = 0;
-      mvwprintz(w_open, 5, 12, c_dkgray, "Custom Character");
-      mvwprintz(w_open, 6, 12, c_white,  "Preset Character");
-      mvwprintz(w_open, 7, 12, c_dkgray, "Random Character");
+      mvwprintz(w_open, 5, 12, c_dkgray, "Создать персонажа");
+      mvwprintz(w_open, 6, 12, c_white,  "Использовать шаблон");
+      mvwprintz(w_open, 7, 12, c_dkgray, "Случайная генерация");
      }
      if (sel2 == 3) {
       if (!u.create(this, PLTYPE_RANDOM)) {
@@ -282,7 +282,7 @@ fivedozenwhales@gmail.com.");
     }
    } else if (sel1 == 2) {	// Load Character
     if (savegames.size() == 0)
-     mvwprintz(w_open, 6, 12, c_red, "No save games found!");
+     mvwprintz(w_open, 6, 12, c_red, "Нет сохраненных игр!");
     else {
      int savestart = (sel2 < 7 ?  0 : sel2 - 7),
          saveend   = (sel2 < 7 ? 14 : sel2 + 7);
@@ -322,7 +322,7 @@ fivedozenwhales@gmail.com.");
    }
   } else if (layer == 3) {	// Character Templates
    if (templates.size() == 0)
-    mvwprintz(w_open, 6, 12, c_red, "No templates found!");
+    mvwprintz(w_open, 6, 12, c_red, "Нет шаблонов!");
    else {
     int tempstart = (sel1 < 6 ?  0 : sel1 - 6),
         tempend   = (sel1 < 6 ? 14 : sel1 + 6);
@@ -536,7 +536,7 @@ bool game::do_turn()
    }
   }
   if (uquit == QUIT_DIED)
-   popup_top("Game over! Press spacebar...");
+   popup_top("Игра окончена! Жми пробел...");
   if (uquit == QUIT_DIED || uquit == QUIT_SUICIDE)
    death_screen();
   return true;
@@ -560,10 +560,10 @@ bool game::do_turn()
  }
 // Check if we've overdosed... in any deadly way.
  if (u.stim > 250) {
-  add_msg("You have a sudden heart attack!");
+  add_msg("Сердечный приступ!");
   u.hp_cur[hp_torso] = 0;
  } else if (u.stim < -200 || u.pkill > 240) {
-  add_msg("Your breathing stops completely.");
+  add_msg("Остановка дыхания.");
   u.hp_cur[hp_torso] = 0;
  }
 
@@ -576,7 +576,7 @@ bool game::do_turn()
   u.fatigue++;
   if (u.fatigue == 192 && !u.has_disease(DI_LYING_DOWN) &&
       !u.has_disease(DI_SLEEP)) {
-   add_msg("You're feeling tired.  Press '$' to lie down for sleep.");
+   add_msg("Вы чувствуете усталость. Нажмите '$', чтобы лечь и поспать.");
    u.activity.type = ACT_NULL;
   }
   if (u.stim < 0)
@@ -630,7 +630,7 @@ bool game::do_turn()
   get_input();
   if (is_game_over()) {
    if (uquit == QUIT_DIED)
-    popup_top("Game over! Press spacebar...");
+    popup_top("Игра окончена! Жми пробел...");
    if (uquit == QUIT_DIED || uquit == QUIT_SUICIDE)
     death_screen();
    return true;
@@ -688,12 +688,12 @@ void game::update_skills()
   }
   if (u.skexercise[i] < -100) {
    u.sklevel[i]--;
-   add_msg("Your skill in %s has reduced to %d!",
+   add_msg("Ваш навык %s понизился на %d!",
            skill_name(skill(i)).c_str(), u.sklevel[i]);
    u.skexercise[i] = 0;
   } else if (u.skexercise[i] >= 100) {
    u.sklevel[i]++;
-   add_msg("Your skill in %s has increased to %d!",
+   add_msg("Ваш навык %s увеличился %d!",
            skill_name(skill(i)).c_str() ,u.sklevel[i]);
    u.skexercise[i] = 0;
   }
@@ -1116,7 +1116,7 @@ void game::get_input()
   vertical_move( 1, false);
  else if (ch == '.') {
   if (run_mode == 2) // Monsters around and we don't wanna pause
-   add_msg("Monster spotted--safe mode is on! (Press '!' to turn it off.)");
+   add_msg("Обнаружен противник! (Нажмите '!', чтобы игнорировать его.)");
   else
    u.pause();
  } else if (ch == 'o')
@@ -1215,11 +1215,11 @@ void game::get_input()
   }
  } else if (ch == 's')
   smash();
- else if (ch == 'S' && query_yn("Save and quit?")) {
+ else if (ch == 'S' && query_yn("Сохранить и выйти?")) {
   save();
   u.moves = 0;
   uquit = QUIT_SAVED;
- } else if (ch == 'Q' && query_yn("Commit suicide?")) {
+ } else if (ch == 'Q' && query_yn("Подтвердите самоубийство?")) {
   u.moves = 0;
   std::vector<item> tmp = u.inv_dump();
   item your_body;
@@ -1334,8 +1334,8 @@ void game::death_screen()
   num_kills += kills[i];
 
  WINDOW* w_death = newwin(25, 80, 0, 0);
- mvwprintz(w_death, 0, 35, c_red, "GAME OVER - Press Spacebar to Quit");
- mvwprintz(w_death, 2, 0, c_white, "Number of kills: %d", num_kills);
+ mvwprintz(w_death, 0, 35, c_red, "Конец игры. Жми пробел.");
+ mvwprintz(w_death, 2, 0, c_white, "Статистика: %d", num_kills);
  int line = 0, mon = 0;
  while (line < 40 && mon < num_monsters) {
   if (kills[mon] > 0) {
@@ -2568,15 +2568,15 @@ void game::mon_info()
  for (int i = 0; i < 9; i++) {
   if (unique_types[i].size() > 0) {
    switch(i) {
-    case 0: mvwprintz(w_moninfo, line, 0, c_magenta, "NORTHWEST");	break;
-    case 1: mvwprintz(w_moninfo, line, 0, c_magenta, "NORTH");		break;
-    case 2: mvwprintz(w_moninfo, line, 0, c_magenta, "NORTHEAST");	break;
-    case 3: mvwprintz(w_moninfo, line, 0, c_magenta, "WEST");		break;
-    case 4: mvwprintz(w_moninfo, line, 0, c_magenta, "NEARBY");		break;
-    case 5: mvwprintz(w_moninfo, line, 0, c_magenta, "EAST");		break;
-    case 6: mvwprintz(w_moninfo, line, 0, c_magenta, "SOUTHWEST");	break;
-    case 7: mvwprintz(w_moninfo, line, 0, c_magenta, "SOUTH");		break;
-    case 8: mvwprintz(w_moninfo, line, 0, c_magenta, "SOUTHEAST");	break;
+    case 0: mvwprintz(w_moninfo, line, 0, c_magenta, "СЕВЕРО-ЗАПАД");	break;
+    case 1: mvwprintz(w_moninfo, line, 0, c_magenta, "СЕВЕР");		break;
+    case 2: mvwprintz(w_moninfo, line, 0, c_magenta, "СЕВЕРО-ВОСТОК");	break;
+    case 3: mvwprintz(w_moninfo, line, 0, c_magenta, "ЗАПАД");		break;
+    case 4: mvwprintz(w_moninfo, line, 0, c_magenta, "ПОБЛИЗОСТИ");		break;
+    case 5: mvwprintz(w_moninfo, line, 0, c_magenta, "ВОСТОК");		break;
+    case 6: mvwprintz(w_moninfo, line, 0, c_magenta, "ЮГО-ЗАПАД");	break;
+    case 7: mvwprintz(w_moninfo, line, 0, c_magenta, "ЮГ");		break;
+    case 8: mvwprintz(w_moninfo, line, 0, c_magenta, "ЮГО-ВОСТОК");	break;
    }
    line++;
   }
@@ -5226,18 +5226,21 @@ void game::plmove(int x, int y)
                                   m.i_at(x, y).size() != 0) {
    if (in_tutorial)
     tutorial_message(LESSON_PICKUP);
-   std::string buff = "You see here ";
-   for (int i = 0; i < m.i_at(x, y).size(); i++) {
-    buff += m.i_at(x, y)[i].tname(this);
-    if (i + 2 < m.i_at(x, y).size())
-     buff += ", ";
-    else if (i + 1 < m.i_at(x, y).size())
-     buff += ", and ";
-   }
-   buff += ".";
-   add_msg(buff.c_str());
-  } else if (m.i_at(x, y).size() != 0)
-   add_msg("There are many items here.");
+   std::string buff = "Вы видите здесь ";
+//   std::string buff = "";
+   for (int i = 0; i < m.i_at(x, y).size(); i++) 
+       {
+       buff += m.i_at(x, y)[i].tname(this);
+       if (i + 2 < m.i_at(x, y).size())
+           buff += ", ";
+           else if (i + 1 < m.i_at(x, y).size())
+               buff += " и ";
+       } 
+       buff += "."; 
+       //if (m.i_at(x, y).size() == 1) {buff += " лежит здесь.";} else {buff += " лежат здесь.";}
+       add_msg(buff.c_str());
+       } else if (m.i_at(x, y).size() != 0)
+       add_msg("Несколько предметов лежат здесь.");
  } else if (m.has_flag(swimmable, x, y)) { // Dive into water!
 // Requires confirmation if we were on dry land previously
   if ((m.has_flag(swimmable, u.posx, u.posy) &&

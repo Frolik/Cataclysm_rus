@@ -19,12 +19,15 @@ void game::init_mtypes ()
 // Null monster named "None".
  mtypes.push_back(new mtype);
 
-#define mon(name, species, sym, color, size, mat, \
+#define mon(name, name1, name2, name3, name4, name5, \
+            species, sym, color, size, mat, \
             freq, diff, agro, morale, speed, melee_skill, melee_dice,\
             melee_sides, melee_cut, dodge, arm_bash, arm_cut, item_chance, HP,\
             sp_freq, death, sp_att, desc)\
 id++;\
-mtypes.push_back(new mtype(id, name, species, sym, color, size, mat,\
+mtypes.push_back(new mtype(id, name, \
+name1, name2, name3, name4, name5, \
+species, sym, color, size, mat,\
 freq, diff, agro, morale, speed, melee_skill, melee_dice, melee_sides,\
 melee_cut, dodge, arm_bash, arm_cut, item_chance, HP, sp_freq, death, sp_att,\
 desc))
@@ -37,7 +40,8 @@ desc))
 // PLEASE NOTE: The description is AT MAX 4 lines of 46 characters each.
 
 // FOREST ANIMALS
-mon("squirrel",	species_mammal, 'r',	c_ltgray,	MS_TINY,	FLESH,
+mon("белка","белки","белке","белку","белкой","белке",	
+        species_mammal, 'r',	c_ltgray,	MS_TINY,	FLESH,
 //	frq dif  agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 50,  0,  -5, -1,140,  0,  1,  1,  0,  4,  0,  0,  0,  1,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -45,7 +49,8 @@ A small woodland animal."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_ANIMAL, MF_WARM, MF_FUR);
 
-mon("rabbit",	species_mammal, 'r',	c_white,	MS_TINY,	FLESH,
+mon("кролик","кролика","кролику","кролика","кроликом","кролике",
+	species_mammal, 'r',	c_white,	MS_TINY,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 10,  0, -5, -1,180, 0,  0,  0,  0,  6,  0,  0,  0,  4,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -54,7 +59,8 @@ delicious flesh."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_ANIMAL, MF_WARM, MF_FUR);
 
-mon("deer",	species_mammal, 'd',	c_brown,	MS_LARGE,	FLESH,
+mon("олень",	"олень","олень","олень","олень","олень",
+species_mammal, 'd',	c_brown,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3,  1, -5, -1,300,  4,  3,  3,  0,  3,  0,  0,  0, 80, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -62,7 +68,8 @@ A large buck, fast-moving and strong."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_ANIMAL, MF_WARM, MF_FUR);
 
-mon("wolf",	species_mammal, 'w',	c_dkgray,	MS_MEDIUM,	FLESH,
+mon("волк","волка","волку","волка","волком","волке",
+	species_mammal, 'w',	c_dkgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  4, 12,  0, 20,165, 14,  2,  3,  4,  4,  1,  0,  0, 28,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -72,7 +79,7 @@ FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_ANIMAL, MF_WARM, MF_FUR, MF_HIT_AND_RUN);
 ANGER(MTRIG_TIME, MTRIG_PLAYER_WEAK);
 PLACATE(MTRIG_MEAT);
 
-mon("bear",	species_mammal, 'B',	c_dkgray,	MS_LARGE,	FLESH,
+mon("медведь","","","","","",	species_mammal, 'B',	c_dkgray,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 10,-10, 40,140, 10,  3,  4,  6,  3,  2,  0,  0, 90, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -83,7 +90,7 @@ ANGER(MTRIG_PLAYER_CLOSE);
 PLACATE(MTRIG_MEAT);
 
 // DOMESICATED ANIMALS
-mon("dog",	species_mammal, 'd',	c_white,	MS_SMALL,	FLESH,
+mon("собака","","","","","",	species_mammal, 'd',	c_white,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 1,   5,  2, 15,150, 12,  2,  3,  3,  3,  0,  0,  0, 25,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -92,7 +99,8 @@ A medium-sized domesticated dog, gone feral."
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_ANIMAL, MF_WARM, MF_FUR, MF_HIT_AND_RUN);
 
 // INSECTOIDS
-mon("ant larva",species_insect, 'a',	c_white,	MS_SMALL,	FLESH,
+mon("личинка муравья","личинки муравья","личинке муравья","личинку муравья","личинкой муравья","личинке муравья",
+     species_insect, 'a',	c_white,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1,  0,  5, 10, 65,  4,  1,  3,  0,  0,  0,  0,  0, 10,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -101,7 +109,7 @@ of glistening white flesh turns your stomach."
 );
 FLAGS(MF_SMELLS, MF_POISON);
 
-mon("giant ant",species_insect, 'a',	c_brown,	MS_MEDIUM,	FLESH,
+mon("гигантский муравей","","","","","",species_insect, 'a',	c_brown,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 20,  7, 15, 60,100,  9,  1,  6,  4,  2,  4,  8,-40, 40,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -111,7 +119,7 @@ vicious mandibles."
 );
 FLAGS(MF_SMELLS);
 
-mon("soldier ant",species_insect, 'a',	c_blue,		MS_MEDIUM,	FLESH,
+mon("солдат-муравей","","","","","",species_insect, 'a',	c_blue,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 16, 25,100,115, 12,  2,  4,  6,  2,  5, 10,-50, 80,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -121,7 +129,7 @@ mandibles."
 );
 FLAGS(MF_SMELLS);
 
-mon("queen ant",species_insect, 'a',	c_ltred,	MS_LARGE,	FLESH,
+mon("муравьиная королева","","","","","",species_insect, 'a',	c_ltred,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 13,  0,100, 60,  6,  3,  4,  4,  1,  6, 14,-40,180, 1,
 	&mdeath::normal,	&mattack::antqueen, "\
@@ -132,7 +140,7 @@ still more."
 );
 FLAGS(MF_SMELLS, MF_QUEEN);
 
-mon("fungal insect",species_fungus, 'a',c_ltgray,	MS_MEDIUM,	VEGGY,
+mon("fungal insect","","","","","",species_fungus, 'a',c_ltgray,	MS_MEDIUM,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  5, 80,100, 75,  5,  1,  5,  3,  1,  1,  1,  0, 30, 60,
 	&mdeath::normal,	&mattack::fungus, "\
@@ -142,7 +150,7 @@ from every joint on its body."
 );
 FLAGS(MF_SMELLS, MF_POISON);
 
-mon("giant fly",species_insect, 'a',	c_ltgray,	MS_SMALL,	FLESH,
+mon("огромная муха","","","","","",species_insect, 'a',	c_ltgray,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  8, 50, 30,120,  3,  1,  3,  0,  5,  0,  0,  0, 25,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -151,7 +159,7 @@ It buzzes around incessantly."
 );
 FLAGS(MF_SMELLS, MF_FLIES, MF_STUMBLES, MF_HIT_AND_RUN);
 
-mon("giant bee",species_insect, 'a',	c_yellow,	MS_SMALL,	FLESH,
+mon("огромная пчела","","","","","",species_insect, 'a',	c_yellow,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 15,-10, 50,140,  4,  1,  1,  5,  6,  0,  5,-50, 20,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -162,7 +170,7 @@ sized sting pointed forward."
 FLAGS(MF_SMELLS, MF_VENOM, MF_FLIES, MF_STUMBLES, MF_HIT_AND_RUN);
 ANGER(MTRIG_FRIEND_DIED, MTRIG_PLAYER_CLOSE);
 
-mon("giant wasp",species_insect, 'a', 	c_red,		MS_MEDIUM,	FLESH,
+mon("гигантская оса","","","","","",species_insect, 'a', 	c_red,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 22,  5, 60,150,  6,  1,  3,  7,  7,  0,  7,-40, 35, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -173,7 +181,7 @@ FLAGS(MF_SMELLS, MF_POISON, MF_VENOM, MF_FLIES);
 
 // GIANT WORMS
 
-mon("graboid",	species_worm, 'S',	c_red,		MS_HUGE,	FLESH,
+mon("graboid","","","","","",	species_worm, 'S',	c_red,		MS_HUGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 17, 30,120,180, 11,  3,  8,  4,  0,  5,  5,  0,180,  0,
 	&mdeath::worm,		&mattack::none, "\
@@ -184,7 +192,7 @@ enormous body is hidden underground."
 );
 FLAGS(MF_DIGS, MF_HEARS, MF_GOODHEARING, MF_DESTROYS, MF_WARM, MF_LEATHER);
 
-mon("giant worm",species_worm, 'S',	c_pink,		MS_LARGE,	FLESH,
+mon("гигантский червь","","","","","",species_worm, 'S',	c_pink,		MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 30, 10, 30,100, 85,  9,  4,  5,  2,  0,  2,  0,  0, 50,  0,
 	&mdeath::worm,		&mattack::none, "\
@@ -195,7 +203,7 @@ large, fanged mouth."
 );
 FLAGS(MF_DIGS, MF_HEARS, MF_GOODHEARING, MF_WARM, MF_LEATHER);
 
-mon("half worm",species_worm, 's',	c_pink,		MS_MEDIUM,	FLESH,
+mon("половинка червя","","","","","",species_worm, 's',	c_pink,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  2, 10, 40, 80,  5,  3,  5,  0,  0,  0,  0,  0, 20,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -204,7 +212,7 @@ A portion of a giant worm that is still alive."
 FLAGS(MF_DIGS, MF_HEARS, MF_GOODHEARING, MF_WARM, MF_LEATHER);
 
 // ZOMBIES
-mon("zombie",	species_zombie, 'Z',	c_ltgreen,	MS_MEDIUM,	FLESH,
+mon("зомби","","","","","",	species_zombie, 'Z',	c_ltgreen,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 90,  3,100,100, 70,  8,  1,  5,  0,  1,  0,  0, 40, 50,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -214,7 +222,7 @@ rage."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("shrieker zombie",species_zombie, 'Z',c_magenta,	MS_MEDIUM,	FLESH,
+mon("изувеченный зомби","","","","","",species_zombie, 'Z',c_magenta,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  4, 10,100,100, 95,  9,  1,  2,  0,  4,  0,  0, 45, 50, 10,
 	&mdeath::normal,	&mattack::shriek, "\
@@ -223,7 +231,7 @@ a gaping hole from mid-neck up."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("spitter zombie",species_zombie, 'Z',c_yellow,	MS_MEDIUM,	FLESH,
+mon("плюющийся зомби","","","","","",species_zombie, 'Z',c_yellow,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  4,  9,100,100,105,  8,  1,  5,  0,  4,  0,  0, 30, 60, 20,
 	&mdeath::acid,		&mattack::acid,	"\
@@ -234,7 +242,7 @@ yellow fluid."
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON,
       MF_ACIDPROOF);
 
-mon("shocker zombie",species_zombie,'Z',c_ltcyan,	MS_MEDIUM,	FLESH,
+mon("электрозомби","","","","","",species_zombie,'Z',c_ltcyan,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3, 10,100,100,110,  8,  1,  6,  0,  4,  0,  0, 40, 65, 25,
 	&mdeath::normal,	&mattack::shockstorm, "\
@@ -246,7 +254,7 @@ FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON,
       MF_ELECTRIC);
 
 
-mon("fast zombie",species_zombie, 'Z',	c_ltred,	MS_MEDIUM,	FLESH,
+mon("быстрый зомби","","","","","",species_zombie, 'Z',	c_ltred,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  6, 12,100,100,150, 10,  1,  4,  3,  4,  0,  0, 45, 40,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -257,7 +265,7 @@ humans ever could."
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON,
       MF_HIT_AND_RUN);
 
-mon("zombie brute",species_zombie, 'Z',	c_red,		MS_MEDIUM,	FLESH,
+mon("зомби-зверь","","","","","",species_zombie, 'Z',	c_red,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  4, 25,100,100,115,  9,  4,  4,  2,  0,  6,  3, 60, 80,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -266,7 +274,7 @@ distended muscles on both arms and legs."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("zombie hulk",species_zombie, 'Z',	c_blue,		MS_HUGE,	FLESH,
+mon("зомби-амбал","","","","","",species_zombie, 'Z',	c_blue,		MS_HUGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 50,150,100,130,  9,  4,  8,  0,  0, 12,  8, 80,260,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -276,7 +284,7 @@ A zombie that has somehow grown to the size of\n\
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES,
       MF_DESTROYS, MF_POISON, MF_ATTACKMON, MF_LEATHER);
 
-mon("fungal zombie",species_fungus, 'Z',c_ltgray,	MS_MEDIUM,	FLESH,
+mon("грибной зомби","","","","","",species_fungus, 'Z',c_ltgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2,  6,100,100, 45,  6,  1,  6,  0,  0,  0,  0, 20, 40, 50,
 	&mdeath::normal,	&mattack::fungus, "\
@@ -286,7 +294,7 @@ over its translucent flesh."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("boomer",	species_zombie, 'Z',	c_pink,		MS_LARGE,	FLESH,
+mon("жирдяй","","","","","",	species_zombie, 'Z',	c_pink,		MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  6,  5,100,100, 55,  7,  2,  4,  0,  1,  3,  0, 35, 40,  20,
 	&mdeath::boomer,	&mattack::boomer, "\
@@ -296,7 +304,7 @@ from its mouth."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("fungal boomer",species_fungus, 'B',c_ltgray,	MS_LARGE,	FLESH,
+mon("грибной жирдяй","","","","","",species_fungus, 'B',c_ltgray,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1,  7,100,100, 40,  5,  2,  6,  0,  0,  3,  0, 20, 20, 30,
 	&mdeath::fungus,	&mattack::fungus, "\
@@ -306,7 +314,7 @@ and it dribbles a gray sludge from its mouth."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("skeleton",	species_zombie, 'Z',	c_white,	MS_MEDIUM,	STONE,
+mon("скелет","","","","","",	species_zombie, 'Z',	c_white,	MS_MEDIUM,	STONE,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  7,  8,100,100, 90, 10,  1,  5,  3,  2,  0, 15,  0, 40, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -316,7 +324,7 @@ motion."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_HARDTOSHOOT);
 
-mon("zombie necromancer",species_zombie, 'Z',c_dkgray,	MS_MEDIUM,	FLESH,
+mon("зомби-некромант","","","","","",species_zombie, 'Z',c_dkgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3, 13,  0,100,100,  4,  2,  3,  0,  4,  0,  0, 50,140, 4,
 	&mdeath::normal,	&mattack::resurrect, "\
@@ -326,7 +334,7 @@ feeling of dread and terror."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("zombie scientist",species_zombie, 'Z',c_ltgray,	MS_MEDIUM,	FLESH,
+mon("зомби ученого","","","","","",species_zombie, 'Z',c_ltgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 20,  3,100,100, 75,  7,  1,  3,  0,  1,  0,  0, 50, 35, 20,
 	&mdeath::normal,	&mattack::science, "\
@@ -337,7 +345,7 @@ than most zombies, but more resourceful too."
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_WARM, MF_BASHES, MF_POISON,
       MF_ACIDPROOF);
 
-mon("zombie soldier",	species_zombie,	'Z',c_ltblue,	MS_MEDIUM,	FLESH,
+mon("зомби солдата","","","","","",	species_zombie,	'Z',c_ltblue,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 20,100,100, 80, 12,  2,  4,  0,  0,  8, 16, 60,100, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -349,7 +357,7 @@ most zombies."
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_WARM, MF_BASHES, MF_POISON);
 
 // PLANTS & FUNGI
-mon("triffid",	species_plant, 'F',	c_ltgreen,	MS_MEDIUM,	VEGGY,
+mon("триффид","","","","","",	species_plant, 'F',	c_ltgreen,	MS_MEDIUM,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
  	 24, 16, 20,100, 75,  9,  2,  4,  5,  0, 10,  2,  0, 80,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -360,7 +368,7 @@ sting within."
 );
 FLAGS(MF_HEARS, MF_SMELLS, MF_BASHES, MF_NOHEAD);
 
-mon("young triffid",species_plant, 'f',	c_ltgreen,	MS_SMALL,	VEGGY,
+mon("молодой триффид","","","","","",species_plant, 'f',	c_ltgreen,	MS_SMALL,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 15,  2,  0, 10, 65,  7,  1,  4,  3,  0,  0,  0,  0, 40,  0,
 	&mdeath::normal,	&mattack::none, "\
@@ -370,7 +378,7 @@ is still sharp and deadly."
 );
 FLAGS(MF_HEARS, MF_SMELLS, MF_NOHEAD);
 
-mon("queen triffid",species_plant, 'F',	c_red,		MS_LARGE,	VEGGY,
+mon("королева триффидов","","","","","",species_plant, 'F',	c_red,		MS_LARGE,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3, 22,100,200, 85, 14,  2,  7,  8,  0, 10,  4,  0,280, 2,
 	&mdeath::normal,	&mattack::growplants, "\
@@ -381,7 +389,7 @@ and immediately takes root."
 );
 FLAGS(MF_HEARS, MF_SMELLS, MF_BASHES, MF_NOHEAD);
 
-mon("creeper hub",species_plant, 'V',	c_dkgray,	MS_MEDIUM,	VEGGY,
+mon("Центр лозы","","","","","",species_plant, 'V',	c_dkgray,	MS_MEDIUM,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 16,100,100,100,  0,  0,  0,  0,  0,  8,  0,  0,100, 2,
 	&mdeath::kill_vines,	&mattack::grow_vine, "\
@@ -391,7 +399,7 @@ directions."
 );
 FLAGS(MF_NOHEAD, MF_IMMOBILE);
 
-mon("creeping vine",species_plant, 'v',	c_green,	MS_TINY,	VEGGY,
+mon("ползучая лоза","","","","","",species_plant, 'v',	c_green,	MS_TINY,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  4,100,100, 75,  0,  0,  0,  0,  0,  2,  0,  0, 20, 2,
 	&mdeath::vine_cut,	&mattack::vine, "\
@@ -400,7 +408,7 @@ it grows, spreading rapidly."
 );
 FLAGS(MF_NOHEAD, MF_HARDTOSHOOT, MF_PLASTIC, MF_IMMOBILE);
 
-mon("biollante",species_plant, 'F',	c_magenta,	MS_LARGE,	VEGGY,
+mon("биолланте","","","","","",species_plant, 'F',	c_magenta,	MS_LARGE,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 20,100,100,100,  0,  0,  0,  0,  0,  0,  0,-80,120, 2,
 	&mdeath::normal,	&mattack::spit_sap, "\
@@ -410,7 +418,7 @@ and pulsate ominously."
 );
 FLAGS(MF_NOHEAD, MF_IMMOBILE);
 
-mon("triffid heart",species_plant, 'T',	c_red,		MS_HUGE,	VEGGY,
+mon("сердце триффидов","","","","","",species_plant, 'T',	c_red,		MS_HUGE,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
           0, 45,100,100,100,  0,  0,  0,  0,  0, 14,  4,  0,300, 5,
 	&mdeath::triffid_heart,	&mattack::triffid_heartbeat, "\
@@ -420,7 +428,7 @@ the root walls around it."
 );
 FLAGS(MF_NOHEAD, MF_IMMOBILE, MF_QUEEN);
 
-mon("fungaloid",species_fungus, 'F',	c_ltgray,	MS_MEDIUM,	VEGGY,
+mon("грибоид","","","","","",species_fungus, 'F',	c_ltgray,	MS_MEDIUM,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 12, 12,  0,100, 45,  8,  3,  3,  0,  0,  4,  0,  0, 80, 200,
 	&mdeath::fungus,	&mattack::fungus, "\
@@ -433,7 +441,7 @@ ANGER(MTRIG_PLAYER_CLOSE, MTRIG_PLAYER_WEAK);
 FLAGS(MF_HEARS, MF_SMELLS, MF_POISON, MF_NOHEAD);
 
 // This is a "dormant" fungaloid that doesn't waste CPU cycles ;)
-mon("fungaloid",species_fungus, 'F',	c_ltgray,	MS_MEDIUM,	VEGGY,
+mon("грибоид","","","","","",species_fungus, 'F',	c_ltgray,	MS_MEDIUM,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  0,  0,100,  1,  8,  2,  4,  0,  0,  4,  0,  0,  1, 0,
 	&mdeath::fungusawake,	&mattack::none, "\
@@ -444,7 +452,7 @@ mobility and a weak attack."
 );
 FLAGS(MF_HEARS, MF_SMELLS, MF_POISON, MF_NOHEAD);
 
-mon("young fungaloid",species_fungus, 'f',c_ltgray,	MS_SMALL,	VEGGY,
+mon("молодой грибоид","","","","","",species_fungus, 'f',c_ltgray,	MS_SMALL,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  6,  6,100,100, 65,  8,  1,  4,  6,  0,  4,  4,  0, 70, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -455,7 +463,7 @@ full-grown fungaloids."
 );
 FLAGS(MF_HEARS, MF_SMELLS, MF_POISON, MF_NOHEAD);
 
-mon("spore",	species_fungus, 'o',	c_ltgray,	MS_TINY,	VEGGY,
+mon("спора","","","","","",	species_fungus, 'o',	c_ltgray,	MS_TINY,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  1,-50,100,100,  0,  0,  0,  0,  6,  0,  0,  0,  5, 50,
 	&mdeath::disintegrate,	&mattack::plant, "\
@@ -464,7 +472,7 @@ wafting on the breeze."
 );
 FLAGS(MF_STUMBLES, MF_FLIES, MF_POISON, MF_NOHEAD);
 
-mon("fungal spire",species_fungus, 'T',	c_ltgray,	MS_HUGE,	STONE,
+mon("грибной шпиль","","","","","",species_fungus, 'T',	c_ltgray,	MS_HUGE,	STONE,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 40,100,100,100,  0,  0,  0,  0,  0, 10, 10,  0,300, 5,
 	&mdeath::fungus,	&mattack::fungus_sprout, "\
@@ -474,7 +482,7 @@ continuously growing new defenses."
 );
 FLAGS(MF_NOHEAD, MF_POISON, MF_IMMOBILE, MF_QUEEN);
 
-mon("fungal wall",species_fungus, 'F',	c_dkgray,	MS_HUGE,	VEGGY,
+mon("грибная стена","","","","","",species_fungus, 'F',	c_dkgray,	MS_HUGE,	VEGGY,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  5,100,100,100,  0,  0,  0,  0,  0, 10, 10,  0, 60, 8,
 	&mdeath::disintegrate,	&mattack::fungus, "\
@@ -486,7 +494,7 @@ alarming rate."
 FLAGS(MF_NOHEAD, MF_POISON, MF_IMMOBILE);
 
 // BLOBS & SLIMES &c
-mon("blob",	species_nether, 'O',	c_dkgray,	MS_MEDIUM,	LIQUID,
+mon("пузырь","","","","","",	species_nether, 'O',	c_dkgray,	MS_MEDIUM,	LIQUID,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 10, 19,100,100, 85,  9,  2,  4,  0,  0,  6,  0,  0, 85, 30,
 	&mdeath::blobsplit,	&mattack::formblob, "\
@@ -496,7 +504,7 @@ oil."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_GOODHEARING, MF_NOHEAD, MF_POISON, MF_ACIDPROOF);
 
-mon("small blob",species_nether, 'o',	c_dkgray,	MS_SMALL,	LIQUID,
+mon("мелкий пузырь","","","","","",species_nether, 'o',	c_dkgray,	MS_SMALL,	LIQUID,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1,  2,100,100, 50,  6,  1,  4,  0,  0,  2,  0,  0, 50, 0,
 	&mdeath::blobsplit,	&mattack::none, "\
@@ -507,7 +515,7 @@ oil."
 FLAGS(MF_SMELLS, MF_HEARS, MF_GOODHEARING, MF_NOHEAD, MF_POISON, MF_ACIDPROOF);
 
 // CHUDS & SUBWAY DWELLERS
-mon("C.H.U.D.",	species_none, 'S',	c_ltgray,	MS_MEDIUM,	FLESH,
+mon("Подземный каннибал","","","","","",	species_none, 'S',	c_ltgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 50,  8, 30, 30,110, 10,  1,  5,  0,  3,  0,  0, 25, 60, 0,
 	&mdeath::normal,	&mattack::none,	"\
@@ -518,7 +526,7 @@ the subways."
 FLAGS(MF_SEES, MF_HEARS, MF_WARM, MF_BASHES);
 FEARS(MTRIG_HURT, MTRIG_FIRE);
 
-mon("one-eyed mutant",species_none, 'S',c_ltred,	MS_MEDIUM,	FLESH,
+mon("одноглазый мутант","","","","","",species_none, 'S',c_ltred,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 18, 30, 30,130, 20,  2,  4,  0,  5,  0,  0, 40, 80, 0,
 	&mdeath::normal,	&mattack::none,	"\
@@ -528,7 +536,7 @@ hair and a grapefruit-sized bloodshot eye."
 FLAGS(MF_SEES, MF_HEARS, MF_WARM, MF_BASHES);
 FEARS(MTRIG_HURT, MTRIG_FIRE);
 
-mon("crawler mutant",species_none, 'S',	c_red,		MS_LARGE,	FLESH,
+mon("ползучий мутант","","","","","",species_none, 'S',	c_red,		MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 16, 40, 40, 80, 10,  2,  6,  0,  1,  8,  0,  0,180, 0,
 	&mdeath::normal,	&mattack::none,	"\
@@ -539,7 +547,7 @@ body across the ground."
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_WARM, MF_BASHES, MF_POISON);
 FEARS(MTRIG_HURT, MTRIG_FIRE);
 
-mon("sewer fish",species_none, 's',	c_ltgreen,	MS_SMALL,	FLESH,
+mon("канализационная рыба","","","","","",species_none, 's',	c_ltgreen,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 30, 13,100,100,120, 17,  1,  3,  3,  6,  0,  0,  0, 20, 0,
 	&mdeath::normal,	&mattack::none,	"\
@@ -549,7 +557,7 @@ three rows of razor-sharp teeth."
 FLAGS(MF_SEES, MF_SMELLS, MF_WARM, MF_AQUATIC);
 FEARS(MTRIG_HURT);
 
-mon("sewer snake",species_none, 's',	c_yellow,	MS_SMALL,	FLESH,
+mon("канализационная змея","","","","","",species_none, 's',	c_yellow,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 15,  2, 20, 40, 60, 12,  1,  2,  5,  1,  0,  0,  0, 40, 0,
 	&mdeath::normal,	&mattack::none,	"\
@@ -559,7 +567,7 @@ underground life."
 FLAGS(MF_SEES, MF_SMELLS, MF_WARM, MF_VENOM, MF_SWIMS, MF_LEATHER);
 FEARS(MTRIG_HURT);
 
-mon("sewer rat",species_mammal, 's',	c_dkgray,	MS_SMALL,	FLESH,
+mon("канализационная крыса","","","","","",species_mammal, 's',	c_dkgray,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 18,  3, 20, 40,105, 10,  1,  2,  1,  2,  0,  0,  0, 30, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -569,7 +577,7 @@ hungrily."
 );
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_WARM, MF_SWIMS, MF_ANIMAL, MF_FUR);
 
-mon("rat king",species_mammal, 'S',	c_dkgray,	MS_MEDIUM,	FLESH,
+mon("крысиный король","","","","","",species_mammal, 'S',	c_dkgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 18, 10,100, 40,  4,  1,  3,  1,  0,  0,  0,  0,120, 3,
 	&mdeath::ratking,	&mattack::ratking, "\
@@ -579,7 +587,7 @@ of nausea washes over you in its presence."
 );
 
 // SWAMP CREATURES
-mon("giant mosquito",species_insect, 'y',c_ltgray,	MS_SMALL,	FLESH,
+mon("гигантский комар","","","","","",species_insect, 'y',c_ltgray,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 22, 12, 20, 20,120,  8,  1,  1,  1,  5,  0,  0,  0, 20, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -589,7 +597,7 @@ proboscis."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_STUMBLES, MF_VENOM, MF_FLIES, MF_HIT_AND_RUN);
 
-mon("giant dragonfly",species_insect, 'y',c_ltgreen,	MS_SMALL,	FLESH,
+mon("гигантская стрекоза","","","","","",species_insect, 'y',c_ltgreen,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  6, 13, 20,100,155, 12,  1,  3,  6,  5,  0,  6,-20, 70, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -598,7 +606,7 @@ through the air, its mouth a cluster of fangs."
 );
 FLAGS(MF_SEES, MF_SMELLS, MF_FLIES, MF_HIT_AND_RUN);
 
-mon("giant centipede",species_insect, 'a',c_ltgreen,	MS_MEDIUM,	FLESH,
+mon("гигансткая сороконожка","","","","","",species_insect, 'a',c_ltgreen,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  7,  9, 20,100,120, 10,  1,  3,  5,  2,  0,  8,-30, 60, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -608,7 +616,7 @@ pincers attached to its head."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_POISON, MF_VENOM);
 
-mon("giant frog",species_none, 'F',	c_green,	MS_LARGE,	FLESH,
+mon("гигантская лягушка","","","","","",species_none, 'F',	c_green,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 10, 10,100, 90,  8,  2,  3,  0,  2,  4,  0,  0, 70, 5,
 	&mdeath::normal,	&mattack::leap, "\
@@ -618,7 +626,7 @@ much as you imagine it might eye an insect."
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_SWIMS, MF_LEATHER);
 FEARS(MTRIG_HURT);
 
-mon("giant slug",species_none, 'S',	c_yellow,	MS_HUGE,	FLESH,
+mon("гигантский слизень","","","","","",species_none, 'S',	c_yellow,	MS_HUGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  4, 16, 20,100, 60,  7,  1,  5,  1,  0,  8,  2,  0,190, 10,
 	&mdeath::normal,	&mattack::acid, "\
@@ -629,7 +637,7 @@ its fang-lined mouth."
 FLAGS(MF_SEES, MF_SMELLS, MF_BASHES, MF_ACIDPROOF, MF_ACIDTRAIL);
 FEARS(MTRIG_HURT, MTRIG_PLAYER_CLOSE);
 
-mon("dermatik larva",species_insect, 'i',c_white,	MS_TINY,	FLESH,
+mon("личинка dermatik","","","","","",species_insect, 'i',c_white,	MS_TINY,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  4,-20,-20, 20,  1,  1,  2,  2,  1,  0,  0,  0, 10, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -639,7 +647,7 @@ digging than fighting."
 );
 FLAGS(MF_HEARS, MF_SMELLS, MF_POISON, MF_DIGS);
 
-mon("dermatik",	species_insect, 'i',	c_red,		MS_TINY,	FLESH,
+mon("dermatik","","","","","",	species_insect, 'i',	c_red,		MS_TINY,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3, 18, 30, 30,100,  5,  1,  1,  6, 7,   0,  6,  0, 60, 50,
 	&mdeath::normal,	&mattack::dermatik, "\
@@ -652,7 +660,7 @@ FLAGS(MF_HEARS, MF_SMELLS, MF_STUMBLES, MF_POISON, MF_FLIES);
 
 
 // SPIDERS
-mon("wolf spider",species_insect, 's',	c_brown,	MS_MEDIUM,	FLESH,
+mon("паук-волк","","","","","",species_insect, 's',	c_brown,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 20, 20,100,110, 7,   1,  1,  8,  6,  2,  8,-70, 40, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -661,7 +669,7 @@ and aggresively."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_VENOM);
 
-mon("web spider",species_insect, 's',	c_yellow,	MS_SMALL,	FLESH,
+mon("паук","","","","","",species_insect, 's',	c_yellow,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 16, 30, 80,120,  5,  1,  1,  7,  5,  2,  7,-70, 35, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -671,7 +679,7 @@ entangled before pouncing and biting."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_VENOM, MF_WEBWALK);
 
-mon("jumping spider",species_insect, 's',c_white,	MS_SMALL,	FLESH,
+mon("паук-прыгун","","","","","",species_insect, 's',c_white,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 14, 40, 80,100,  7,  1,  1,  4,  8,  0,  3,-60, 30, 2,
 	&mdeath::normal,	&mattack::leap, "\
@@ -682,7 +690,7 @@ another."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_VENOM, MF_HIT_AND_RUN);
 
-mon("trap door spider",species_insect, 's',c_blue,	MS_MEDIUM,	FLESH,
+mon("ловчий паук","","","","","",species_insect, 's',c_blue,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 20, 60,100,110,  5,  1,  2,  7,  3,  2,  8,-80, 70, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -693,7 +701,7 @@ in its webs."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_VENOM, MF_WEBWALK);
 
-mon("black widow",species_insect, 's',	c_dkgray,	MS_SMALL,	FLESH,
+mon("черная вдова","","","","","",species_insect, 's',	c_dkgray,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 20,-10,100, 90,  6,  1,  1,  6,  3,  0,  3,-50, 40, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -705,7 +713,7 @@ FLAGS(MF_SMELLS, MF_HEARS, MF_BADVENOM, MF_WEBWALK);
 ANGER(MTRIG_PLAYER_WEAK, MTRIG_PLAYER_CLOSE, MTRIG_HURT);
 
 // UNEARTHED HORRORS
-mon("dark wyrm",species_none, 'S',	c_blue,		MS_LARGE,	FLESH,
+mon("черный змей","","","","","",species_none, 'S',	c_blue,		MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 20,100,100, 90,  8,  2,  6,  4,  4,  6,  0,  0, 80, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -716,7 +724,7 @@ round mouth lined with dagger-like teeth."
 FLAGS(MF_SMELLS, MF_HEARS, MF_GOODHEARING, MF_DESTROYS, MF_POISON, MF_SUNDEATH,
       MF_ACIDPROOF, MF_ACIDTRAIL);
 
-mon("Amigara horror",species_none, 'H',	c_white,	MS_LARGE,	FLESH,
+mon("ужасная амигара","","","","","",species_none, 'H',	c_white,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 30,100,100, 70, 10,  2,  4,  0,  2,  0,  0,  0,250, 0,
 	&mdeath::amigara,	&mattack::fear_paralyze, "\
@@ -728,7 +736,7 @@ distorted to the point of being tentacles."
 FLAGS(MF_SMELLS, MF_HEARS, MF_SEES, MF_STUMBLES, MF_HARDTOSHOOT);
 
 // This "dog" is, in fact, a disguised Thing
-mon("dog",	species_nether, 'd',	c_white,	MS_SMALL,	FLESH,
+mon("собака",	"","","","","",species_nether, 'd',	c_white,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3,  5,100,100,150, 12,  2,  3,  3,  3,  0,  0,  0, 25, 40,
 	&mdeath::thing,		&mattack::dogthing, "\
@@ -737,7 +745,7 @@ A medium-sized domesticated dog, gone feral."
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_ANIMAL, MF_WARM, MF_FUR,
       MF_FRIENDLY_SPECIAL);
 
-mon("tentacle dog",species_nether, 'd',	c_dkgray,	MS_MEDIUM,	FLESH,
+mon("пес-ктулху","","","","","",species_nether, 'd',	c_dkgray,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 14,100,100,120, 12,  2,  4,  0,  3,  0,  0,  0,120, 5,
 	&mdeath::thing,		&mattack::tentacle, "\
@@ -746,7 +754,7 @@ tentacles extending from its head."
 );
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_BASHES);
 
-mon("Thing",	species_nether, 'H',	c_dkgray,	MS_LARGE,	FLESH,
+mon("Тварь",	"","","","","",species_nether, 'H',	c_dkgray,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 25,100,100,135, 14,  2,  4,  0,  5,  8,  0,  0,160, 5,
 	&mdeath::melt,		&mattack::tentacle, "\
@@ -756,7 +764,7 @@ sprout tentacles rapidly."
 FLAGS(MF_SMELLS, MF_HEARS, MF_NOHEAD, MF_BASHES, MF_SWIMS, MF_ATTACKMON,
       MF_PLASTIC, MF_ACIDPROOF);
 
-mon("human snail",species_none, 'h',	c_green,	MS_LARGE,	FLESH,
+mon("человекоулитка","","","","","",species_none, 'h',	c_green,	MS_LARGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 20, 10,  0, 30, 50,  4,  1,  5,  0,  0,  6, 12,  0, 50, 15,
 	&mdeath::normal,	&mattack::acid, "\
@@ -766,7 +774,7 @@ FLAGS(MF_SMELLS, MF_HEARS, MF_POISON, MF_ACIDPROOF, MF_ACIDTRAIL);
 ANGER(MTRIG_PLAYER_WEAK, MTRIG_FRIEND_DIED);
 FEARS(MTRIG_PLAYER_CLOSE, MTRIG_HURT);
 
-mon("twisted body",species_none, 'h',	c_pink,		MS_MEDIUM,	FLESH,
+mon("твистер","","","","","",species_none, 'h',	c_pink,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 12,100,100, 90,  5,  2,  4,  0,  6,  0,  0,  0, 65, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -775,7 +783,7 @@ hair impossibly twisted."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_GOODHEARING, MF_POISON);
 
-mon("vortex",	species_none, 'v',	c_white,	MS_SMALL,	POWDER,
+mon("водоворот","","","","","",	species_none, 'v',	c_white,	MS_SMALL,	POWDER,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 30,100,100,120,  0,  0,  0,  0,  0,  0,  0,  0, 20, 6,
 	&mdeath::melt,		&mattack::vortex, "\
@@ -786,7 +794,7 @@ FLAGS(MF_HEARS, MF_GOODHEARING, MF_STUMBLES, MF_NOHEAD, MF_HARDTOSHOOT,
       MF_FLIES, MF_PLASTIC, MF_FRIENDLY_SPECIAL);
 
 // NETHER WORLD INHABITANTS
-mon("flying polyp",species_nether, 'H',	c_dkgray,	MS_HUGE,	FLESH,
+mon("летающий полип","","","","","",species_nether, 'H',	c_dkgray,	MS_HUGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 42,100,100,280, 16,  3,  8,  6,  7,  8,  0,  0,350, 0,
 	&mdeath::melt,		&mattack::none, "\
@@ -796,7 +804,7 @@ that flies through the air swiftly."
 FLAGS(MF_SMELLS, MF_HEARS, MF_GOODHEARING, MF_NOHEAD, MF_BASHES, MF_FLIES,
       MF_ATTACKMON, MF_PLASTIC, MF_HIT_AND_RUN);
 
-mon("hunting horror",species_nether, 'h',c_dkgray,	MS_SMALL,	MNULL,
+mon("охотящийся кошмар","","","","","",species_nether, 'h',c_dkgray,	MS_SMALL,	MNULL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 10, 28,100,100,180, 15,  3,  4,  0,  6,  0,  0,  0, 80, 0,
 	&mdeath::melt,		&mattack::none, "\
@@ -808,7 +816,7 @@ writhing."
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_NOHEAD, MF_HARDTOSHOOT, MF_FLIES,
       MF_PLASTIC, MF_SUNDEATH, MF_HIT_AND_RUN);
 
-mon("Mi-go",	species_nether, 'H',	c_pink,		MS_MEDIUM,	FLESH,
+mon("Mi-go","","","","","",	species_nether, 'H',	c_pink,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 26, 20, 30,120, 14,  5,  3, 10,  7,  4, 12,  0,110, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -819,7 +827,7 @@ antennae."
 );
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_WARM, MF_BASHES, MF_POISON);
 
-mon("yugg",	species_nether, 'H',	c_white,	MS_HUGE,	FLESH,
+mon("yugg","","","","","",	species_nether, 'H',	c_white,	MS_HUGE,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3, 32,100,100, 80, 12,  3,  5,  8,  1,  6,  0,  0,320, 20,
 	&mdeath::normal,	&mattack::gene_sting, "\
@@ -831,7 +839,7 @@ pink mouth, lined with rows of fangs."
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_BASHES, MF_DESTROYS, MF_POISON, MF_VENOM,
       MF_DIGS);
 
-mon("gelatinous blob",species_nether, 'O',c_ltgray,	MS_LARGE,	LIQUID,
+mon("желатиновый пузырь","","","","","",species_nether, 'O',c_ltgray,	MS_LARGE,	LIQUID,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 20,  0,100, 40,  8,  2,  3,  0,  0, 10,  0,  0,200, 4,
 	&mdeath::melt,		&mattack::formblob, "\
@@ -841,7 +849,7 @@ chunks falling off of its sides."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_PLASTIC);
 
-mon("flaming eye",species_nether, 'E',	c_red,		MS_MEDIUM,	FLESH,
+mon("пылающий глаз","","","","","",species_nether, 'E',	c_red,		MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 27,  0,100, 90,  0,  0,  0,  0,  1,  3,  0,  0,300, 12,
 	&mdeath::normal,	&mattack::stare, "\
@@ -851,7 +859,7 @@ through the air."
 );
 FLAGS(MF_SEES, MF_WARM, MF_FLIES, MF_FIREY);
 
-mon("kreck",	species_nether, 'h',	c_ltred,	MS_SMALL,	FLESH,
+mon("kreck","","","","","",	species_nether, 'h',	c_ltred,	MS_SMALL,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  9,  5,100,100,135,  6,  2,  2,  1,  5,  0,  5,  0, 35, 0,
 	&mdeath::melt,		&mattack::none, "\
@@ -862,7 +870,7 @@ grunting."
 );
 FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_WARM, MF_BASHES);
 
-mon("blank body",species_nether, 'h',	c_white,	MS_MEDIUM,	FLESH,
+mon("blank body","","","","","",species_nether, 'h',	c_white,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3,  5,  0,100, 80,  9,  1,  4,  0,  1,  0,  0,  0,100, 10,
 	&mdeath::normal,	&mattack::shriek, "\
@@ -873,7 +881,7 @@ mouth."
 );
 FLAGS(MF_SMELLS, MF_HEARS, MF_WARM, MF_ANIMAL, MF_SUNDEATH);
 
-mon("Gozu",	species_nether, 'G',	c_white,	MS_MEDIUM,	FLESH,
+mon("Gozu","","","","","",	species_nether, 'G',	c_white,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 1,  20, 10,100, 80, 12,  2,  5,  0,  5,  0,  0,  0,400, 20,
 	&mdeath::normal,	&mattack::fear_paralyze, "\
@@ -886,7 +894,7 @@ FLAGS(MF_SEES, MF_SMELLS, MF_HEARS, MF_WARM, MF_BASHES, MF_ANIMAL, MF_FUR);
 
 
 // ROBOTS
-mon("eyebot",	species_robot, 'r',	c_ltblue,	MS_SMALL,	STEEL,
+mon("eyebot","","","","","",	species_robot, 'r',	c_ltblue,	MS_SMALL,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 20,  2,  0,100,120, 0,  0,  0,  0,  3,   0, 10, 70,  20, 30,
 	&mdeath::normal,	&mattack::photograph, "\
@@ -897,7 +905,7 @@ Frequently used for reconaissance."
 );
 FLAGS(MF_SEES, MF_FLIES, MF_ELECTRONIC);
 
-mon("manhack",	species_robot, 'r',	c_green,	MS_TINY,	STEEL,
+mon("manhack","","","","","",	species_robot, 'r',	c_green,	MS_TINY,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 18,  7,100,100,130, 12,  1,  1,  8,  2,  0,  0, 10,  5, 0,
 	&mdeath::normal,	&mattack::none, "\
@@ -907,7 +915,7 @@ and has one small, glowing red eye."
 );
 FLAGS(MF_SEES, MF_FLIES, MF_NOHEAD, MF_ELECTRONIC, MF_HIT_AND_RUN);
 
-mon("skitterbot",species_robot, 'r',	c_ltred,	MS_SMALL,	STEEL,
+mon("skitterbot","","","","","",species_robot, 'r',	c_ltred,	MS_SMALL,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	 10, 13,100,100,105,  0,  0,  0,  0,  0,  0, 12, 60, 40, 5,
 	&mdeath::normal,	&mattack::tazer, "\
@@ -918,7 +926,7 @@ prods at the ready."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_GOODHEARING, MF_ELECTRONIC);
 
-mon("secubot",	species_robot, 'R',	c_dkgray,	MS_SMALL,	STEEL,
+mon("secubot",	"","","","","",species_robot, 'R',	c_dkgray,	MS_SMALL,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  7, 19,100,100, 70,  0,  0,  0,  0,  0,  0, 14, 80, 80, 8,
 	&mdeath::explode,	&mattack::smg, "\
@@ -929,7 +937,7 @@ heavily armored."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_BASHES, MF_ATTACKMON, MF_ELECTRONIC);
 
-mon("copbot",	species_robot, 'R',	c_dkgray,	MS_MEDIUM,	STEEL,
+mon("copbot","","","","","",	species_robot, 'R',	c_dkgray,	MS_MEDIUM,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 12,100, 40,100,  4,  3,  2,  0,  8,  0,  8, 80, 80, 3,
 	&mdeath::normal,	&mattack::copbot, "\
@@ -939,7 +947,7 @@ readied, and appears to be well-armored."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_BASHES, MF_ATTACKMON, MF_ELECTRONIC);
 
-mon("molebot",	species_robot, 'R',	c_brown,	MS_MEDIUM,	STEEL,
+mon("molebot","","","","","",	species_robot, 'R',	c_brown,	MS_MEDIUM,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  2, 17,100,100, 40, 13,  1,  4, 10,  0,  0, 14, 82, 80, 0,
 	&mdeath::normal,	&mattack::none,	"\
@@ -950,7 +958,7 @@ covered head."
 );
 FLAGS(MF_HEARS, MF_GOODHEARING, MF_DIGS, MF_ELECTRONIC);
 
-mon("tripod robot",species_robot, 'R',	c_white,	MS_LARGE,	STEEL,
+mon("tripod robot","","","","","",species_robot, 'R',	c_white,	MS_LARGE,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  5, 26,100,100, 90, 15,  2,  4,  7,  0,  4,  8, 82, 80, 10,
 	&mdeath::normal,	&mattack::flamethrower, "\
@@ -960,7 +968,7 @@ well as a flamethrower mounted on its head."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_GOODHEARING, MF_BASHES, MF_ELECTRONIC);
 
-mon("chicken walker",species_robot, 'R',c_red,		MS_LARGE,	STEEL,
+mon("chicken walker","","","","","",species_robot, 'R',c_red,		MS_LARGE,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  3, 32,100,100,115, 0,  0,  0,  0,  0,   8, 14, 85, 90, 5,
 	&mdeath::explode,	&mattack::smg, "\
@@ -971,7 +979,7 @@ nasty-looking machine gun."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_BASHES, MF_ELECTRONIC);
 
-mon("tankbot",	species_robot, 'R',	c_blue,		MS_HUGE,	STEEL,
+mon("tankbot","","","","","",	species_robot, 'R',	c_blue,		MS_HUGE,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  1, 52,100,100,100, 0,  0,  0,  0,  0,  12, 20, 92,240, 4,
 	&mdeath::normal,	&mattack::multi_robot, "\
@@ -983,7 +991,7 @@ deadly weapons."
 FLAGS(MF_SEES, MF_HEARS, MF_GOODHEARING, MF_NOHEAD, MF_BASHES, MF_DESTROYS,
       MF_ATTACKMON, MF_ELECTRONIC);
 
-mon("turret",	species_robot, 't',	c_ltgray,	MS_SMALL,	STEEL,
+mon("turret","","","","","",	species_robot, 't',	c_ltgray,	MS_SMALL,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 14,100,100,100,  0,  0,  0,  0,  0,  4, 16, 88, 30, 1,
 	&mdeath::explode,	&mattack::smg, "\
@@ -993,7 +1001,7 @@ degrees."
 );
 FLAGS(MF_SEES, MF_NOHEAD, MF_ELECTRONIC, MF_IMMOBILE, MF_FRIENDLY_SPECIAL);
 
-mon("exploder",	species_robot, 'm',	c_ltgray,	MS_LARGE,	STEEL,
+mon("exploder","","","","","",	species_robot, 'm',	c_ltgray,	MS_LARGE,	STEEL,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0, 14,100,100,100,  0,  0,  0,  0,  0,  0,  0, 88,  1, 1,
 	&mdeath::explode,	&mattack::none, "\
@@ -1005,7 +1013,7 @@ FLAGS(MF_IMMOBILE);
 
 
 // HALLUCINATIONS
-mon("zombie",	species_hallu, 'Z',	c_ltgreen,	MS_MEDIUM,	FLESH,
+mon("zombie",	"","","","","",species_hallu, 'Z',	c_ltgreen,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  0,100,100, 65,  3,  0,  0,  0,  0,  0,  0,  0,  1,  20,
 	&mdeath::disappear,	&mattack::disappear, "\
@@ -1015,7 +1023,7 @@ unstoppable rage."
 );
 FLAGS(MF_SEES, MF_HEARS, MF_SMELLS, MF_STUMBLES);
 
-mon("giant bee",species_hallu, 'a',	c_yellow,	MS_MEDIUM,	FLESH,
+mon("giant bee","","","","","",species_hallu, 'a',	c_yellow,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  0,100,100,180,  2,  0,  0,  0,  0,  0,  0,  0,  1,  20,
 	&mdeath::disappear,	&mattack::disappear, "\
@@ -1025,7 +1033,7 @@ sized sting pointed forward."
 );
 FLAGS(MF_SMELLS, MF_FLIES);
 
-mon("giant ant",species_hallu, 'a',	c_brown,	MS_MEDIUM,	FLESH,
+mon("giant ant","","","","","",species_hallu, 'a',	c_brown,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  0,100,100,100,  3,  0,  0,  0,  0,  0,  0,  0,  1,  20,
 	&mdeath::disappear,	&mattack::disappear, "\
@@ -1035,7 +1043,7 @@ pair of vicious mandibles."
 );
 FLAGS(MF_SMELLS);
 
-mon("your mother",species_hallu, '@',	c_white,	MS_MEDIUM,	FLESH,
+mon("your mother","","","","","",species_hallu, '@',	c_white,	MS_MEDIUM,	FLESH,
 //	frq dif agr mor spd msk mdi m## cut dge bsh cut itm  HP special freq
 	  0,  0,100,100,100,  3,  0,  0,  0,  0,  0,  0,  0,  1,  20,
 	&mdeath::guilt,		&mattack::disappear, "\

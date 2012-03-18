@@ -230,21 +230,21 @@ FOOD("meat sandwich", 30, 60,	c_ltgray,	FLESH,	itm_wrapper,
     1,  2,  0, 50, 36,  0,  0,  0,  1,  5,	&iuse::none, ADD_NULL, "\
 Bread and turkey, that's it.");
 
-FOOD("candy",		80, 14,	c_magenta,	VEGGY,	itm_bag_plastic,
+FOOD("леденец",		80, 14,	c_magenta,	VEGGY,	itm_bag_plastic,
     0, 0,  -1,  2,  0,  1, -2,  0,  3,  4,	&iuse::none, ADD_NULL, "\
 A big bag of peanut butter cups... your favorite!");
 
-FOOD("mushroom",         4, 14,	c_brown,	VEGGY,	itm_null,
+FOOD("гриб",         4, 14,	c_brown,	VEGGY,	itm_null,
     1,  0,  0, 14,  0,  0,  1,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Mushrooms are tasty, but be careful.  Some can poison you, while others are\n\
 hallucinogenic.");
 
-FOOD("mushroom",	 3, 14,	c_brown,	VEGGY,	itm_null,
+FOOD("гриб",	 3, 14,	c_brown,	VEGGY,	itm_null,
     1,  0,  0, 10,  0,  0,  0,  0,  1,  0,	&iuse::poison, ADD_NULL, "\
 Mushrooms are tasty, but be careful.  Some can poison you, while others are\n\
 hallucinogenic.");
 
-FOOD("mushroom",	 1, 14,	c_brown,	VEGGY,	itm_null,
+FOOD("гриб",	 1, 14,	c_brown,	VEGGY,	itm_null,
     1,  0,  0, 10,  0, -4,  0,  0,  1,  6,	&iuse::hallu, ADD_NULL, "\
 Mushrooms are tasty, but be careful.  Some can poison you, while others are\n\
 hallucinogenic.");
@@ -258,17 +258,17 @@ FOOD("strawberries",	 2, 10,	c_red,		VEGGY,	itm_null,
 Tasty juicy berry, often found growing wild in fields.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("tomato",		 9, 25,	c_red,		VEGGY,  itm_null,
+FOOD("помидор",		 9, 25,	c_red,		VEGGY,  itm_null,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     1,  1,  3, 18, 90,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Juicy red tomato.  It gained popularity in Italy after being brought back\n\
 from the New World.");
 
-FOOD("broccoli",	 9, 40,	c_green,	VEGGY,	itm_null,
+FOOD("брокколи",	 9, 40,	c_green,	VEGGY,	itm_null,
     2,  2,  0, 30,160,  0,  1,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 It's a bit tough, but quite delicious.");
 
-FOOD("zucchini",	 7, 30,	c_ltgreen,	VEGGY,	itm_null,
+FOOD("цукини",	 7, 30,	c_ltgreen,	VEGGY,	itm_null,
     2,  1,  0, 20,120,  0,  1,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 A tasty summer squash.");
 
@@ -383,17 +383,17 @@ has a strong but delicious aroma, but is clearly either mutated or of alien\n\
 origin.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("flour",		20, 25, c_white,	POWDER, itm_box_small,
+FOOD("мука",		20, 25, c_white,	POWDER, itm_box_small,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func       addiction type
     2,  4,  0,  1,  0,  0,  0,  0,  8, -5,	&iuse::none,	ADD_NULL, "\
 This white flour is useful for baking.");
 
-FOOD("sugar",		20, 25, c_white,	POWDER, itm_box_small,
+FOOD("сахар",		20, 25, c_white,	POWDER, itm_box_small,
     2,  3,  0,  3,  0,  4, -3,  0,  8,  1,	&iuse::none,	ADD_NULL, "\
 Sweet, sweet sugar.  Bad for your teeth and surprisingly not very tasty\n\
 on its own.");
 
-FOOD("salt",		20, 18, c_white,	POWDER, itm_box_small,
+FOOD("соль",		20, 18, c_white,	POWDER, itm_box_small,
     2,  2,-10,  0,  0,  0,  0,  0,  8, -8,	&iuse::none,	ADD_NULL, "\
 Yuck, you surely wouldn't want to eat this.  It's good for preserving meat\n\
 and cooking with, though.");
@@ -707,11 +707,11 @@ A heavy iron disc which generally covers a ladder into the sewers.  Lifting\n\
 it from the manhole is impossible without a crowbar.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("rock",		40,  0, '*', c_ltgray,	STONE,	MNULL,
+MELEE("камень",		40,  0, '*', c_ltgray,	STONE,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 1,  3, 14,  0, -1, 0, "\
-A rock the size of a baseball.  Makes a decent melee weapon, and is also good\n\
-for throwing at enemies.");
+Небольшой камень размером с бейсбольный мяч. Можно использовать как оружие, \n\
+но также хорошо метнуть его в противника.");
 
 MELEE("heavy stick",	95,  0, '/', c_brown,	WOOD,	MNULL,
 	 6, 10, 12,  0,  3, 0, "\

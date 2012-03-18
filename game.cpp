@@ -109,7 +109,7 @@ bool game::opening_screen()
   mvwputch(w_open, 21, i, c_white, LINE_OXOX);
  mvwprintz(w_open, 0, 1, c_blue, "Добро пожаловать в Катаклизм!");
  mvwprintz(w_open, 1, 0, c_red, "\
-Этот альфа-релиз все еще сильно нестабилен. Сообщайте о любых ошибках на \n\
+Этот альфа-релиз еще сырой. Сообщайте о любых ошибках на \n\
 fivedozenwhales@gmail.com.");
  refresh();
  wrefresh(w_open);
@@ -203,7 +203,7 @@ fivedozenwhales@gmail.com.");
      clear();
      mvwprintz(w_open, 0, 1, c_blue, "Добро пожаловать в Катаклизм!");
      mvwprintz(w_open, 1, 0, c_red, "\
-Этот альфа-релиз все еще сильно нестабилен. Сообщайте о любых ошибках на \n\
+Этот альфа-релиз еще сырой. Сообщайте о любых ошибках на \n\
 fivedozenwhales@gmail.com.");
      refresh();
      wrefresh(w_open);
@@ -693,7 +693,7 @@ void game::update_skills()
    u.skexercise[i] = 0;
   } else if (u.skexercise[i] >= 100) {
    u.sklevel[i]++;
-   add_msg("Ваш навык %s увеличился %d!",
+   add_msg("Ваш навык %s увеличился на %d!",
            skill_name(skill(i)).c_str() ,u.sklevel[i]);
    u.skexercise[i] = 0;
   }
@@ -783,7 +783,7 @@ void game::process_activity()
     break;
 
    case ACT_WAIT:
-    add_msg("You finish waiting.");
+    add_msg("Ожидание подошло к концу.");
     break;
 
    case ACT_CRAFT:
@@ -812,23 +812,23 @@ void game::cancel_activity_query(std::string message)
 {
  switch (u.activity.type) {
   case ACT_READ:
-   if (query_yn("%s Stop reading?", message.c_str()))
+   if (query_yn("%s Остановить чтение?", message.c_str()))
     u.activity.type = ACT_NULL;
    break;
   case ACT_RELOAD:
-   if (query_yn("%s Stop reloading?", message.c_str()))
+   if (query_yn("%s Остановить перезарядку?", message.c_str()))
     u.activity.type = ACT_NULL;
    break;
   case ACT_CRAFT:
-   if (query_yn("%s Stop crafting?", message.c_str()))
+   if (query_yn("%s Остановить изготовление?", message.c_str()))
     u.activity.type = ACT_NULL;
    break;
   case ACT_BUTCHER:
-   if (query_yn("%s Stop butchering?", message.c_str()))
+   if (query_yn("%s Остановить разделку?", message.c_str()))
     u.activity.type = ACT_NULL;
    break;
   case ACT_BUILD:
-   if (query_yn("%s Stop construction?", message.c_str()))
+   if (query_yn("%s Остановить строительство?", message.c_str()))
     u.activity.type = ACT_NULL;
    break;
   default:
@@ -1335,7 +1335,7 @@ void game::death_screen()
 
  WINDOW* w_death = newwin(25, 80, 0, 0);
  mvwprintz(w_death, 0, 35, c_red, "Конец игры. Жми пробел.");
- mvwprintz(w_death, 2, 0, c_white, "Статистика: %d", num_kills);
+ mvwprintz(w_death, 2, 0, c_white, "Убито: %d", num_kills);
  int line = 0, mon = 0;
  while (line < 40 && mon < num_monsters) {
   if (kills[mon] > 0) {
@@ -1531,7 +1531,7 @@ void game::add_msg(const char* msg, ...)
  if (s.length() == 0)
   return;
 
- int maxlength = 80 - (SEEX * 2 + 10);	// Matches write_msg() below
+ int maxlength = (80 - (SEEX * 2 + 10))*4;	// Matches write_msg() below
  if (messages.size() == 256)
   messages.erase(messages.begin());
  curmes++;
@@ -2572,7 +2572,7 @@ void game::mon_info()
     case 1: mvwprintz(w_moninfo, line, 0, c_magenta, "СЕВЕР");		break;
     case 2: mvwprintz(w_moninfo, line, 0, c_magenta, "СЕВЕРО-ВОСТОК");	break;
     case 3: mvwprintz(w_moninfo, line, 0, c_magenta, "ЗАПАД");		break;
-    case 4: mvwprintz(w_moninfo, line, 0, c_magenta, "ПОБЛИЗОСТИ");		break;
+    case 4: mvwprintz(w_moninfo, line, 0, c_magenta, "ПОБЛИЗОСТИ");	break;
     case 5: mvwprintz(w_moninfo, line, 0, c_magenta, "ВОСТОК");		break;
     case 6: mvwprintz(w_moninfo, line, 0, c_magenta, "ЮГО-ЗАПАД");	break;
     case 7: mvwprintz(w_moninfo, line, 0, c_magenta, "ЮГ");		break;
@@ -5226,7 +5226,7 @@ void game::plmove(int x, int y)
                                   m.i_at(x, y).size() != 0) {
    if (in_tutorial)
     tutorial_message(LESSON_PICKUP);
-   std::string buff = "Вы видите здесь ";
+   std::string buff = "Здесь лежит ";
 //   std::string buff = "";
    for (int i = 0; i < m.i_at(x, y).size(); i++) 
        {
@@ -5944,8 +5944,8 @@ int game::valid_group(mon_id type, int x, int y)
 
 void game::wait()
 {
- char ch = menu("Wait for how long?", "5 Minutes", "30 Minutes", "1 hour",
-                "2 hours", "3 hours", "6 hours", "Exit", NULL);
+ char ch = menu("Сколько ждать?", "5 минут", "30 минут", "1 час",
+                "2 часа", "3 часа", "6 часов", "выход", NULL);
  int time;
  if (ch == 7)
   return;

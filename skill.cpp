@@ -4,21 +4,21 @@ std::string skill_name(int sk)
 {
  switch (sk) {
  case sk_null:
-  return "nothing";
+  return "ничего";
  case sk_dodge:
-  return "dodge";
+  return "увертка";
  case sk_melee:
-  return "melee";
+  return "ближний бой";
  case sk_unarmed:
-  return "unarmed combat";
+  return "бой без оружия";
  case sk_bashing:
-  return "bashing weapons";
+  return "дробящее оружие";
  case sk_cutting:
-  return "cutting weapons";
+  return "рубящее оружие";
  case sk_stabbing:
-  return "piercing weapons";
+  return "колющее оружие";
  case sk_throw:
-  return "throwing";
+  return "метание";
  case sk_gun:
   return "firearms";
  case sk_pistol:
@@ -28,35 +28,35 @@ std::string skill_name(int sk)
  case sk_smg:
   return "submachine guns";
  case sk_rifle:
-  return "rifles";
+  return "винтовки";
  case sk_archery:
-  return "archery";
+  return "луки";
  case sk_launcher:
-  return "grenade launcher";
+  return "гранатометы";
  case sk_computer:
-  return "computers";
+  return "компьютеры";
  case sk_mechanics:
-  return "mechanics";
+  return "механика";
  case sk_electronics:
-  return "electronics";
+  return "электроника";
  case sk_cooking:
-  return "cooking";
+  return "кулинария";
  case sk_carpentry:
-  return "carpentry";
+  return "плотник";
  case sk_survival:
-  return "survival";
+  return "выживание";
  case sk_traps:
-  return "traps";
+  return "ловушки";
  case sk_tailor:
-  return "tailoring";
+  return "портной";
  case sk_firstaid:
-  return "first aid";
+  return "первая помощь";
  case sk_speech:
-  return "speech";
+  return "красноречие";
  case sk_barter:
-  return "barter";
+  return "торговля";
  case sk_swimming:
-  return "swimming";
+  return "плавание";
  case num_skill_types:
   return "out of bounds";
  }

@@ -563,15 +563,15 @@ void player::disp_info(game *g)
   effect_name.push_back(pos ? "Elated" : "Depressed");
   std::stringstream morale_text;
   if (abs(morale_level()) >= 200)
-   morale_text << "Dexterity" << (pos ? " +" : " ") <<
+   morale_text << "Ловкость" << (pos ? " +" : " ") <<
                    int(morale_level() / 200) << "   ";
   if (abs(morale_level()) >= 180)
-   morale_text << "Strength" << (pos ? " +" : " ") <<
+   morale_text << "Сила" << (pos ? " +" : " ") <<
                   int(morale_level() / 180) << "   ";
   if (abs(morale_level()) >= 125)
-   morale_text << "Perception" << (pos ? " +" : " ") <<
+   morale_text << "Восприятие" << (pos ? " +" : " ") <<
                   int(morale_level() / 125) << "   ";
-  morale_text << "Intelligence" << (pos ? " +" : " ") <<
+  morale_text << "Интеллект" << (pos ? " +" : " ") <<
                  int(morale_level() / 100) << "   ";
   effect_text.push_back(morale_text.str());
  }
@@ -674,13 +674,14 @@ Strength - 4;    Dexterity - 4;    Intelligence - 4;    Dexterity - 4");
 
 // First!  Default STATS screen.
  mvwprintz(w_stats, 0, 10, c_ltgray, "STATS");
- mvwprintz(w_stats, 2,  2, c_ltgray, "Strength:%s(%d)",
+ mvwprintz(w_stats, 2,  2, c_ltgray, "Сила:    %s(%d)",
            (str_max < 10 ? "         " : "        "), str_max);
- mvwprintz(w_stats, 3,  2, c_ltgray, "Dexterity:%s(%d)",
+ mvwprintz(w_stats, 3,  2, c_ltgray, "Ловкость: %s(%d)",                                      
            (dex_max < 10 ? "        "  : "       "),  dex_max);
- mvwprintz(w_stats, 4,  2, c_ltgray, "Intelligence:%s(%d)",
+ mvwprintz(w_stats, 4,  2, c_ltgray, "Интеллект:   %s(%d)",
+                                      
            (int_max < 10 ? "     "     : "    "),     int_max);
- mvwprintz(w_stats, 5,  2, c_ltgray, "Perception:%s(%d)",
+ mvwprintz(w_stats, 5,  2, c_ltgray, "Восприятие:%s(%d)",
            (per_max < 10 ? "       "   : "      "),   per_max);
 
  nc_color status = c_white;
@@ -818,9 +819,9 @@ Strength - 4;    Dexterity - 4;    Intelligence - 4;    Dexterity - 4");
  wrefresh(w_skills);
 
 // Finally, draw speed.
- mvwprintz(w_speed, 0, 11, c_ltgray, "SPEED");
- mvwprintz(w_speed, 1,  1, c_ltgray, "Base Move Cost:");
- mvwprintz(w_speed, 2,  1, c_ltgray, "Current Speed:");
+ mvwprintz(w_speed, 0, 11, c_ltgray, "СКОРОСТЬ");
+ mvwprintz(w_speed, 1,  1, c_ltgray, "Базовая :");
+ mvwprintz(w_speed, 2,  1, c_ltgray, "Текущая :");
  int newmoves = current_speed(g);
  int pen = 0;
  line = 3;
@@ -939,24 +940,24 @@ Strength - 4;    Dexterity - 4;    Intelligence - 4;    Dexterity - 4");
   case 1:	// Stats tab
    mvwprintz(w_stats, 0, 0, h_ltgray, "          STATS           ");
    if (line == 0) {
-    mvwprintz(w_stats, 2, 2, h_ltgray, "Strength:");
+    mvwprintz(w_stats, 2, 2, h_ltgray, "Сила:       ");
     mvwprintz(w_info, 0, 0, c_magenta, "\
 Strength affects your melee damage, the amount of weight you can carry, your\n\
 total HP, your resistance to many diseases, and the effectiveness of actions\n\
 which require brute force.");
    } else if (line == 1) {
-    mvwprintz(w_stats, 3, 2, h_ltgray, "Dexterity:");
+    mvwprintz(w_stats, 3, 2, h_ltgray, "Ловкость:   ");
     mvwprintz(w_info, 0, 0, c_magenta, "\
 Dexterity affects your chance to hit in melee combat, helps you steady your\n\
 gun for ranged combat, and enhances many actions that require finesse."); 
    } else if (line == 2) {
-    mvwprintz(w_stats, 4, 2, h_ltgray, "Intelligence:");
+    mvwprintz(w_stats, 4, 2, h_ltgray, "Интеллект:  ");
     mvwprintz(w_info, 0, 0, c_magenta, "\
 Intelligence is less important in most situations, but it is vital for more\n\
 complex tasks like electronics crafting. It also affects how much skill you\n\
 can pick up from reading a book.");
    } else if (line == 3) {
-    mvwprintz(w_stats, 5, 2, h_ltgray, "Perception:");
+    mvwprintz(w_stats, 5, 2, h_ltgray, "Восприятие: ");
     mvwprintz(w_info, 0, 0, c_magenta, "\
 Perception is the most important stat for ranged combat. It's also used for\n\
 detecting traps and other things of interest.");
@@ -984,10 +985,10 @@ detecting traps and other things of interest.");
     case KEY_ESCAPE:
      done = true;
    }
-   mvwprintz(w_stats, 2, 2, c_ltgray, "Strength:");
-   mvwprintz(w_stats, 3, 2, c_ltgray, "Dexterity:");
-   mvwprintz(w_stats, 4, 2, c_ltgray, "Intelligence:");
-   mvwprintz(w_stats, 5, 2, c_ltgray, "Perception:");
+   mvwprintz(w_stats, 2, 2, c_ltgray, "Сила:       ");
+   mvwprintz(w_stats, 3, 2, c_ltgray, "Ловкость:   ");
+   mvwprintz(w_stats, 4, 2, c_ltgray, "Интеллект:  ");
+   mvwprintz(w_stats, 5, 2, c_ltgray, "Восприятие: ");
    wrefresh(w_stats);
    break;
   case 2:	// Encumberment tab

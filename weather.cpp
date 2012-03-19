@@ -55,9 +55,9 @@ void weather_effect::thunder(game *g)
  very_wet(g);
  if (one_in(THUNDER_CHANCE)) {
   if (g->levz >= 0)
-   g->add_msg("You hear a distant rumble of thunder.");
+   g->add_msg("Вы слышите далекие раскаты грома.");
   else if (!g->u.has_trait(PF_BADHEARING) && one_in(1 - 3 * g->levz))
-   g->add_msg("You hear a rumble of thunder from above.");
+   g->add_msg("ВЫ слышите раскаты грома.");
  }
 }
 
@@ -75,7 +75,7 @@ void weather_effect::lightning(game *g)
   point hit;
   if (strike.size() > 0) {
    hit = strike[rng(0, strike.size() - 1)];
-   g->add_msg("Lightning strikes nearby!");
+   g->add_msg("Совсем рядом бьет молния!");
    g->explosion(hit.x, hit.y, 10, 0, one_in(4));
   }
  }

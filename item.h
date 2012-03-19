@@ -103,6 +103,9 @@ public:
  std::vector<item> contents;
 
  std::string name;
+
+
+
  char invlet;           // Inventory letter
  int charges;
  bool active;           // If true, it has active effects to be processed

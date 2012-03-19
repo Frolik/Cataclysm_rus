@@ -124,32 +124,36 @@ std::string monster::name()
 
 std::string monster::name1()
 {
- if (unique_name != "")
-  return type->name1 + ": " + unique_name;
+ if (type->name1 == "")
+  return name();
  return type->name1;
 }
+
 std::string monster::name2()
 {
- if (unique_name != "")
-  return type->name2 + ": " + unique_name;
+ if (type->name2 == "")
+  return name();
  return type->name2;
 }
+
 std::string monster::name3()
 {
- if (unique_name != "")
-  return type->name3 + ": " + unique_name;
+ if (type->name3 == "")
+  return name();
  return type->name3;
 }
+
 std::string monster::name4()
 {
- if (unique_name != "")
-  return type->name4 + ": " + unique_name;
+ if (type->name4 == "")
+  return name();
  return type->name4;
 }
+
 std::string monster::name5()
 {
- if (unique_name != "")
-  return type->name5 + ": " + unique_name;
+ if (type->name5 == "")
+  return name();
  return type->name5;
 }
 

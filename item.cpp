@@ -550,16 +550,20 @@ std::string item::tname(game *g)
   return ret.str();
  }
 
- if (is_gun() && contents.size() > 0) {
-  ret << type->name;
-  for (int i = 0; i < contents.size(); i++)
-   ret << "+";
- } else if (contents.size() == 1)
-  ret << type->name << " of " << contents[0].tname();
- else if (contents.size() > 0)
-  ret << type->name << ", full";
- else
-  ret << type->name;
+
+ if (is_gun() && contents.size() > 0) 
+     {
+     ret << type->name;
+     for (int i = 0; i < contents.size(); i++)
+         ret << "+";
+     } 
+   else if (contents.size() == 1)
+      ret << contents[0].tname() << " в " << type->name2; 
+         else if (contents.size() > 0)
+             ret << type->name << ", полн.";
+             else
+             ret << type->name << "";
+
 
  it_comest* food = NULL;
  if (is_food())
@@ -568,7 +572,7 @@ std::string item::tname(game *g)
   food = dynamic_cast<it_comest*>(contents[0].type);
  if (food != NULL && g != NULL && food->spoils != 0 &&
      int(g->turn) - bday > food->spoils * 600)
-  ret << " (rotten)";
+  ret << " (пропало)";
 
 
  if (owned > 0)

@@ -53,7 +53,8 @@ color,LIQUID,2,1,0,0,0,0,quench,nutr,spoils,stim,healthy,addict,charges,\
 fun,container,itm_null,use_func,addict_func));
 
 //     NAME		RAR PRC	COLOR     CONTAINER
-DRINK("вода","","","","","",		90, 50,	c_ltcyan, itm_bottle_plastic,
+DRINK("вода","воды","воде","воду","водой","воде",
+ 	90, 50,	c_ltcyan, itm_bottle_plastic,
 //	QUE NUT SPO STM HTH ADD CHG FUN use_func	addiction type
 	50,  0,  0,  0,  0,  0,  1,  0,&iuse::none,	ADD_NULL, "\
 Water, the stuff of life, the best thirst-quencher available.");
@@ -2580,7 +2581,9 @@ CONT("plastic bag","","","","","",	50,  1,	c_ltgray,	PLASTIC,MNULL,
     1,  0, -8, -4,	24,	0, "\
 A small, open plastic bag.  Essentially trash.");
 
-CONT("plastic bottle","","","","","",	70,  8,	c_ltcyan,	PLASTIC,MNULL,
+CONT("пластиковая бутылка","пластиковой бутылки","пластиковой бутылке","пластиковую бутылку",
+                                                 "пластиковой бутылкой","пластиковой бутылке",
+	70,  8,	c_ltcyan,	PLASTIC,MNULL,
     2,  0, -8,  1,	 2,	mfb(con_rigid)|mfb(con_wtight)|mfb(con_seals),"\
 A plastic bottle with a resealable top.  Useful for refilling with water;\n\
 stand in shallow water, and press ',' or 'g' to pick some up.");

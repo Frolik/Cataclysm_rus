@@ -558,7 +558,7 @@ std::string item::tname(game *g)
          ret << "+";
      } 
    else if (contents.size() == 1)
-      ret << contents[0].tname() << " в " << type->name2; 
+      ret << contents[0].tname() << " в " << type->name5; 
          else if (contents.size() > 0)
              ret << type->name << ", полн.";
              else

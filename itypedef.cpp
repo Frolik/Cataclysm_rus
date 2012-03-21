@@ -223,12 +223,12 @@ FOOD("плитка шоколада","","","","","",	50, 20,	c_brown,	VEGGY,	itm
     1,  1,  0,  8,  0,  1,  0,  0,  1,  8,	&iuse::none, ADD_NULL, "\
 Chocolate isn't very healthy, but it does make a delicious treat.");
 
-FOOD("beef jerky","","","","","",	55, 24,	c_red,		FLESH,  itm_bag_plastic,
+FOOD("вяленая говядина","","","","","",	55, 24,	c_red,		FLESH,  itm_bag_plastic,
     1,  1, -3, 12,  0,  0, -1,  0,  3,  4,	&iuse::none, ADD_NULL, "\
 Salty dried meat that never goes bad, but will make you thirsty.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("meat sandwich","","","","","", 30, 60,	c_ltgray,	FLESH,	itm_wrapper,
+FOOD("сендвич с мясом","","","","","", 30, 60,	c_ltgray,	FLESH,	itm_wrapper,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     1,  2,  0, 50, 36,  0,  0,  0,  1,  5,	&iuse::none, ADD_NULL, "\
 Bread and turkey, that's it.");
@@ -252,11 +252,11 @@ FOOD("гриб","","","","","",	 1, 14,	c_brown,	VEGGY,	itm_null,
 Mushrooms are tasty, but be careful.  Some can poison you, while others are\n\
 hallucinogenic.");
 
-FOOD("blueberries","","","","","",	 3, 20,	c_blue,		VEGGY,	itm_null,
+FOOD("черника","","","","","",	 3, 20,	c_blue,		VEGGY,	itm_null,
     1,  1,  2, 16, 60,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 They're blue, but that doesn't mean they're sad.");
 
-FOOD("strawberries","","","","","",	 2, 10,	c_red,		VEGGY,	itm_null,
+FOOD("клубника","","","","","",	 2, 10,	c_red,		VEGGY,	itm_null,
     1,  1,  3, 18, 60,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Tasty juicy berry, often found growing wild in fields.");
 
@@ -275,53 +275,53 @@ FOOD("цукини","","","","","",	 7, 30,	c_ltgreen,	VEGGY,	itm_null,
     2,  1,  0, 20,120,  0,  1,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 A tasty summer squash.");
 
-FOOD("frozen dinner","","","","","",	50, 80,	c_magenta,	FLESH,	itm_box_small,
+FOOD("замороженный обед","","","","","",	50, 80,	c_magenta,	FLESH,	itm_box_small,
     5,  4, -2, 60, 60,  0, -2,  0,  1, -3,	&iuse::none, ADD_NULL, "\
 Now with ONE POUND of meat and ONE POUND of carbs!  Not as appetizing or\n\
 nutritious as it would be if heated up.");
 
-FOOD("cooked TV dinner","","","","","", 0,  0, c_magenta,	FLESH,  itm_null,
+FOOD("готовый обед","","","","","", 0,  0, c_magenta,	FLESH,  itm_null,
     5,  4, -2, 72, 12,  0, -2,  0,  1,  5,	&iuse::none,	ADD_NULL, "\
 Now with ONE POUND of meat and ONE POUND of carbs!  Nice and heated up.  It's\n\
 tastier and more filling, but will also spoil quickly.");
 
-FOOD("raw spaghetti","","","","","",	40, 12,	c_yellow,	VEGGY,	itm_box_small,
+FOOD("сырые спагетти","","","","","",	40, 12,	c_yellow,	VEGGY,	itm_box_small,
     6,  2,  0,  6,  0,  0,  0,  0,  1, -8,	&iuse::none, ADD_NULL, "\
 It could be eaten raw if you're desperate, but is much better cooked.");
 
-FOOD("cooked spaghetti","","","","","", 0, 28,	c_yellow,	VEGGY,	itm_box_small,
+FOOD("готовые спагетти","","","","","", 0, 28,	c_yellow,	VEGGY,	itm_box_small,
    10,  3,  0, 60, 20,  0,  0,  0,  1,  2,	&iuse::none, ADD_NULL, "\
 Fresh wet noodles.  Very tasty.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("raw macaroni","","","","","",	40, 15,	c_yellow,	VEGGY,	itm_box_small,
+FOOD("сырые макароны","","","","","",	40, 15,	c_yellow,	VEGGY,	itm_box_small,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     3,  1,  0,  3,  0,  0,  0,  0,  1, -8,	&iuse::none, ADD_NULL, "\
 It could be eaten raw if you're desperate, but is much better cooked.");
 
-FOOD("mac & cheese","","","","","",	 0, 38,	c_yellow,	VEGGY,	itm_box_small,
+FOOD("макароны с сыром","","","","","",	 0, 38,	c_yellow,	VEGGY,	itm_box_small,
     4,  2,  0, 60, 10,  0, -1,  0,  1,  3,	&iuse::none, ADD_NULL, "\
 When the cheese starts flowing, Kraft gets your noodle going.");
 
-FOOD("ravioli","","","","","",		25, 75,	c_cyan,		FLESH,	itm_can_food,
+FOOD("равиоли","","","","","",		25, 75,	c_cyan,		FLESH,	itm_can_food,
     1,  2,  0, 48,  0,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Meat encased in little dough satchels.  Tastes fine raw.");
 
-FOOD("red sauce","","","","","",	20, 24,	c_red,		VEGGY,	itm_can_food,
+FOOD("красный соус","","","","","",	20, 24,	c_red,		VEGGY,	itm_can_food,
     2,  3,  0, 20,  0,  0,  0,  0,  1,  1,	&iuse::none, ADD_NULL, "\
 Tomato sauce, yum yum.");
 
-FOOD("pesto","","","","","",		15, 20,	c_ltgreen,	VEGGY,	itm_can_food,
+FOOD("соус песто","","","","","",		15, 20,	c_ltgreen,	VEGGY,	itm_can_food,
     2,  3,  0, 18,  0,  0,  1,  0,  1,  4,	&iuse::none, ADD_NULL, "\
 Olive oil, basil, garlic, pine nuts.  Simple and deliicous.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("beans","","","","","",		40, 55,	c_cyan,		VEGGY,	itm_can_food,
+FOOD("бобы","","","","","",		40, 55,	c_cyan,		VEGGY,	itm_can_food,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     1,  2,  0, 40,  0,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Canned beans.  A staple for hobos.");
 
-FOOD("corn","","","","","",		35, 40,	c_cyan,		VEGGY,	itm_can_food,
+FOOD("кукуруза","","","","","",		35, 40,	c_cyan,		VEGGY,	itm_can_food,
     1,  2,  5, 30,  0,  0,  0,  0,  1, -2,	&iuse::none, ADD_NULL, "\
 Canned corn in water.  Eat up!");
 
@@ -329,57 +329,57 @@ FOOD("SPAM","","","","","",		30, 50,	c_cyan,		FLESH,	itm_can_food,
     1,  2, -3, 48,  0,  0,  0,  0,  1, -8,	&iuse::none, ADD_NULL, "\
 Yuck, not very tasty.  But it is quite filling.");
 
-FOOD("pineapple","","","","","",	30, 50,	c_cyan,		VEGGY,	itm_can_food,
+FOOD("ананас","","","","","",	30, 50,	c_cyan,		VEGGY,	itm_can_food,
     1,  2,  5, 26,  0,  0,  1,  0,  1,  7,	&iuse::none, ADD_NULL, "\
 Canned pinapple rings in water.  Quite tasty.");
 
-FOOD("coconut milk","","","","","",	10, 45,	c_cyan,		VEGGY,	itm_can_food,
+FOOD("кокосовое молоко","","","","","",	10, 45,	c_cyan,		VEGGY,	itm_can_food,
     1,  2,  5, 30,  0,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 A dense, sweet creamy sauce, often used in curries.");
 
-FOOD("sardines","","","","","",	14, 25,	c_cyan,		FLESH,	itm_can_food,
+FOOD("сардины","","","","","",	14, 25,	c_cyan,		FLESH,	itm_can_food,
     1,  1, -8, 14,  0,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Salty little fish.  They'll make you thirsty.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("tuna fish","","","","","",	35, 35,	c_cyan,		FLESH,	itm_can_food,
+FOOD("тунец","","","","","",	35, 35,	c_cyan,		FLESH,	itm_can_food,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func    addiction type
     1,  2,  0, 24,  0,  0,  0,  0,  1,  0,	&iuse::none, ADD_NULL, "\
 Now with 95 percent less dolphins!");
 
-FOOD("cat food","","","","","",	20,  8,	c_cyan,		FLESH,	itm_can_food,
+FOOD("кошачья еда","","","","","",	20,  8,	c_cyan,		FLESH,	itm_can_food,
     1,  2,  0, 10,  0,  0, -1,  0,  1,-24,	&iuse::none, ADD_NULL, "\
 Blech, so gross.  Save it for when you're about to die of starvation.");
 
-FOOD("honey comb","","","","","",	10, 35,	c_yellow,	VEGGY,	itm_null,
+FOOD("медовые соты","","","","","",	10, 35,	c_yellow,	VEGGY,	itm_null,
     1,  1,  0, 20,  0,  0, -2,  0,  1,  9,	&iuse::none, ADD_NULL, "\
 A large chunk of wax, filled with honey.  Very tasty.");
 
-FOOD("royal jelly","","","","","",	 8,200,	c_magenta,	VEGGY,	itm_null,
+FOOD("мармелад","","","","","",	 8,200,	c_magenta,	VEGGY,	itm_null,
     1,  1,  0, 10,  0,  0,  3,  0,  1,  7,	&iuse::royal_jelly, ADD_NULL, "\
 A large chunk of wax, filled with dense, dark honey.  Useful for curing all\n\
 sorts of afflictions.");
 
-FOOD("misshapen fetus","","","","","",	 1,150,	c_magenta,	FLESH,	itm_null,
+FOOD("мутированный офрукт","","","","","",	 1,150,	c_magenta,	FLESH,	itm_null,
     4,  4,  0,  8,  0,  0, -8,  0,  1,-60,	&iuse::mutagen, ADD_NULL, "\
 Eating this is about the most disgusting thing you can imagine, and it will\n\
 cause your DNA to mutate as well.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("arm","","","","","",		 4,250,	c_brown,	FLESH,	itm_null,
+FOOD("рука","","","","","",		 4,250,	c_brown,	FLESH,	itm_null,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func       addiction type
     8, 14,  0, 12,  0,  0, -8,  0,  1, -20,	&iuse::mutagen, ADD_NULL, "\
 Eating this would be pretty gross.  It causes you to mutate.");
 
-FOOD("leg","","","","","",		 4,250,	c_brown,	FLESH,	itm_null,
+FOOD("нога","","","","","",		 4,250,	c_brown,	FLESH,	itm_null,
    12, 24,  0, 16,  0,  0, -8,  0,  1, -20,	&iuse::mutagen, ADD_NULL, "\
 Eating this would be pretty gross.  It causes you to mutate.");
 
-FOOD("ant egg","","","","","",		 5, 80,	c_white,	FLESH,	itm_null,
+FOOD("муравьиные яйца","","","","","",		 5, 80,	c_white,	FLESH,	itm_null,
     4,  2, 10, 100, 0,  0, -1,  0,  1, -10,	&iuse::none,	ADD_NULL, "\
 A large ant egg, the size of a softball.  Extremely nutrtious, but gross.");
 
-FOOD("marloss berry","","","","","",	 2,600, c_pink,		VEGGY,	itm_null,
+FOOD("мутированная ягода","","","","","",	 2,600, c_pink,		VEGGY,	itm_null,
     1,  1, 20, 40,  0,  0,-10,  0,  1, 30,	&iuse::marloss,	ADD_NULL, "\
 This looks like a blueberry the size of your fist, but pinkish in color.  It\n\
 has a strong but delicious aroma, but is clearly either mutated or of alien\n\
@@ -401,47 +401,47 @@ FOOD("соль","","","","","",		20, 18, c_white,	POWDER, itm_box_small,
 Yuck, you surely wouldn't want to eat this.  It's good for preserving meat\n\
 and cooking with, though.");
 
-FOOD("raw potato","","","","","",	10, 10, c_brown,	VEGGY,  itm_null,
+FOOD("сырой картофель","","","","","",	10, 10, c_brown,	VEGGY,  itm_null,
     1,  1,  0,  8,240,  0, -2,  0,  1, -3,	&iuse::none,	ADD_NULL, "\
 Mildly toxic and not very tasty raw.  When cooked, it is delicious.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("baked potato","","","","","",	 0, 30, c_brown,	VEGGY,  itm_null,
+FOOD("печеный картофель","","","","","",	 0, 30, c_brown,	VEGGY,  itm_null,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func       addiction type
     1,  1,  0, 20, 48,  0,  1,  0,  1,  3,	&iuse::none,	ADD_NULL, "\
 A delicious baked potato.  Got any sour cream?");
 
-FOOD("bread","","","","","",		14, 50, c_brown,	VEGGY,  itm_bag_plastic,
+FOOD("хлеб","","","","","",		14, 50, c_brown,	VEGGY,  itm_bag_plastic,
     4,  1,  0, 20,240,  0,  1,  0,  4,  1,	&iuse::none,	ADD_NULL, "\
 Healthy and filling.");
 
-FOOD("fruit pie","","","","","",	20, 80, c_yellow,	VEGGY,  itm_box_small,
+FOOD("фруктовый пирог","","","","","",	20, 80, c_yellow,	VEGGY,  itm_box_small,
     6,  3,  5, 16, 72,  2,  1,  0,  6,  3,	&iuse::none,	ADD_NULL, "\
 A delicious baked pie with a sweet fruit filling.");
 
 //   NAME		RAR PRC	COLOR		MAT1	CONTAINER
-FOOD("pizza","","","","","",		 8, 80, c_ltred,	VEGGY,	itm_box_small,
+FOOD("пицца","","","","","",		 8, 80, c_ltred,	VEGGY,	itm_box_small,
 // VOL WGT QUE NUT SPO STM HTH ADD CHG FUN	 use_func       addiction type
     8,  4,  0, 18, 48,  0,  0,  0,  8,  6,	&iuse::none,	ADD_NULL, "\
 A vegetarian pizza, with delicious tomato sauce and a fluffy crust.  Its\n\
 smell brings back great memories.");
 
-FOOD("MRE - beef","","","","","",		50,100, c_green,	FLESH,	itm_null,
+FOOD("мясные консервы","","","","","",		50,100, c_green,	FLESH,	itm_null,
     2,  1,  0, 50,  0,  0,  1,  0,  1, -4,	&iuse::none,	ADD_NULL, "\
 Meal Ready to Eat.  A military ration.  Though not very tasty, it is very\n\
 filling and will not spoil.");
 
-FOOD("MRE - vegetable","","","","","",		50,100, c_green,	VEGGY,	itm_null,
+FOOD("овощные консервы","","","","","",		50,100, c_green,	VEGGY,	itm_null,
     2,  1,  0, 40,  0,  0,  1,  0,  1, -4,	&iuse::none,	ADD_NULL, "\
 Meal Ready to Eat.  A military ration.  Though not very tasty, it is very\n\
 filling and will not spoil.");
 
-FOOD("tea leaves","","","","","",	10, 13,	c_green,	VEGGY,	itm_bag_plastic,
+FOOD("чайные листья","","","","","",	10, 13,	c_green,	VEGGY,	itm_bag_plastic,
     2,  1, 0,  2,  0,  0,  0,  0,  5, -1,	&iuse::none, ADD_NULL, "\
 Dried leaves of a tropical plant. You cam boil them into tea, or you\n\
 can just eat them raw. They aren't too filling though.");
 
-FOOD("coffee powder","","","","","",	15, 13,	c_brown,	VEGGY,	itm_bag_plastic,
+FOOD("кофейный порошок","","","","","",	15, 13,	c_brown,	VEGGY,	itm_bag_plastic,
     2,  1, 0,  0,  0,  8,  0,  0,  4, -5,	&iuse::caff, ADD_CAFFEINE, "\
 Ground coffee beans. You can boil it into a mediocre stimulant,\n\
 or swallow it raw for a lesser stimulative boost.");
@@ -586,127 +586,131 @@ rarity,price,sym,color,mat1,mat2,volume,wgt,dam,cut,to_hit,\
 color,mat1,mat2,volume,wgt,dam,cut,to_hit,flags))
 
 //    NAME		RAR PRC SYM  COLOR	MAT1	MAT2
-MELEE("paper wrapper","","","","","",	50,  1, ',', c_ltgray,	PAPER,	MNULL,
+MELEE("бумажная обертка","бумажной обертки","бумажной обертке","бумажную обертку",
+                                            "бумажной оберткой","бумажной обертке",
+	50,  1, ',', c_ltgray,	PAPER,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 1,  0, -8,  0, -2, 0, "\
 Just a piece of butcher's paper.  Good for starting fires.");
 
-MELEE("syringe","","","","","",	 8, 25, ',', c_ltcyan,	PLASTIC,MNULL,
+MELEE("шприц","шприца","шприцу","шприц","шприцом","шприце",
+	 8, 25, ',', c_ltcyan,	PLASTIC,MNULL,
 	 1,  0, -4,  6, -2, mfb(IF_SPEAR), "\
 A medical syringe.  Used for administering heroin and other drugs.");
 
-MELEE("rag","","","","","",		72, 10, ';', c_dkgray,	COTTON,	MNULL,
+MELEE("тряпка","тряпки","тряпке","тряпку","тряпкой","тряпке",
+		72, 10, ';', c_dkgray,	COTTON,	MNULL,
 	 1,  1,-10,  0,  0, 0, "\
 A small piece of cloth.  Useful for making molotov cocktails and not much else."
 );
 
-MELEE("fur pelt","","","","","",	 0, 10, ',', c_brown,	WOOL,	FLESH,
+MELEE("шкура","","","","","",	 0, 10, ',', c_brown,	WOOL,	FLESH,
 	 1,  1, -8,  0,  0, 0, "\
 A small bolt of fur from an animal.  Can be made into warm clothing.");
 
-MELEE("leather pelt","","","","","",	 0, 20, ',', c_red,	LEATHER,FLESH,
+MELEE("кожа","","","","","",	 0, 20, ',', c_red,	LEATHER,FLESH,
 	 1,  1, -2,  0, -1, 0, "\
 A small piece of thick animal hide.  Can be made into tough clothing.");
 
 //    NAME		RAR PRC SYM  COLOR	MAT1	MAT2
-MELEE("superglue","","","","","",	30, 18, ',', c_white,	PLASTIC,MNULL,
+MELEE("суперклей","","","","","",	30, 18, ',', c_white,	PLASTIC,MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 1,  0, -2,  0, -2, 0, "\
 A tube of strong glue.  Used in many crafting recipes.");
 
-MELEE("science ID card","","","","","", 2,600, ',', c_pink,	PLASTIC,MNULL,
+MELEE("лабораторная ID-карта","","","","","", 2,600, ',', c_pink,	PLASTIC,MNULL,
 	 0,  0, -8,  1, -3, 0, "\
 This ID card once belonged to a scientist of some sort.  It has a magnetic\n\
 stripe on the back; perhaps it can be used on a control panel.");
 
-MELEE("military ID card","","","","","",3,1200,',', c_pink,	PLASTIC,MNULL,
+MELEE("военная ID-карта","","","","","",3,1200,',', c_pink,	PLASTIC,MNULL,
 	 0,  0, -8,  1, -3, 0, "\
 This ID card once belonged to a military officer with high-level clearance.\n\
 It has a magnetic stripe on the back; perhaps it can be used on a control\n\
 panel.");
 
-MELEE("electrohack","","","","","",	 3,400, ',', c_green,	PLASTIC,STEEL,
+MELEE("электрохак","","","","","",	 3,400, ',', c_green,	PLASTIC,STEEL,
 	 2,  2,  5,  0,  1, 0, "\
 This device has many ports attached, allowing to to connect to almost any\n\
 control panel or other electronic machine (but not computers).  With a little\n\
 skill, it can be used to crack passwords and more.");
 
-MELEE("string - 6 in","","","","","",	 2,  5, ',', c_ltgray,	COTTON,	MNULL,
+MELEE("нить - 6 дюймов","","","","","",	 2,  5, ',', c_ltgray,	COTTON,	MNULL,
 	 0,  0,-20,  0,  1, 0, "\
 A small piece of cotton string.");
 
-MELEE("string - 3 ft","","","","","",	40, 30, ',', c_ltgray,	COTTON,	MNULL,
+MELEE("нить - 3 фута","","","","","",	40, 30, ',', c_ltgray,	COTTON,	MNULL,
 	 1,  0, -5,  0,  1, 0, "\
 A long piece of cotton string.  Use scissors on it to cut it into smaller\n\
 pieces.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("rope - 6 ft","","","","","",	 4, 45, ',', c_yellow,	WOOD,	MNULL,
+MELEE("веревка - 6 футов","","","","","",	 4, 45, ',', c_yellow,	WOOD,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 2,  4,  1,  0,  1, mfb(IF_WRAP), "\
 A short piece of nylon rope.  Too small to be of much use.");
 
-MELEE("rope - 30 ft","","","","","",	35,100, ',', c_yellow,	WOOD,	MNULL,
+MELEE("веревка - 30 футов","","","","","",	35,100, ',', c_yellow,	WOOD,	MNULL,
 	10, 20,  1,  0, -10, 0, "\
 A long nylon rope.  Useful for keeping yourself safe from falls.");
 
-MELEE("steel chain","","","","","",	20, 80, '/', c_cyan,	STEEL,	MNULL,
+MELEE("стальная цепь","","","","","",	20, 80, '/', c_cyan,	STEEL,	MNULL,
 	 4,  8, 12,  0,  3, mfb(IF_WRAP), "\
 A heavy steel chain.  Useful as a weapon, or for crafting.");
 
-MELEE("processor board","","","","","",15,120, ',', c_ltcyan,	IRON,	PLASTIC,
+MELEE("материнская плата","","","","","",15,120, ',', c_ltcyan,	IRON,	PLASTIC,
 	 1,  0, -3,  0, -1, 0, "\
 A central processor unit, useful in advanced electronics crafting.");
 
-MELEE("RAM","","","","","",		22, 90, ',', c_ltcyan,	IRON,	PLASTIC,
+MELEE("ОЗУ","","","","","",		22, 90, ',', c_ltcyan,	IRON,	PLASTIC,
 	 1,  0, -5,  0, -1, 0, "\
 A stick of memory.  Useful in advanced electronics crafting.");
 
-MELEE("power converter","","","","","",16,170, ',', c_ltcyan,	IRON,	PLASTIC,
+MELEE("модуль питания","","","","","",16,170, ',', c_ltcyan,	IRON,	PLASTIC,
 	 4,  2,  5,  0, -1, 0, "\
 A power supply unit.  Useful in lots of electronics recipes.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("amplifier circuit","","","","","",8,200,',', c_ltcyan,	IRON,	PLASTIC,
+MELEE("модуль усиления","","","","","",8,200,',', c_ltcyan,	IRON,	PLASTIC,
 //	VOL WGT DAM CUT HIT FLAGS
 	 1,  0, -5,  0, -1, 0, "\
 A circuit designed to amplify the strength of a signal.  Useful in lots of\n\
 electronics recipes.");
 
-MELEE("transponder circuit","","","","","",5,240,',',c_ltcyan,	IRON,	PLASTIC,
+MELEE("модуль передачи","","","","","",5,240,',',c_ltcyan,	IRON,	PLASTIC,
 	 1,  0, -5,  0, -1, 0, "\
 A circuit designed to repeat a signal.  Useful for crafting communications\n\
 equipment.");
 
-MELEE("signal receiver","","","","","",10,135, ',', c_ltcyan,	IRON,	PLASTIC,
+MELEE("модуль приема","","","","","",10,135, ',', c_ltcyan,	IRON,	PLASTIC,
 	 1,  0, -4,  0, -1, 0, "\
 A module designed to receive many forms of signals.  Useful for crafting\n\
 communications equipment.");
 
-MELEE("antenna","","","","","",	18, 80, ',', c_ltcyan,	STEEL,	MNULL,
+MELEE("антенна","","","","","",	18, 80, ',', c_ltcyan,	STEEL,	MNULL,
 	 1,  0, -6,  0,  2, 0, "\
 A simple thin aluminum shaft.  Useful in lots of electronics recipes.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("chunk of steel","","","","","", 30, 10, ',', c_ltblue,	STEEL,	MNULL,
+MELEE("стальной металлолом","","","","","", 30, 10, ',', c_ltblue,	STEEL,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 2,  6, 12,  0, -2, 0, "\
 A misshapen chunk of steel.  Makes a decent weapon in a pinch, and is also\n\
 useful for some crafting recipes.");
 
-MELEE("electric motor","","","","","",  2,120, ',', c_ltcyan,	IRON,	MNULL,
+MELEE("электродвигатель","","","","","",  2,120, ',', c_ltcyan,	IRON,	MNULL,
 	 4,  6,  4,  0,  0, 0, "\
 A powerful electric motor.  Useful for crafting.");
 
-MELEE("rubber hose","","","","","",	15, 80, ',', c_green,	PLASTIC,MNULL,
+MELEE("резиновый шланг","","","","","",	15, 80, ',', c_green,	PLASTIC,MNULL,
 	 3,  2,  4,  0,  3, mfb(IF_WRAP), "\
 A flexible rubber hose.  Useful for crafting.");
 
-MELEE("sheet of glass","","","","","",	 5,135, ']', c_ltcyan,	GLASS,	MNULL,
+MELEE("лист стекла","","","","","",	 5,135, ']', c_ltcyan,	GLASS,	MNULL,
 	50, 20, 16,  0, -5, 0, "\
 A large sheet of glass.  Easily shattered.  Useful for re-paning windows.");
 
-MELEE("manhole cover","","","","","",	 0, 20, ']', c_dkgray,	IRON,	MNULL,
+MELEE("крышка люка","","","","","",	 0, 20, ']', c_dkgray,	IRON,	MNULL,
 	45,250, 20,  0,-10, 0, "\
 A heavy iron disc which generally covers a ladder into the sewers.  Lifting\n\
 it from the manhole is impossible without a crowbar.");
@@ -718,208 +722,208 @@ MELEE("камень","","","","","",		40,  0, '*', c_ltgray,	STONE,	MNULL,
 Небольшой камень размером с бейсбольный мяч. Можно использовать как оружие, \n\
 но также хорошо метнуть его в противника.");
 
-MELEE("heavy stick","","","","","",	95,  0, '/', c_brown,	WOOD,	MNULL,
+MELEE("тяжелая палка","","","","","",	95,  0, '/', c_brown,	WOOD,	MNULL,
 	 6, 10, 12,  0,  3, 0, "\
 A sturdy, heavy stick.  Makes a decent melee weapon, and can be cut into two\n\
 by fours for crafting.");
 
-MELEE("broom","","","","","",		30, 24, '/', c_blue,	PLASTIC,MNULL,
+MELEE("метла","","","","","",		30, 24, '/', c_blue,	PLASTIC,MNULL,
 	10,  8,  6,  0,  1, 0, "\
 A long-handled broom.  Makes a terrible weapon unless you're chasing cats.");
 
-MELEE("mop","","","","","",		20, 28, '/', c_ltblue,	PLASTIC,MNULL,
+MELEE("швабра","","","","","",		20, 28, '/', c_ltblue,	PLASTIC,MNULL,
 	11, 12,  5,  0, -2, 0, "\
 An unwieldy mop.  Essentially useless.");
 
-MELEE("screwdriver","","","","","",	40, 65, ';', c_ltcyan,	IRON,	PLASTIC,
+MELEE("отвертка","","","","","",	40, 65, ';', c_ltcyan,	IRON,	PLASTIC,
 	 1,  1,  2,  8,  1, mfb(IF_SPEAR), "\
 A Philips-head screwdriver, important for almost all electronics crafting and\n\
 most mechanics crafting.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("wrench","","","","","",		30, 86, ';', c_ltgray,	IRON,	MNULL,
+MELEE("разводной ключ","","","","","",		30, 86, ';', c_ltgray,	IRON,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 2,  5, 15,  0,  2, 0, "\
 An adjustable wrench.  Makes a decent melee weapon, and is used in many\n\
 mechanics crafting recipes.");
 
-MELEE("wood saw","","","","","",	15, 40, ';', c_cyan,	IRON,	WOOD,
+MELEE("столярная пила","","","","","",	15, 40, ';', c_cyan,	IRON,	WOOD,
 	 7,  3, -6,  1, -2, 0, "\
 A flimsy saw, useful for cutting through wood objects.");
 
-MELEE("hack saw","","","","","",	17, 65, ';', c_ltcyan,	IRON,	MNULL,
+MELEE("слесарная пила","","","","","",	17, 65, ';', c_ltcyan,	IRON,	MNULL,
 	 4,  2,  1,  1, -1, 0, "\
 A sturdy saw, useful for cutting through metal objects.");
 
-MELEE("sledge hammer","","","","","",	 6, 120,'/', c_brown,	WOOD,	IRON,
+MELEE("кувалда","","","","","",	 6, 120,'/', c_brown,	WOOD,	IRON,
 	18, 34, 40,  0,  0, 0, "\
 A large, heavy hammer.  Makes a good melee weapon for the very strong, but is\n\
 nearly useless in the hands of the weak.");
 
-MELEE("hatchet","","","","","",	10,  95,';', c_ltgray,	IRON,	WOOD,
+MELEE("топор","","","","","",	10,  95,';', c_ltgray,	IRON,	WOOD,
 	 6,  7, 12, 12,  1, 0, "\
 A one-handed hatchet.  Makes a great melee weapon, and is useful both for\n\
 cutting wood, and for use as a hammer.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("wood ax","","","","","",	 8, 105,'/', c_ltgray,	WOOD,	IRON,
+MELEE("топор лесоруба","","","","","",	 8, 105,'/', c_ltgray,	WOOD,	IRON,
 //	VOL WGT DAM CUT HIT FLAGS
 	17, 15, 24, 18,  1, 0, "\
 A large two-handed axe.  Makes a good melee weapon, but is a bit slow.");
 
-MELEE("nail board","","","","","",	 5,  80,'/', c_ltred,	WOOD,	MNULL,
+MELEE("доска с гвоздями","","","","","",	 5,  80,'/', c_ltred,	WOOD,	MNULL,
 	 6,  6, 16,  6,  1, mfb(IF_STAB), "\
 A long piece of wood with several nails through one end; essentiall a simple\n\
 mace.  Makes a great melee weapon.");
 
-MELEE("X-Acto knife","","","","","",	10,  40,';', c_dkgray,	IRON,	PLASTIC,
+MELEE("нож X-Acto","","","","","",	10,  40,';', c_dkgray,	IRON,	PLASTIC,
 	 1,  0,  0, 14, -4, mfb(IF_SPEAR), "\
 A small, very sharp knife.  Causes decent damage but is difficult to hit with."
 );
 
-MELEE("scalpel","","","","","",	48,  40,',', c_cyan,	STEEL,	MNULL,
+MELEE("скальпель","","","","","",	48,  40,',', c_cyan,	STEEL,	MNULL,
 	 1,  0,  0, 18, -4, mfb(IF_SPEAR), "\
 A small, very sharp knife, used in surgery.");
 
-MELEE("pot","","","","","",		25,  45,')', c_ltgray,	IRON,	MNULL,
+MELEE("кастрюля","","","","","",		25,  45,')', c_ltgray,	IRON,	MNULL,
 	 8,  6,  9,  0,  1, 0, "\
 Useful for boiling water when cooking spaghetti and more.");
 
-MELEE("frying pan","","","","","",	25,  50,')', c_ltgray,	IRON,	MNULL,
+MELEE("сковорода","","","","","",	25,  50,')', c_ltgray,	IRON,	MNULL,
 	 6,  6, 14,  0,  2, 0, "\
 A cast-iron pan.  Makes a decent melee weapon, and is used for cooking.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("butter knife","","","","","",	90,  15,';', c_ltcyan,	STEEL, 	MNULL,
+MELEE("столовый нож","","","","","",	90,  15,';', c_ltcyan,	STEEL, 	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 1,  2,  2,  1, -2, 0, "\
 A dull knife, absolutely worthless in combat.");
 
-MELEE("steak knife","","","","","",	85,  25,';', c_ltcyan,	STEEL,	MNULL,
+MELEE("кухонный нож","","","","","",	85,  25,';', c_ltcyan,	STEEL,	MNULL,
 	 1,  2,  2, 10, -3, mfb(IF_STAB), "\
 A sharp knife.  Makes a poor melee weapon, but is decent at butchering\n\
 corpses.");
 
-MELEE("butcher knife","","","","","",	10,  80,';', c_cyan,	STEEL,	MNULL,
+MELEE("разделочный нож","","","","","",	10,  80,';', c_cyan,	STEEL,	MNULL,
 	 3,  6,  4, 20, -3, 0, "\
 A sharp, heavy knife.  Makes a good melee weapon, and is the best item for\n\
 butchering corpses.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("combat knife","","","","","",	14, 100,';', c_blue,	STEEL,  PLASTIC,
+MELEE("боевой нож","","","","","",	14, 100,';', c_blue,	STEEL,  PLASTIC,
 //	VOL WGT DAM CUT HIT FLAGS
 	 2,  2,  2, 22, -3, mfb(IF_STAB), "\
 Designed for combat, and deadly in the right hands.  Can be used to butcher\n\
 corpses.");
 
-MELEE("two by four","","","","","", 	60,  80,'/', c_ltred,	WOOD,	MNULL,
+MELEE("доска","","","","","", 	60,  80,'/', c_ltred,	WOOD,	MNULL,
 	 6,  6, 14,  0,  1, 0, "\
 A plank of wood.  Makes a decent melee weapon, and can be used to board up\n\
 doors and windows if you have a hammer and nails.");
 
-MELEE("muffler","","","","","",	30,  30,'/', c_ltgray,	IRON,	MNULL,
+MELEE("автоглушитель","","","","","",	30,  30,'/', c_ltgray,	IRON,	MNULL,
 	20, 20, 19,  0, -3, 0, "\
 A muffler from a car.  Very unwieldy as a weapon.  Useful in a few crafting\n\
 recipes.");
 
-MELEE("pipe","","","","","",		20,  75,'/', c_dkgray,	STEEL,	MNULL,
+MELEE("труба","","","","","",		20,  75,'/', c_dkgray,	STEEL,	MNULL,
 	 4, 10, 13,  0,  3, 0, "\
 A steel pipe, makes a good melee weapon.  Useful in a few crafting recipes.");
 
-MELEE("baseball bat","","","","","",	60, 160,'/', c_ltred,	WOOD,	MNULL,
+MELEE("бейсбольная бита","","","","","",	60, 160,'/', c_ltred,	WOOD,	MNULL,
 	12, 10, 28,  0,  3, 0, "\
 A sturdy wood bat.  Makes a great melee weapon.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("machete","","","","","",	 5, 280,'/', c_blue,	IRON,	MNULL,
+MELEE("мачете","","","","","",	 5, 280,'/', c_blue,	IRON,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 8, 14,  6, 28,  2, 0, "\
 This huge iron knife makes an excellent melee weapon.");
 
-MELEE("katana","","","","","",		 2, 980,'/', c_ltblue,	STEEL,	MNULL,
+MELEE("катана","","","","","",		 2, 980,'/', c_ltblue,	STEEL,	MNULL,
 	16, 16, 18, 45,  1, mfb(IF_STAB), "\
 A rare sword from Japan.  Deadly against unarmored targets, and still very\n\
 effective against the armored.");
 
-MELEE("wood spear","","","","","",	 5,  40,'/', c_ltred,	WOOD,	MNULL,
+MELEE("деревянной копье","","","","","",	 5,  40,'/', c_ltred,	WOOD,	MNULL,
 	 5,  3,  4, 18,  1, mfb(IF_SPEAR), "\
 A simple wood pole with one end sharpened.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("steel spear","","","","","",      5,  140,'/', c_ltred,   WOOD,   STEEL,
+MELEE("стальное копье","","","","","",      5,  140,'/', c_ltred,   WOOD,   STEEL,
 //	VOL WGT DAM CUT HIT FLAGS
          6,  6,  2, 28,  1, mfb(IF_SPEAR), "\
 A simple wood pole made deadlier by the knife tied to it.");
 
-MELEE("expandable baton","","","","","",8, 175,'/', c_blue,	STEEL,	MNULL,
+MELEE("складная дубинка","","","","","",8, 175,'/', c_blue,	STEEL,	MNULL,
 	 1,  4, 12,  0,  2, 0, "\
 A telescoping baton that collapses for easy storage.  Makes an excellent\n\
 melee weapon.");
 
-MELEE("bee sting","","","","","",	 5,  70,',', c_dkgray,	FLESH,	MNULL,
+MELEE("пчелиное жало","","","","","",	 5,  70,',', c_dkgray,	FLESH,	MNULL,
 	 1,  0,  0, 18,  1, mfb(IF_SPEAR), "\
 A four-inch stinger from a giant bee.  Makes a good melee weapon.");
 
-MELEE("wasp sting","","","","","",	 5,  90,',', c_dkgray,	FLESH,	MNULL,
+MELEE("осиное жало","","","","","",	 5,  90,',', c_dkgray,	FLESH,	MNULL,
 	 1,  0,  0, 22,  1, mfb(IF_SPEAR), "\
 A four-inch stinger from a giant wasp.  Makes a good melee weapon.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("chunk of chitin","","","","","",10,  15,',', c_red,	FLESH,	MNULL,
+MELEE("обломок хитина","","","","","",10,  15,',', c_red,	FLESH,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 1,  0,  1,  0, -2, 0, "\
 A piece of an insect's exoskeleton.  It is light and very durable.");
 
-MELEE("biollante bud","","","","","",   1, 400,',', c_magenta,	VEGGY,	MNULL,
+MELEE("бутон биолланте","","","","","",   1, 400,',', c_magenta,	VEGGY,	MNULL,
 	 1,  0, -8,  0, -3, 0, "\
 An unopened biollante flower, brilliant purple in color.  It may still have\n\
 its sap-producing organ intact.");
 
-MELEE("empty canister","","","","","",  5,  20,'*', c_ltgray,	STEEL,	MNULL,
+MELEE("пустая канистра","","","","","",  5,  20,'*', c_ltgray,	STEEL,	MNULL,
 	 1,  1,  2,  0, -1, 0, "\
 An empty cansiter, which may have once held tear gas or other substances.");
 
-MELEE("gold bar","","","","","",	10,3000,'/', c_yellow,	STEEL,	MNULL,
+MELEE("золотой слиток","","","","","",	10,3000,'/', c_yellow,	STEEL,	MNULL,
 	 2, 60, 14,  0, -1, 0, "\
 A large bar of gold.  Before the apocalypse, this would've been worth a small\n\
 fortune; now its value is greatly diminished.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("coal pallet","","","","","",	20, 600,'/', c_dkgray,	STONE,	MNULL,
+MELEE("ящик угля","","","","","",	20, 600,'/', c_dkgray,	STONE,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	 72,100, 8,  0, -5, 0, "\
 A large block of semi-processed coal.");
 
-MELEE("petrified eye","","","","","",   1,2000,'*', c_dkgray,	STONE,	MNULL,
+MELEE("каменный глаз","","","","","",   1,2000,'*', c_dkgray,	STONE,	MNULL,
 	 2,  8, 10,  0, -1, 0, "\
 A fist-sized eyeball with a cross-shaped pupil.  It seems to be made of\n\
 stone, but doesn't look like it was carved.");
 
-MELEE("spiral stone","","","","","",   20, 200,'*', c_pink,	STONE,	MNULL,
+MELEE("спиральный камень","","","","","",   20, 200,'*', c_pink,	STONE,	MNULL,
 	 1,  3, 14,  0, -1, 0, "\
 A rock the size of your fist.  It is covered with intricate spirals; it is\n\
 impossible to tell whether they are carved, naturally formed, or some kind of\n\
 fossil.");
 
-MELEE("rapier","","","","","",		 3, 980,'/', c_ltblue,	STEEL,	MNULL,
+MELEE("рапира","","","","","",		 3, 980,'/', c_ltblue,	STEEL,	MNULL,
 	 8, 10, 5, 20,  2, mfb(IF_STAB), "\
 Preferred weapon of gentlemen and swashbucklers. Light and quick, it makes\n\
 any battle a stylish battle.");
 
 //    NAME		RAR PRC SYM COLOR	MAT1	MAT2
-MELEE("walking cane","","","","","",   10, 160,'/', c_ltred,	WOOD,	MNULL,
+MELEE("трость","","","","","",   10, 160,'/', c_ltred,	WOOD,	MNULL,
 //	VOL WGT DAM CUT HIT FLAGS
 	  8,  7, 10,  0,  2, 0, "\
 Handicapped or not, you always walk in style.  Consisting of a metal\n\
 headpiece and a wooden body, this makes a great bashing weapon in a pinch.");
 
-MELEE("binoculars","","","","","",	20, 300,';', c_ltgray,	PLASTIC,GLASS,
+MELEE("бинокль","","","","","",	20, 300,';', c_ltgray,	PLASTIC,GLASS,
 	  2,  3,  6,  0, -1, 0, "\
 A tool useful for seeing long distances.  Simply carrying this item in your\n\
 inventory will double the distance that is mapped around you during your\n\
 travels.");
 
-MELEE("USB drive","","","","","",	 5, 100,',', c_white,	PLASTIC,MNULL,
+MELEE("USB диск","","","","","",	 5, 100,',', c_white,	PLASTIC,MNULL,
 	  0,  0,  0,  0,  0, 0, "\
 A USB thumb drive.  Useful for holding software.");
 
@@ -932,245 +936,245 @@ color,mat1,mat2,volume,wgt,dam,0,to_hit,0,covers,encumber,dmg_resist,cut_resist,
 env,warmth,storage))
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("sneakers","","","","","",	80, 100,C_SHOES,	LEATHER,	MNULL,
+ARMOR("кроссовки","","","","","",	80, 100,C_SHOES,	LEATHER,	MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     5,  4, -2,  0, -1,  0,  2,  0,  2,  0,	mfb(bp_feet), "\
 Guaranteed to make you run faster and jump higher!");
 
-ARMOR("boots","","","","","",		70, 120,C_SHOES,	LEATHER,	MNULL,
+ARMOR("ботинки","","","","","",		70, 120,C_SHOES,	LEATHER,	MNULL,
     7,  6,  1, -1,  1,  1,  4,  2,  4,  0,	mfb(bp_feet), "\
 Tough leather boots, very durable.");
 
-ARMOR("steeltoed boots","","","","","",50, 135,C_SHOES,	LEATHER,	STEEL,
+ARMOR("ботинки со стальными носами","","","","","",50, 135,C_SHOES,	LEATHER,	STEEL,
     7,  9,  4, -1,  1,  4,  4,  3,  2,  0,	mfb(bp_feet), "\
 Leather boots with a steel toe.  Extremely durable.");
 
-ARMOR("winter boots","","","","","",	60, 140,C_SHOES,	PLASTIC,	WOOL,
+ARMOR("зимние ботинки","","","","","",	60, 140,C_SHOES,	PLASTIC,	WOOL,
     8,  7,  0, -1,  2,  0,  2,  1,  7,  0,	mfb(bp_feet), "\
 Cumbersome boots designed for warmth.");
 
-ARMOR("mocassins","","","","","",	 5,  80,C_SHOES,	LEATHER,	WOOL,
+ARMOR("мокасины","","","","","",	 5,  80,C_SHOES,	LEATHER,	WOOL,
     2,  1, -3,  0,  0,  0,  1,  0,  3,  0,	mfb(bp_feet), "\
 Simple shoes made from animal pelts.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("flip-flops","","","","","",	35,  25,C_SHOES,	PLASTIC,	MNULL,
+ARMOR("шлепанцы","","","","","",	35,  25,C_SHOES,	PLASTIC,	MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     1,  1, -4, -2,  3,  0,  0,  0,  0,  0,	mfb(bp_feet), "\
 Simple sandals.  Very difficult to run in.");
 
-ARMOR("dress shoes","","","","","",	50,  45,C_SHOES,	LEATHER,	MNULL,
+ARMOR("туфли","","","","","",	50,  45,C_SHOES,	LEATHER,	MNULL,
     5,  3,  1,  1,  1,  0,  3,  0,  1,  0,	mfb(bp_feet), "\
 Fancy patent leather shoes.  Not designed for running in.");
 
-ARMOR("heels","","","","","",		50,  50,C_SHOES,	LEATHER,	MNULL,
+ARMOR("туфли на высоких каблуках","","","","","",		50,  50,C_SHOES,	LEATHER,	MNULL,
     4,  2,  6, -2,  4,  0,  0,  0,  0,  0,	mfb(bp_feet), "\
 A pair of high heels.  Difficult to even walk in.");
 
 
-ARMOR("jeans","","","","","",		90, 180,C_PANTS,	COTTON,		MNULL,
+ARMOR("джинсы","","","","","",		90, 180,C_PANTS,	COTTON,		MNULL,
     5,  4, -4,  1,  0,  0,  1,  0,  1,  4,	mfb(bp_legs), "\
 A pair of blue jeans with two deep pockets.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("pants","","","","","",		75, 185,C_PANTS,	COTTON,		MNULL,
+ARMOR("штаны","","","","","",		75, 185,C_PANTS,	COTTON,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     5,  5, -4,  1,  0,  0,  1,  0,  2,  4,	mfb(bp_legs), "\
 A pair of khaki pants.  Slightly warmer than jeans.");
 
-ARMOR("leather pants","","","","","",	60, 210,C_PANTS,	LEATHER,	MNULL,
+ARMOR("кожаные штаны","","","","","",	60, 210,C_PANTS,	LEATHER,	MNULL,
     6,  8, -2,  1,  1,  1,  7,  0,  5,  2,	mfb(bp_legs), "\
 A pair of black leather pants.  Very tough, but encumbersome and without much\n\
 storage.");
 
-ARMOR("cargo pants","","","","","",	70, 280,C_PANTS,	COTTON,		MNULL,
+ARMOR("штаны с карманами","","","","","",	70, 280,C_PANTS,	COTTON,		MNULL,
     6,  6, -3,  0,  1,  0,  2,  0,  3, 12,	mfb(bp_legs), "\
 A pair of pants lined with pockets, offering lots of storage.");
 
-ARMOR("army pants","","","","","",	30, 315,C_PANTS,	COTTON,		MNULL,
+ARMOR("военные штаны","","","","","",	30, 315,C_PANTS,	COTTON,		MNULL,
     6,  7, -2,  0,  1,  0,  3,  0,  4, 14,	mfb(bp_legs), "\
 A tough pair of pants lined with pockets.  Favored by the military.");
 
-ARMOR("skirt","","","","","",		75, 120,C_PANTS,	COTTON,		MNULL,
+ARMOR("юбка","","","","","",		75, 120,C_PANTS,	COTTON,		MNULL,
     2,  2, -5,  0, -1,  0,  0,  0,  0,  1,	mfb(bp_legs), "\
 A short, breezy cotton skirt.  Easy to move in, but only has a single small\n\
 pocket.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("jumpsuit","","","","","",	20, 200,C_BODY,		COTTON,		PLASTIC,
+ARMOR("комбинезон","","","","","",	20, 200,C_BODY,		COTTON,		PLASTIC,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     6,  6, -3, -3,  1,  0,  1,  0,  3, 16,	mfb(bp_legs)|mfb(bp_torso), "\
 A full-body jumpsuit with many pockets.");
 
-ARMOR("dress","","","","","",		70, 180,C_BODY,		COTTON,		MNULL,
+ARMOR("пижама","","","","","",		70, 180,C_BODY,		COTTON,		MNULL,
     8,  6, -5, -5,  3,  0,  1,  0,  2,  0,	mfb(bp_legs)|mfb(bp_torso), "\
 A long cotton dress.  Difficult to move in and lacks any storage space.");
 
-ARMOR("chitinous armor","","","","","", 1,1200,C_BODY,		FLESH,		MNULL,
+ARMOR("хитиновая броня","","","","","", 1,1200,C_BODY,		FLESH,		MNULL,
    70, 10,  2, -5,  2,  8, 14,  0,  1,  0,	mfb(bp_legs)|mfb(bp_torso), "\
 Leg and body armor made from the exoskeletons of insects.  Light and durable.");
 
-ARMOR("suit","","","","","",		60, 180,C_BODY,		COTTON,		MNULL,
+ARMOR("костюм","","","","","",		60, 180,C_BODY,		COTTON,		MNULL,
    10,  7, -5, -5,  1,  0,  1,  0,  2,  10,	mfb(bp_legs)|mfb(bp_torso), "\
 A full-body cotton suit. Makes the apocalypse a truly gentlemanly\n\
 experience.");
 
-ARMOR("hazmat suit","","","","","",	10,1000,C_BODY,		PLASTIC,	MNULL,
+ARMOR("защитный костюм","","","","","",	10,1000,C_BODY,		PLASTIC,	MNULL,
    20, 8, -5,  -8,  4,  0,  0,10,  2, 12,	mfb(bp_legs)|mfb(bp_torso), "\
 A hazardous materials suit.  Though quite bulky and cumbersome, wearing it\n\
 will provide excellent protection against ambient radiation.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("t shirt","","","","","",	80,  80,C_TORSO,	COTTON,		MNULL,
+ARMOR("короткая рубашка","","","","","",	80,  80,C_TORSO,	COTTON,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     3,  2, -5,  0,  0,  0,  0,  0,  1,  0,	mfb(bp_torso), "\
 A short-sleeved cotton shirt.");
 
-ARMOR("polo shirt","","","","","",	65,  95,C_TORSO,	COTTON,		MNULL,
+ARMOR("рубашка с короткими рукавами","","","","","",	65,  95,C_TORSO,	COTTON,		MNULL,
     3,  2, -5,  0,  0,  0,  1,  0,  1,  0,	mfb(bp_torso), "\
 A short-sleeved cotton shirt, slightly thicker than a t-shirt.");
 
-ARMOR("dress shirt","","","","","",	60, 115,C_TORSO,	COTTON,		MNULL,
+ARMOR("рубашка","","","","","",	60, 115,C_TORSO,	COTTON,		MNULL,
     3,  3, -5,  0,  1,  0,  1,  0,  1,  1,	mfb(bp_torso), "\
 A white button-down shirt with long sleeves.  Looks professional!");
 
-ARMOR("tank top","","","","","",	50,  75,C_TORSO,	COTTON,		MNULL,
+ARMOR("безрукавка","","","","","",	50,  75,C_TORSO,	COTTON,		MNULL,
     1,  1, -5,  0,  0,  0,  0,  0,  0,  0,	mfb(bp_torso), "\
 A sleeveless cotton shirt.  Very easy to move in.");
 
-ARMOR("sweatshirt","","","","","",	75, 110,C_TORSO,	COTTON,		MNULL,
+ARMOR("спортивный свитер","","","","","",	75, 110,C_TORSO,	COTTON,		MNULL,
     9,  5, -5,  0,  1,  1,  1,  0,  3,  0,	mfb(bp_torso), "\
 A thick cotton shirt.  Provides warmth and a bit of padding.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("sweater","","","","","",	75, 105,C_TORSO,	WOOL,		MNULL,
+ARMOR("свитер","","","","","",	75, 105,C_TORSO,	WOOL,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     8,  5, -5,  0,  0,  1,  0,  0,  3,  0,	mfb(bp_torso), "\
 A wool shirt.  Provides warmth.");
 
-ARMOR("hoodie","","","","","",		65, 130,C_TORSO,	COTTON,		MNULL,
+ARMOR("рубашка с капюшоном","","","","","",		65, 130,C_TORSO,	COTTON,		MNULL,
    10,  5, -5,  0,  1,  1,  2,  0,  3,  9,	mfb(bp_torso), "\
 A sweatshirt with a hood and a \"kangaroo pocket\" in front for storage.");
 
-ARMOR("light jacket","","","","","",	50, 105,C_TORSO,	COTTON,		MNULL,
+ARMOR("легкая куртка","","","","","",	50, 105,C_TORSO,	COTTON,		MNULL,
     6,  4, -5,  0,  0,  0,  2,  0,  2,  4,	mfb(bp_torso), "\
 A thin cotton jacket.  Good for brisk weather.");
 
-ARMOR("jean jacket","","","","","",	35, 120,C_TORSO,	COTTON,		MNULL,
+ARMOR("джинсовая куртка","","","","","",	35, 120,C_TORSO,	COTTON,		MNULL,
     7,  5, -3,  0,  1,  0,  4,  0,  2,  3,	mfb(bp_torso), "\
 A jacket made from denim.  Provides decent protection from cuts.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("blazer","","","","","",		35, 120,C_TORSO,	WOOL,		MNULL,
+ARMOR("блейзер","","","","","",		35, 120,C_TORSO,	WOOL,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
    10,  6, -4,  0,  2,  0,  3,  0,  3,  2,	mfb(bp_torso), "\
 A professional-looking wool blazer.  Quite encumbersome.");
 
-ARMOR("leather jacket","","","","","",	30, 150,C_TORSO,	LEATHER,	MNULL,
+ARMOR("кожаная куртка","","","","","",	30, 150,C_TORSO,	LEATHER,	MNULL,
    14, 14, -2,  1,  2,  1,  9,  1,  4,  4,	mfb(bp_torso), "\
 A jacket made from thick leather.  Encumbersome, but offers excellent\n\
 protection from cuts.");
 
-ARMOR("kevlar vest","","","","","",	30, 800,C_TORSO,	KEVLAR,		MNULL,
+ARMOR("бронежилет","","","","","",	30, 800,C_TORSO,	KEVLAR,		MNULL,
    24, 24,  6, -3,  2,  4, 22,  0,  4,  4,	mfb(bp_torso), "\
 A heavy bulletproof vest.  The best protection from cuts and bullets.");
 
-ARMOR("rain coat","","","","","",	50, 100,C_TORSO,	PLASTIC,	COTTON,
+ARMOR("дождевик","","","","","",	50, 100,C_TORSO,	PLASTIC,	COTTON,
     9,  8, -4,  0,  2,  0,  3,  1,  2,  7,	mfb(bp_torso), "\
 A plastic coat with two very large pockets.  Provides protection from rain.");
 
-ARMOR("wool poncho","","","","","",	15, 120,C_TORSO,	WOOL,		MNULL,
+ARMOR("пончо","","","","","",	15, 120,C_TORSO,	WOOL,		MNULL,
     7,  3, -5, -1,  0,  1,  2,  1,  2,  0,	mfb(bp_torso), "\
 A simple wool garment worn over the torso.  Provides a bit of protection.");
 
 //     NAME		RARE	COLOR		MAT1		MAT2
-ARMOR("trenchcoat","","","","","",	25, 225,C_TORSO,	COTTON,		MNULL,
+ARMOR("плащ","","","","","",	25, 225,C_TORSO,	COTTON,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
    10,  6, -5, -1,  1,  0,  1,  1,  3, 24,	mfb(bp_torso), "\
 A long coat lines with pockets.  Great for storage.");
 
-ARMOR("winter coat","","","","","",	50, 160,C_TORSO,	COTTON,		MNULL,
+ARMOR("зимнее пальто","","","","","",	50, 160,C_TORSO,	COTTON,		MNULL,
    12,  6, -5, -2,  3,  3,  1,  1,  8, 12,	mfb(bp_torso), "\
 A padded coat with deep pockets.  Very warm.");
 
-ARMOR("fur coat","","","","","",	 5, 550,C_TORSO,	WOOL,		FLESH,
+ARMOR("меховой плащ","","","","","",	 5, 550,C_TORSO,	WOOL,		FLESH,
    18, 12, -5, -5,  2,  4,  2,  2, 10,  4,	mfb(bp_torso), "\
 A fur coat with a couple small pockets.  Extremely warm.");
 
-ARMOR("peacoat","","","","","",	30, 180,C_TORSO,	COTTON,		MNULL,
+ARMOR("пальто","","","","","",	30, 180,C_TORSO,	COTTON,		MNULL,
    16, 10, -4, -3,  2,  1,  2,  0,  7, 10,	mfb(bp_torso), "\
 A heavy cotton coat.  Encumbersome, but warm and with deep pockets.");
 
-ARMOR("utility vest","","","","","",	15, 200,C_TORSO,	COTTON,		MNULL,
+ARMOR("жилет","","","","","",	15, 200,C_TORSO,	COTTON,		MNULL,
     4,  3, -3,  0,  0,  0,  1,  0,  1, 14,	mfb(bp_torso), "\
 A light vest covered in pockets and straps for storage.");
 
-ARMOR("lab coat","","","","","",	20, 155,C_TORSO,	COTTON,		MNULL,
+ARMOR("лабораторный халат","","","","","",	20, 155,C_TORSO,	COTTON,		MNULL,
    11,  7, -3, -2,  1,  1,  2,  0,  1, 14,	mfb(bp_torso), "\
 A long white coat with several large pockets.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("light gloves","","","","","",	35,  65,C_GLOVES,	COTTON,		MNULL,
+ARMOR("легкие перчатки","","","","","",	35,  65,C_GLOVES,	COTTON,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     0,  0, -5,  1,  1,  0,  0,  0,  1,  0,	mfb(bp_hands), "\
 A pair of thin cotton gloves.  Often used as a liner beneath other gloves.");
 
-ARMOR("mittens","","","","","",	30,  40,C_GLOVES,	WOOL,		MNULL,
+ARMOR("варежки","","","","","",	30,  40,C_GLOVES,	WOOL,		MNULL,
     0,  0, -5,  1,  8,  0,  1,  0,  5,  0,	mfb(bp_hands), "\
 A pair of warm mittens.  They are extremely encumbersome.");
 
-ARMOR("wool gloves","","","","","",	33,  50,C_GLOVES,	WOOL,		MNULL,
+ARMOR("шерстянные перчатки","","","","","",	33,  50,C_GLOVES,	WOOL,		MNULL,
     1,  0, -5,  1,  3,  0,  1,  0,  3,  0,	mfb(bp_hands), "\
 A thick pair of wool gloves.  Encumbersome but warm.");
 
-ARMOR("winter gloves","","","","","",	40,  65,C_GLOVES,	COTTON,		MNULL,
+ARMOR("зимние перчатки","","","","","",	40,  65,C_GLOVES,	COTTON,		MNULL,
     1,  0, -5,  1,  5,  1,  1,  0,  4,  0,	mfb(bp_hands), "\
 A pair of padded gloves.  Encumbersome but warm.");
 
-ARMOR("leather gloves","","","","","",	45,  85,C_GLOVES,	LEATHER,	MNULL,
+ARMOR("кожаные перчатки","","","","","",	45,  85,C_GLOVES,	LEATHER,	MNULL,
     1,  1, -3,  2,  1,  0,  3,  0,  3,  0,	mfb(bp_hands), "\
 A thin pair of leather gloves.  Good for doing manual labor.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("fingerless gloves","","","","","",20,90,C_GLOVES,	LEATHER,	MNULL,
+ARMOR("перчатки без пальцев","","","","","",20,90,C_GLOVES,	LEATHER,	MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     1,  1, -3,  2,  0,  0,  2,  0,  2,  0,	mfb(bp_hands), "\
 A pair of leather gloves with no fingers, allowing greater manual dexterity.");
 
-ARMOR("rubber gloves","","","","","",	20,  30,C_GLOVES,	PLASTIC,	MNULL,
+ARMOR("резиновые перчатки","","","","","",	20,  30,C_GLOVES,	PLASTIC,	MNULL,
     1,  1, -3,  2,  3,  0,  1,  2,  1,  0,	mfb(bp_hands), "\
 A pair of rubber gloves, often used while cleaning with caustic materials.");
 
-ARMOR("medical gloves","","","","","",	70,  10,C_GLOVES,	PLASTIC,	MNULL,
+ARMOR("медицинские перчатки","","","","","",	70,  10,C_GLOVES,	PLASTIC,	MNULL,
     0,  0, -5,  1,  0,  0,  0,  1,  0,  0,	mfb(bp_hands), "\
 A pair of thin latex gloves, designed to limit the spread of disease.");
 
-ARMOR("fire gauntlets","","","","","",	 5,  95,C_GLOVES,	LEATHER,	MNULL,
+ARMOR("пожарные краги","","","","","",	 5,  95,C_GLOVES,	LEATHER,	MNULL,
     3,  5, -2,  2,  6,  1,  2,  5,  4,  0,	mfb(bp_hands), "\
 A heavy pair of leather gloves, used by firefighters for heat protection.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("dust mask","","","","","",	65,  20,C_MOUTH,	COTTON,		IRON,
+ARMOR("повязка","","","","","",	65,  20,C_MOUTH,	COTTON,		IRON,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     0,  0, -5, -3,  1,  0,  0,  2,  1,  0,	mfb(bp_mouth), "\
 A simple piece of cotton that straps over the mouth.  Provides a small amount\n\
 of protection from air-borne illness and dust.");
 
-ARMOR("bandana","","","","","",	35,  28,C_MOUTH,	COTTON, 	MNULL,
+ARMOR("бандана","","","","","",	35,  28,C_MOUTH,	COTTON, 	MNULL,
     1,  0, -4, -1,  0,  0,  0,  1,  2,  0,	mfb(bp_mouth), "\
 A cotton bandana, worn over the mouth for warmth and minor protection from\n\
 dust and other contaminents.");
 
-ARMOR("scarf","","","","","",		45,  40,C_MOUTH,	WOOL,   	MNULL,
+ARMOR("шарф","","","","","",		45,  40,C_MOUTH,	WOOL,   	MNULL,
     2,  3, -5, -3,  1,  1,  0,  2,  3,  0,	mfb(bp_mouth), "\
 A long wool scarf, worn over the mouth for warmth.");
 
-ARMOR("filter mask","","","","","",	30,  80,C_MOUTH,	PLASTIC,	MNULL,
+ARMOR("респиратор","","","","","",	30,  80,C_MOUTH,	PLASTIC,	MNULL,
     3,  6,  1,  1,  2,  1,  1,  7,  2,  0,	mfb(bp_mouth), "\
 A mask that straps over your mouth and nose and filters air.  Protects from\n\
 smoke, dust, and other contaminents quite well.");
 
-ARMOR("gas mask","","","","","",	10, 240,C_MOUTH,	PLASTIC,	MNULL,
+ARMOR("противогаз","","","","","",	10, 240,C_MOUTH,	PLASTIC,	MNULL,
     6,  8,  0, -3,  4,  1,  2, 16,  4,  0,	mfb(bp_mouth)|mfb(bp_eyes), "\
 A full gas mask that covers the face and eyes.  Provides excellent protection\n\
 from smoke, teargas, and other contaminents.");
@@ -1180,44 +1184,44 @@ from smoke, teargas, and other contaminents.");
 
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("eyeglasses","","","","","",	90, 150,C_EYES,		GLASS,		PLASTIC,
+ARMOR("очки","","","","","",	90, 150,C_EYES,		GLASS,		PLASTIC,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     1,  0, -3, -2,  0,  0,  1,  1,  0,  0,	mfb(bp_eyes), "\
 A pair of glasses for the near-sighted.  Useless for anyone else.");
 
-ARMOR("reading glasses","","","","","",90,  80,C_EYES,		GLASS,		PLASTIC,
+ARMOR("очки для чтения","","","","","",90,  80,C_EYES,		GLASS,		PLASTIC,
     1,  0, -3, -2,  0,  0,  1,  1,  0,  0,	mfb(bp_eyes), "\
 A pair of glasses for the far-sighted.  Useless for anyone else.");
 
-ARMOR("safety glasses","","","","","", 40, 100,C_EYES,		PLASTIC,	MNULL,
+ARMOR("защитные очки","","","","","", 40, 100,C_EYES,		PLASTIC,	MNULL,
     1,  0, -5, -2,  0,  2,  4,  1,  0,  0,	mfb(bp_eyes), "\
 A pair of plastic glasses, used in workshops, sports, chemistry labs, and\n\
 many other places.  Provides great protection from damage.");
 
-ARMOR("swim goggles","","","","","",	50, 110,C_EYES,		PLASTIC,	MNULL,
+ARMOR("очки для плавания","","","","","",	50, 110,C_EYES,		PLASTIC,	MNULL,
     1,  0, -5, -2,  2,  1,  2,  4,  1,  0,	mfb(bp_eyes), "\
 A small pair of goggles.  Distorts vision above water, but allows you to see\n\
 much further under water.");
 
-ARMOR("ski goggles","","","","","",	30, 175,C_EYES,		PLASTIC,	MNULL,
+ARMOR("лыжные очки","","","","","",	30, 175,C_EYES,		PLASTIC,	MNULL,
     2,  1, -4, -2,  1,  1,  2,  6,  2,  0,	mfb(bp_eyes), "\
 A large pair of goggles that completely seal off your eyes.  Excellent\n\
 protection from environmental dangers.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("welding goggles","","","","","", 8, 240,C_EYES,		GLASS,  	STEEL,
+ARMOR("очки для сварки","","","","","", 8, 240,C_EYES,		GLASS,  	STEEL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     2,  4, -1, -3,  6,  2,  5,  6,  1,  0,	mfb(bp_eyes), "\
 A dark pair of goggles.  They make seeing very difficult, but protects you\n\
 from bright flashes.");
 
-ARMOR("light amp goggles","","","","","",1,920,C_EYES,		STEEL,		GLASS,
+ARMOR("прибор ночного видения","","","","","",1,920,C_EYES,		STEEL,		GLASS,
     3,  6,  1, -2,  2,  2,  3,  6,  2,  0,	mfb(bp_eyes), "\
 A pair of goggles that amplify ambient light, allowing you to see in the\n\
 dark.  You must be carrying a powered-on unified power supply, or UPS, to use\n\
 them.");
 
-ARMOR("monocle","","","","","",	 2, 200,C_EYES,		GLASS,		PLASTIC,
+ARMOR("монокль","","","","","",	 2, 200,C_EYES,		GLASS,		PLASTIC,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     1,  0, -3, -2,  0,  0,  1,  1,  0,  0,	mfb(bp_eyes), "\
 An essential article of the gentleman's apparel. Also negates near-sight.");
@@ -1226,113 +1230,113 @@ An essential article of the gentleman's apparel. Also negates near-sight.");
 // Headwear environmental protection (ENV) drops through to eyes
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("baseball cap","","","","","",	30,  35,C_HAT,		COTTON,		MNULL,
+ARMOR("бейсболка","","","","","",	30,  35,C_HAT,		COTTON,		MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     2,  1, -5,  0,  0,  0,  0,  2,  1,  0,	mfb(bp_head), "\
 A Red Sox cap.  It provides a little bit of warmth.");
 
-ARMOR("boonie hat","","","","","",	10,  55,C_HAT,		PLASTIC,	MNULL,
+ARMOR("фуражка","","","","","",	10,  55,C_HAT,		PLASTIC,	MNULL,
     2,  1, -5,  0,  0,  0,  1,  2,  2,  0,	mfb(bp_head), "\
 Also called a \"bucket hat.\"  Often used in the military.");
 
-ARMOR("cotton hat","","","","","",	45,  40,C_HAT,		COTTON,		MNULL,
+ARMOR("хлопковая шляпа","","","","","",	45,  40,C_HAT,		COTTON,		MNULL,
     2,  1, -5,  0,  0,  0,  0,  0,  3,  0,	mfb(bp_head), "\
 A snug-fitting cotton hat.  Quite warm.");
 
-ARMOR("knit hat","","","","","",	25,  50,C_HAT,		WOOL,		MNULL,
+ARMOR("шерстянная шляпа","","","","","",	25,  50,C_HAT,		WOOL,		MNULL,
     2,  1, -5,  0,  0,  1,  0,  0,  4,  0,	mfb(bp_head), "\
 A snug-fitting wool hat.  Very warm.");
 
-ARMOR("hunting cap","","","","","",	20,  80,C_HAT,		WOOL,		MNULL,
+ARMOR("охотничья шляпа","","","","","",	20,  80,C_HAT,		WOOL,		MNULL,
     3,  2, -5,  0,  0,  0,  1,  2,  6,  0,	mfb(bp_head), "\
 A red plaid hunting cap with ear flaps.  Notably warm.");
 
-ARMOR("fur hat","","","","","",	15, 120,C_HAT,		WOOL,		MNULL,
+ARMOR("меховая шапка","","","","","",	15, 120,C_HAT,		WOOL,		MNULL,
     4,  2, -5,  0,  1,  2,  2,  0,  8,  0,	mfb(bp_head), "\
 A hat made from the pelts of animals.  Extremely warm.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("hard hat","","","","","",	50, 125,C_HAT,		PLASTIC,	MNULL,
+ARMOR("каска","","","","","",	50, 125,C_HAT,		PLASTIC,	MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     8,  4,  6,  0,  1,  4,  5,  0,  1,  0,	mfb(bp_head), "\
 A hard plastic hat worn in constructions sites.  Excellent protection from\n\
 cuts and percussion.");
 
-ARMOR("bike helmet","","","","","",	35, 140,C_HAT,		PLASTIC,	MNULL,
+ARMOR("велосипедный шлем","","","","","",	35, 140,C_HAT,		PLASTIC,	MNULL,
    12,  2,  4,  0,  1,  8,  2,  0,  2,  0,	mfb(bp_head), "\
 A thick foam helmet.  Designed to protect against percussion.");
 
-ARMOR("skid lid","","","","","",	30, 190,C_HAT,		PLASTIC,	IRON,
+ARMOR("стальная каска","","","","","",	30, 190,C_HAT,		PLASTIC,	IRON,
    10,  5,  8,  0,  2,  6, 16,  0,  1,  0,	mfb(bp_head), "\
 A small metal helmet that covers the head and protects against cuts and\n\
 percussion.");
 
-ARMOR("baseball helmet","","","","","",45, 195,C_HAT,		PLASTIC,	IRON,
+ARMOR("бейсбольный шлем","","","","","",45, 195,C_HAT,		PLASTIC,	IRON,
    14,  6,  7, -1,  2, 10, 10,  1,  1,  0,	mfb(bp_head), "\
 A hard plastic helmet which covers the head and ears.  Designed to protect\n\
 against a baseball to the head.");
 
-ARMOR("army helmet","","","","","",	40, 480,C_HAT,		PLASTIC,	IRON,
+ARMOR("армейский шлем","","","","","",	40, 480,C_HAT,		PLASTIC,	IRON,
    16,  8, 10, -1,  2, 12, 28,  0,  2,  0,	mfb(bp_head), "\
 A heavy helmet whic provides excellent protection from all sorts of damage.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("riot helmet","","","","","",	25, 420,C_HAT,		PLASTIC,	IRON,
+ARMOR("шлем с забралом","","","","","",	25, 420,C_HAT,		PLASTIC,	IRON,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
    20,  7,  8, -1,  2,  6, 28,  2,  2,  0,	mfb(bp_head)|mfb(bp_eyes)|
 						mfb(bp_mouth), "\
 A helmet with a plastic shield that covers your entire face.");
 
-ARMOR("motorcycle helmet","","","","","",40,325,C_HAT,		PLASTIC,	IRON,
+ARMOR("мотоциклетный шлем","","","","","",40,325,C_HAT,		PLASTIC,	IRON,
    24,  8,  7, -1,  3,  8, 20,  1,  3,  0,	mfb(bp_head)|mfb(bp_mouth), "\
 A helmet with covers your head and chin, leaving space in between for you to\n\
 wear goggles.");
 
-ARMOR("chitinous helmet","","","","","", 1, 380,C_HAT,		FLESH,		MNULL,
+ARMOR("хитиновый шлем","","","","","", 1, 380,C_HAT,		FLESH,		MNULL,
    22,  1,  2, -2,  4, 10, 14,  4,  3,  0,	mfb(bp_head)|mfb(bp_eyes)|
 						mfb(bp_mouth), "\
 A helmet made from the exoskeletons of insects.  Covers the entire head; very\n\
 light and durable.");
 
-ARMOR("top hat","","","","","",	10,  55,C_HAT,		PLASTIC,	MNULL,
+ARMOR("цилиндр","","","","","",	10,  55,C_HAT,		PLASTIC,	MNULL,
     2,  1, -5,  0,  0,  0,  1,  1,  1,  0,	mfb(bp_head), "\
 The only hat for a gentleman. Look exquisite while laughing in the face\n\
 of danger!");
 
-ARMOR("backpack","","","","","",	38, 210,C_STORE,	PLASTIC,	MNULL,
+ARMOR("рюкзак","","","","","",	38, 210,C_STORE,	PLASTIC,	MNULL,
    14,  2, -4,  0,  3,  0,  0,  0,  0, 80,	mfb(bp_torso), "\
 Provides more storage than any other piece of clothing.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("purse","","","","","",		40,  75,C_STORE,	LEATHER,	MNULL,
+ARMOR("мешок","","","","","",		40,  75,C_STORE,	LEATHER,	MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
    10,  3,  2,  2,  3,  0,  0,  0,  0, 20,	mfb(bp_torso), "\
 A bit encumbersome to wear, but provides lots of storage.");
 
-ARMOR("messenger bag","","","","","",	20, 110,C_STORE,	PLASTIC,	MNULL,
+ARMOR("сумка почтальона","","","","","",	20, 110,C_STORE,	PLASTIC,	MNULL,
     8,  2,  1,  1,  3,  0,  0,  0,  0, 30,	mfb(bp_torso), "\
 A bit encumbersome to wear, but provides lots of storage.");
 
-ARMOR("fanny pack","","","","","", 	10, 100,C_STORE,	PLASTIC,	MNULL,
+ARMOR("подарочная упаковка","","","","","", 	10, 100,C_STORE,	PLASTIC,	MNULL,
     3,  1,  1,  2,  0,  0,  0,  0,  0,  6,	0, "\
 Provides a bit of extra storage without encumbering you at all.");
 
-ARMOR("holster","","","","","",	 8,  90,C_STORE,	LEATHER,	MNULL,
+ARMOR("кобура","","","","","",	 8,  90,C_STORE,	LEATHER,	MNULL,
     2,  2,  2, -1,  0,  0,  0,  0,  0,  3,	0, "\
 Provides a bit of extra storage without encumbering you at all.");
 
 //     NAME		RAR PRC	COLOR		MAT1		MAT2
-ARMOR("bootstrap","","","","","",	 3,  80,C_STORE, 	LEATHER,	MNULL,
+ARMOR("ремешок","","","","","",	 3,  80,C_STORE, 	LEATHER,	MNULL,
 // VOL WGT DAM HIT ENC RES CUT ENV WRM STO	COVERS
     1,  1, -1, -1,  0,  0,  0,  0,  1,  2,	mfb(bp_legs), "\
 A small holster worn on the ankle.");
 
-ARMOR("gold ring","","","","","",	12, 600,C_DECOR,	SILVER,		MNULL,
+ARMOR("золотое кольцо","","","","","",	12, 600,C_DECOR,	SILVER,		MNULL,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,	0,	"\
 A flashy gold ring.  You can wear it if you like, but it won't provide\n\
 any effects.");
 
-ARMOR("silver necklace","","","","","",14, 500,C_DECOR,	SILVER,		MNULL,
+ARMOR("серебрянное ожерелье","","","","","",14, 500,C_DECOR,	SILVER,		MNULL,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,	0,	"\
 A nice silver necklace.  You can wear it if you like, but it won't provide\n\
 any effects.");
@@ -2576,7 +2580,9 @@ contains,flags,des) \
 ')',color,mat1,mat2,volume,wgt,melee_dam,0,to_hit,0,contains,flags))
 //	NAME		RAR PRC	COLOR		MAT1	MAT2
 
-CONT("plastic bag","","","","","",	50,  1,	c_ltgray,	PLASTIC,MNULL,
+CONT("пластиковый пакет","пластикового пакета","пластиковому пакету","пластиковый пакет",
+                                             "пластиковым пакетом","пластиковом пакете",
+	50,  1,	c_ltgray,	PLASTIC,MNULL,
 // VOL WGT DAM HIT	VOL	FLAGS
     1,  0, -8, -4,	24,	0, "\
 A small, open plastic bag.  Essentially trash.");
@@ -2588,20 +2594,28 @@ CONT("пластиковая бутылка","пластиковой бутыл�
 A plastic bottle with a resealable top.  Useful for refilling with water;\n\
 stand in shallow water, and press ',' or 'g' to pick some up.");
 
-CONT("glass bottle","","","","","",	70, 12,	c_cyan,		GLASS,	MNULL,
+CONT("стеклянная бутылка","стеклянной бутылки","стеклянной бутылке","стеклянную бутылку",
+                                               "стеклянной бутылкой","стеклянной бутылке",
+	70, 12,	c_cyan,		GLASS,	MNULL,
     2,  1,  8,  1,	 2,	mfb(con_rigid)|mfb(con_wtight)|mfb(con_seals),"\
 A glass bottle with a resealable  top.  Useful for refilling with water; just\n\
 stand in shallow water, and press ',' or 'g' to pick some up.");
 
-CONT("aluminum can","","","","","",	70,  1,	c_ltblue,	STEEL,	MNULL,
+CONT("алюминиевая банка","алюминиевой банки","алюминиевой банке","алюминиевую банку",
+                                             "алюминиевой банкой","алюминиевой банке",
+	70,  1,	c_ltblue,	STEEL,	MNULL,
     1,  0,  0,  0,	 1,	mfb(con_rigid)|mfb(con_wtight), "\
 An aluminum can, like what soda comes in.");
 
-CONT("tin can","","","","","",		65,  2,	c_blue,		IRON,	MNULL,
+CONT("жестяная банка","жестяной банки","жестяной банке","жестяную банку",
+                                       "жестяной банкой","жестяной банке",
+		65,  2,	c_blue,		IRON,	MNULL,
     1,  0, -1,  1,	 1,	mfb(con_rigid)|mfb(con_wtight), "\
 A tin can, like what beans come in.");
 
-CONT("sm. cardboard box","","","","","",50, 0,	c_brown,	PAPER,	MNULL,
+CONT("картонная коробка","картонной коробки","картонной коробке","картонную коробку",
+                                             "картонной коробкой","картонной коробке",
+    50, 0,	c_brown,	PAPER,	MNULL,
     4,  0, -5,  1,	 4,	mfb(con_rigid), "\
 A small cardboard box.  No bigger than a foot in any dimension.");
 

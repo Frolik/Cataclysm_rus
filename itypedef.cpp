@@ -455,35 +455,35 @@ color,mat,1,1,0,0,0,0,0,0,0,stim,healthy,addict,charges,\
 fun,itm_null,tool,use_func,addict_func));
 
 //  NAME		RAR PRC	COLOR		TOOL
-MED("bandages","","","","","",		50, 60,	c_white,	itm_null,
+MED("бинт","","","","","",		50, 60,	c_white,	itm_null,
 //	MATERIAL STM HTH ADD CHG FUN use_func		addiction type
 	COTTON,   0,  0,  0,  3,  0,&iuse::bandage,	ADD_NULL, "\
 Simple cloth bandages.  Used for healing small amounts of damage.");
 
-MED("first aid","","","","","",	35,350,	c_red,		itm_null,
+MED("аптечка","","","","","",	35,350,	c_red,		itm_null,
 	PLASTIC,  0,  0,  0,  2,  0,&iuse::firstaid,	ADD_NULL, "\
 A full medical kit, with bandages, anti-biotics, and rapid healing agents.\n\
 Used for healing large amounts of damage.");
 
-MED("vitamins","","","","","",		75, 45,	c_cyan,		itm_null,
+MED("витамины","","","","","",		75, 45,	c_cyan,		itm_null,
 	PLASTIC,  0,  3,  0, 50,  0,&iuse::none,	ADD_NULL, "\
 Take frequently to improve your immune system.");
 
-MED("aspirin","","","","","",		85, 30,	c_cyan,		itm_null,
+MED("аспирин","","","","","",		85, 30,	c_cyan,		itm_null,
 	PLASTIC,  0, -1,  0, 50,  0,&iuse::pkill_1,	ADD_NULL, "\
 Low-grade painkiller.  Best taken in pairs.");
 
-MED("caffeine pills","","","","","",	25, 60,	c_cyan,		itm_null,
+MED("кофеин","","","","","",	25, 60,	c_cyan,		itm_null,
 	PLASTIC,  8,  0,  3, 20,  0,&iuse::caff,	ADD_CAFFEINE, "\
 No-doz pills.  Useful for staying up all night.");
 
 //  NAME		RAR PRC	COLOR		TOOL
-MED("sleeping pills","","","","","",	15, 50,	c_cyan,		itm_null,
+MED("снотворное","","","","","",	15, 50,	c_cyan,		itm_null,
 //	MATERIAL STM HTH ADD CHG FUN use_func		addiction type
 	PLASTIC, -8,  0, 40, 20,  0,&iuse::sleep,	ADD_SLEEP, "\
 Prescription sleep aids.  Will make you very tired.");
 
-MED("iodine tablets","","","","","",	 5,140, c_yellow,	itm_null,
+MED("таблетки йода","","","","","",	 5,140, c_yellow,	itm_null,
 	PLASTIC,  0, -1,  0, 10,  0,&iuse::iodine,	ADD_NULL, "\
 Iodine tablets are used for recovering from irradiation.  They are not\n\
 spectacularly effective, but are better than nothing.");
@@ -497,13 +497,13 @@ MED("Nyquil","","","","","",		70, 85,	c_blue,		itm_null,
 Nighttime flu medication.  Will halt all flu symptoms for a while, plus make\n\
 you sleepy.");
 
-MED("inhaler","","","","","",		14,200,	c_ltblue,	itm_null,
+MED("ингалятор","","","","","",		14,200,	c_ltblue,	itm_null,
 	PLASTIC,  1,  0,  0,100,  0,&iuse::inhaler,	ADD_NULL, "\
 Vital medicine for those with asthma.  Those without asthma can use it for a\n\
 minor stimulant boost.");
 
 //  NAME		RAR PRC	COLOR		TOOL
-MED("codeine","","","","","",		15,400,	c_cyan,		itm_null,
+MED("кодеин","","","","","",		15,400,	c_cyan,		itm_null,
 //	MATERIAL STM HTH ADD CHG FUN use_func		addiction type
 	PLASTIC, -2,  0, 10, 20, 10,&iuse::pkill_2,	ADD_PKILLER, "\
 A weak opiate, prescribed for light to moderate pain.");
@@ -538,38 +538,38 @@ MED("Prozac","","","","","",		10,650,	c_cyan,		itm_null,
 	PLASTIC, -4,  0,  0, 40,  0,&iuse::prozac,	ADD_NULL, "\
 A strong anti-depressant.  Useful if your morale level is very low.");
 
-MED("cigarettes","","","","","",	90,120,	c_dkgray,	itm_lighter,
+MED("сигареты","","","","","",	90,120,	c_dkgray,	itm_lighter,
 	VEGGY,    1, -1, 40, 20,  5,&iuse::cig,		ADD_CIG, "\
 These will boost your dexterity, intelligence, and perception for a short\n\
 time.  They are quite addictive.");
 
 //  NAME		RAR PRC	COLOR
-MED("marijuana","","","","","",	20,180,	c_green,	itm_lighter,
+MED("марихуана","","","","","",	20,180,	c_green,	itm_lighter,
 //	MATERIAL STM HTH ADD CHG FUN use_func		addiction type
 	VEGGY,   -8,  0,  0, 15, 18,&iuse::weed,	ADD_NULL, "\
 Really useful only for relaxing.  Will reduce your attributes and reflexes.");
 
-MED("cocaine","","","","","",		 8,420,	c_white,	itm_null,
+MED("кокаин","","","","","",		 8,420,	c_white,	itm_null,
 	POWDER,  20, -2, 30,  8, 25,&iuse::coke,	ADD_COKE, "\
 A strong, illegal stimulant.  Highly addictive.");
 
-MED("methamphetamine","","","","","",	 2,400, c_ltcyan,	itm_null,
+MED("амфетамин","","","","","",	 2,400, c_ltcyan,	itm_null,
 	POWDER,  10, -4, 50,  6, 30,&iuse::meth,	ADD_SPEED, "\
 A very strong illegal stimulant.  Extremely addictive and bad for you, but\n\
 also extremely effective in boosting your alertness.");
 
 //  NAME		RAR PRC	COLOR
-MED("heroin","","","","","",		 1,600,	c_brown,	itm_syringe,
+MED("героин","","","","","",		 1,600,	c_brown,	itm_syringe,
 //	MATERIAL STM HTH ADD CHG FUN use_func		addiction type
 	POWDER, -10, -3, 60,  4, 45,&iuse::pkill_4,	ADD_PKILLER, "\
 A very strong illegal opiate.  Unless you have an opiate tolerance, avoid\n\
 heroin, as it will be too strong for you.");
 
-MED("cigars","","","","","",		 5,120,	c_dkgray,	itm_lighter,
+MED("сигара","","","","","",		 5,120,	c_dkgray,	itm_lighter,
 	VEGGY,    1, -1, 40, 10, 15,&iuse::cig,		ADD_CIG, "\
 A gentleman's vice. Cigars are what separates a gentleman from a savage.");
 
-MED("antibiotics","","","","","",	25,900, c_pink,		itm_null,
+MED("антибиотики","","","","","",	25,900, c_pink,		itm_null,
 	PLASTIC,   0, -2,  0, 15,  0,&iuse::none,	ADD_NULL, "\
 Medication designed to stop the spread of, and kill, bacteria infections.");
 
@@ -1360,18 +1360,18 @@ accuracy,recoil,count,des,flags) \
 color,mat,volume,wgt,1,0,0,flags,ammo_type,dmg,AP,accuracy,recoil,range,count))
 
 //  NAME		RAR PRC TYPE		COLOR		MAT
-AMMO("batteries","","","","","",	50, 120,AT_BATT,	c_magenta,	IRON,
+AMMO("батарея","","","","","",	50, 120,AT_BATT,	c_magenta,	IRON,
 //	VOL WGT DMG  AP RNG ACC REC COUNT
 	 1,  1,  0,  0,  0,  0,  0, 100, "\
 A set of universal batteries.  Used to charge almost any electronic device.",
 0);
 
-AMMO("plutonium cell","","","","","",	10,3000,AT_PLUT,	c_ltgreen,	STEEL,
+AMMO("плутениевая батарея","","","","","",	10,3000,AT_PLUT,	c_ltgreen,	STEEL,
 	 1,  1,  0,  0,  0,  0,  0, 5, "\
 A nuclear-powered battery.  Used to charge advanced and rare electronics.",
 0);
 
-AMMO("nails","","","","","",		35,  60,AT_NAIL,	c_cyan,		IRON,
+AMMO("гвозди","","","","","",		35,  60,AT_NAIL,	c_cyan,		IRON,
          1,  8,  4,  3,  3, 40,  4, 100, "\
 A box of nails, mainly useful with a hammer.",
 0);
@@ -1381,20 +1381,20 @@ AMMO("BB","","","","","",		 8,  50,AT_BB,		c_pink,		STEEL,
 A box of small steel balls.  They deal virtually no damage.",
 0);
 
-AMMO("wood arrow", "","","","","",      5,500,AT_ARROW,        c_green,        WOOD,
+AMMO("деревянная стрела", "","","","","",      5,500,AT_ARROW,        c_green,        WOOD,
          2, 60, 16,  3, 10, 14,  0,  15, "\
 A sharpened arrow carved from wood.  It's light-weight, does little damage,\n\
 and is so-so on accuracy.  Stands a good chance of remaining intact once\n\
 fired.",
 0);
             
-AMMO("carbon fiber arrow","","","","","",5,500,AT_ARROW,       c_green,        PLASTIC,
+AMMO("карбоновая стрела","","","","","",5,500,AT_ARROW,       c_green,        PLASTIC,
          2, 30, 24,  5, 15, 18,  0,  12, "\
 High-tech carbon fiber shafts and 100 grain broadheads. Very light weight,\n\
 fast, and notoriously fragile.",
 0);
 
-AMMO("wood crossbow bolt","","","","","",8,500,AT_BOLT,	c_green,	WOOD,
+AMMO("деревянный арбалетный болт","","","","","",8,500,AT_BOLT,	c_green,	WOOD,
 	 1, 40, 16,  4, 10, 16,  0,  15, "\
 A sharpened bolt carved from wood.  It's lighter than steel bolts, and does\n\
 less damage and is less accurate.  Stands a good chance of remaining intact\n\
@@ -1402,7 +1402,7 @@ once fired.",
 0);
 
 //  NAME		RAR PRC TYPE		COLOR		MAT
-AMMO("steel crossbow bolt","","","","","",7,900,AT_BOLT,	c_green,	STEEL,
+AMMO("стальной арбалетный болт","","","","","",7,900,AT_BOLT,	c_green,	STEEL,
 //	VOL WGT DMG  AP RNG ACC REC COUNT
 	 1, 90, 26,  8, 14, 12,  0,  10, "\
 A sharp bolt made from steel.  Deadly in skilled hands.  Stands an excellent\n\
@@ -1689,7 +1689,7 @@ The Heckler & Koch 12mm projectiles are used in H&K railguns. It's made of a\n\
 ferromagnetic metal, probably cobalt.",
 0);
 
-AMMO("hydrogen","","","","","",	 8,1200,AT_PLASMA,	c_green,	STEEL,
+AMMO("водород","","","","","",	 8,1200,AT_PLASMA,	c_green,	STEEL,
 	 10,  25, 35,  3, 8,  4,  0,  25, "\
 A canister of hydrogen. With proper equipment, it could be heated to plasma.",
 mfb(IF_AMMO_INCENDIARY));
@@ -1701,7 +1701,7 @@ rarity,price,ammo_type,color,dmg,AP,range,accuracy,recoil,\
              count,des,flags) \
 	index++;itypes.push_back(new it_ammo(index,rarity,price,name,name1,name2,name3,name4,name5,des,'~',\
 color,LIQUID,1,1,0,0,0,flags,ammo_type,dmg,AP,accuracy,recoil,range,count))
-FUEL("gasoline","","","","","",	0, 400,   AT_GAS,	c_ltred,
+FUEL("бензин","","","","","",	0, 400,   AT_GAS,	c_ltred,
 //	DMG  AP RNG ACC REC COUNT
 	 0,  0,  4,  0,  0,  200, "\
 Gasoline is a highly flammable liquid.  When under pressure, it has the\n\
@@ -1737,7 +1737,7 @@ Popular among children.  It's fairly accurate, but BBs deal nearly no damage.\n\
 It could be used to practice your rifle skill up to level 1.",
 0);
 
-GUN("crossbow","","","","","",		 2, 500,c_green,	IRON,	WOOD,
+GUN("арбалет","","","","","",		 2, 500,c_green,	IRON,	WOOD,
 	sk_archery,	AT_BOLT, 6,  9, 11,  1,  0, 18,  0,  6,  0,  1, 800, "\
 A slow-loading hand weapon that launches bolts.  Stronger people can reload\n\
 it much faster.  Bolts fired from this weapon have a good chance of remaining\n\
@@ -1745,7 +1745,7 @@ intact for re-use.",
 mfb(IF_STR_RELOAD));
 
 //  NAME		RAR PRC COLOR		MAT1	MAT2
-GUN("compound bow","","","","","",      2, 700,c_yellow,       STEEL,  PLASTIC,
+GUN("композитный лук","","","","","",      2, 700,c_yellow,       STEEL,  PLASTIC,
 //	SKILL		AMMO	VOL WGT MDG HIT DMG ACC REC DUR BST CLIP RELOAD
         sk_archery,     AT_ARROW,12, 8,  8,  1,  0, 16,  0,  6,  0,  1, 100, "\
 A bow with wheels that fires high velocity arrows.  Weaker people can use\n\
@@ -1753,7 +1753,7 @@ compound bows more easily.  Arrows fired from this weapon have a good chance\n\
 of remaining intact for re-use.",
 mfb(IF_STR8_DRAW)|mfb(IF_RELOAD_AND_SHOOT));
         
-GUN("longbow","","","","","",           5, 400,c_yellow,       WOOD,   MNULL,
+GUN("длиный лук","","","","","",           5, 400,c_yellow,       WOOD,   MNULL,
         sk_archery,     AT_ARROW,8, 4, 10,  0,  0, 12,  0,  6,  0,  1,  80, "\
 A six-foot wooden bow that fires feathered arrows.  This takes a fair amount\n\
 of strength to draw.  Arrows fired from this weapon have a good chance of\n\
@@ -2233,7 +2233,7 @@ mfb(IF_USE_UPS));
 
 
 //	NAME      	 RAR  PRC  COLOR     MAT1   MAT2     VOL WGT DAM CUT HIT
-GUNMOD("silencer","","","","","",	 15,  480, c_dkgray, STEEL, PLASTIC,  2,  1,  3,  0,  2,
+GUNMOD("глушитель","","","","","",	 15,  480, c_dkgray, STEEL, PLASTIC,  2,  1,  3,  0,  2,
 //	ACC DAM NOI CLP REC BST NEWTYPE,	PISTOL	SHOT	SMG	RIFLE
 	-1, -4,-25,  0,  0,  0,	AT_NULL,	true,	false,	true,	true,
 	0, "\
@@ -2404,7 +2404,7 @@ its normal rounds, or with a single 40MM round.",
 0);
 
 //	NAME      	RAR  PRC  COLOR     MAT1   MAT2      VOL WGT DAM CUT HIT
-GUNMOD("bayonet","","","","","",	 6, 400, c_ltcyan, STEEL, MNULL,       2,  2,  0, 20, -2,
+GUNMOD("штык","","","","","",	 6, 400, c_ltcyan, STEEL, MNULL,       2,  2,  0, 20, -2,
 //	ACC DAM NOI CLP REC BST NEWTYPE		PISTOL	SHOT	SMG	RIFLE
 	  0,  0,  0,  0,  2,  0, AT_NULL,	false,	true,	true,	true,
 	0, "\
@@ -2643,52 +2643,52 @@ color,mat1,mat2,volume,wgt,melee_dam,melee_cut,to_hit,flags,max_charge,\
 def_charge,charge_per_use,charge_per_sec,fuel,revert,func))
 
 //	NAME		RAR PRC	SYM  COLOR	MAT1	MAT
-TOOL("lighter","","","","","",		60,  35,',', c_blue,	PLASTIC,IRON,
+TOOL("зажигалка","","","","","",		60,  35,',', c_blue,	PLASTIC,IRON,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     0,  0,  0,  0,  0, 100,100, 1,  0, AT_NULL,	itm_null, &iuse::lighter, 0, "\
 A lighter must be carried to use various drugs, like cigarettes, or to light\n\
 things like molotov cocktails.  You can also use a lighter to light nearby\n\
 items on fire.");
 
-TOOL("sewing kit","","","","","",	30,120, ',', c_red,	PLASTIC,IRON,
+TOOL("набор для шитья","","","","","",	30,120, ',', c_red,	PLASTIC,IRON,
     2,  0, -3,  0, -1,  50, 50, 1,  0, AT_NULL, itm_null, &iuse::sew, 0, "\
 Use a sewing kit on an article of clothing to attempt to repair or reinforce\n\
 that clothing.  This uses your tailoring skill.");
 
-TOOL("scissors","","","","","",	50,  45,',', c_ltred,	IRON,	PLASTIC,
+TOOL("ножницы","","","","","",	50,  45,',', c_ltred,	IRON,	PLASTIC,
     1,  1,  0,  8, -1,   0,  0, 0,  0, AT_NULL, itm_null, &iuse::scissors,
 mfb(IF_SPEAR), "\
 Use scissors to cut items made from cotton (mostly clothing) into rags.");
 
-TOOL("hammer","","","","","",		35, 70, ';', c_brown,	IRON,	WOOD,
+TOOL("молоток","","","","","",		35, 70, ';', c_brown,	IRON,	WOOD,
     2,  5, 17,  0,  1,   0,  0, 0,  0, AT_NULL, itm_null, &iuse::hammer, 0, "\
 Use a hammer, with nails and two by fours in your inventory, to board up\n\
 adjacent doors and windows.");
 
 //	NAME		RAR PRC	SYM  COLOR	MAT1	MAT
-TOOL("fire extinguisher","","","","","",20,700,';', c_red,	IRON,	MNULL,
+TOOL("огнетушитель","","","","","",20,700,';', c_red,	IRON,	MNULL,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
    16, 20, 26,  0, -1,  80, 80, 1,  0, AT_NULL, itm_null, &iuse::extinguisher,0,
 "Use a fire extinguisher to put out adjacent fires.");
 
-TOOL("flashlight (off)","","","","","",40, 380,';', c_blue,	PLASTIC, IRON,
+TOOL("фонарик (выкл)","","","","","",40, 380,';', c_blue,	PLASTIC, IRON,
     3,  2,  1,  0,  2, 100,100, 0,  0, AT_BATT, itm_null, &iuse::light_off,0,"\
 Using this flashlight will turn it on, assuming it is charged with batteries.\n\
 A turned-on flashlight will provide light during the night or while\n\
 underground.");
 
-TOOL("flashlight (on)","","","","","",  0, 380,';', c_blue,	PLASTIC, IRON,
+TOOL("фонарик (вкл)","","","","","",  0, 380,';', c_blue,	PLASTIC, IRON,
     3,  2,  1,  0,  2, 100,100, 0, 15, AT_BATT,itm_flashlight,&iuse::light_on,
 mfb(IF_LIGHT_8),
 "This flashlight is turned on, and continually draining its batteries.  It\n\
 provides light during the night or while underground.  Use it to turn it off.");
 
-TOOL("hotplate","","","","","",	10, 250,';', c_green,	IRON,	PLASTIC,
+TOOL("подогреватель","","","","","",	10, 250,';', c_green,	IRON,	PLASTIC,
     5,  6,  8,  0, -1, 40, 20,  0,  0, AT_BATT, itm_null, &iuse::none,0,"\
 A small heating element.  Indispensible for cooking and chemisty.");
 
 //	NAME		RAR PRC	SYM  COLOR	MAT1	MAT
-TOOL("soldering iron","","","","","",	70, 200,',', c_ltblue,	IRON,	MNULL,
+TOOL("припой","","","","","",	70, 200,',', c_ltblue,	IRON,	MNULL,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     3,  1,  2,  6,  0, 50, 20,  0,  0, AT_BATT, itm_null, &iuse::none,
 mfb(IF_SPEAR), "\
@@ -2699,63 +2699,63 @@ TOOL("water purifier","","","","","",   5,1200,';', c_ltblue,	PLASTIC, IRON,
 "Using this item on a container full of water will purify the water.  Water\n\
 taken from uncertain sources like a river may be dirty.");
 
-TOOL("two-way radio","","","","","",	10, 800,';', c_yellow,	PLASTIC, IRON,
+TOOL("рация","","","","","",	10, 800,';', c_yellow,	PLASTIC, IRON,
     2,  3, 10,  0,  0, 100,100, 1,  0, AT_BATT, itm_null,&iuse::two_way_radio,0,
 "Using this allows you to send out a signal; either a general SOS, or if you\n\
 are in contact with a faction, to send a direct call to them.");
 
-TOOL("radio (off)","","","","","",	20, 420,';', c_yellow,	PLASTIC, IRON,
+TOOL("радиоприемник (выкл)","","","","","",	20, 420,';', c_yellow,	PLASTIC, IRON,
     4,  2,  4,  0, -1, 100,100, 0,  0, AT_BATT,	itm_null, &iuse::radio_off, 0,"\
 Using this radio turns it on.  It will pick up any nearby signals being\n\
 broadcast and play them audibly.");
 
 //	NAME		RAR PRC	SYM  COLOR	MAT1	MAT
-TOOL("radio (on)","","","","","",	 0, 420,';', c_yellow,	PLASTIC, IRON,
+TOOL("радиоприемник (вкл)","","","","","",	 0, 420,';', c_yellow,	PLASTIC, IRON,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     4,  2,  4,  0, -1, 100,100, 0,  8, AT_BATT, itm_radio,&iuse::radio_on, 0,"\
 This radio is turned on, and continually draining its batteries.  It is\n\
 playing the broadcast being sent from any nearby radio towers.");
 
-TOOL("crowbar","","","","","",		18, 130,';', c_ltblue,	IRON,	MNULL,
+TOOL("ломик","","","","","",		18, 130,';', c_ltblue,	IRON,	MNULL,
     4,  9, 16,  3,  2,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::crowbar, 0,"\
 A prying tool.  Use it to open locked doors without destroying them, or to\n\
 lift manhole covers.");
 
-TOOL("hoe","","","","","",		30,  90,'/', c_brown,	IRON,	WOOD,
+TOOL("тяпка","","","","","",		30,  90,'/', c_brown,	IRON,	WOOD,
    14, 14, 12, 10,  3,  0,  0,  0,  0, AT_NULL, itm_null, &iuse::makemound,
 	mfb(IF_STAB), "\
 A farming implement.  Use it to turn tillable land into a slow-to-cross pile\n\
 of dirt.");
 
-TOOL("shovel","","","","","",		40, 100,'/', c_brown,	IRON,	WOOD,
+TOOL("лопата","","","","","",		40, 100,'/', c_brown,	IRON,	WOOD,
    16, 18, 15,  5,  3,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::dig, 0, "\
 A digging tool.  Use it to dig pits adjacent to your location.");
 
-TOOL("chainsaw (off)","","","","","",	 7, 350,'/', c_red,	IRON,	PLASTIC,
+TOOL("бензопила (выкл)","","","","","",	 7, 350,'/', c_red,	IRON,	PLASTIC,
    12, 40, 10,  0, -4, 400, 0,  0,  0, AT_GAS,	itm_null, &iuse::chainsaw_off,0,
 "Using this item will, if loaded with gas, cause it to turn on, making a very\n\
 powerful, but slow, unwieldy, and noisy, melee weapon.");
 
 //	NAME		RAR VAL	SYM  COLOR	MAT1	MAT
-TOOL("chainsaw (on)","","","","","",	 0, 350,'/', c_red,	IRON,	PLASTIC,
+TOOL("бензопила (вкл)","","","","","",	 0, 350,'/', c_red,	IRON,	PLASTIC,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
    12, 40,  4, 70, -5, 400, 0,  0,  1, AT_GAS,	itm_chainsaw_off,
 	&iuse::chainsaw_on, mfb(IF_MESSY), "\
 This chainsaw is on, and is continuously draining gasoline.  Use it to turn\n\
 it off.");
 
-TOOL("jackhammer","","","","","",	 2, 890,';', c_magenta,	IRON,	MNULL,
+TOOL("отбойный молоток","","","","","",	 2, 890,';', c_magenta,	IRON,	MNULL,
    13, 54, 20,  6, -4, 120,  0,10,  0, AT_GAS,	itm_null, &iuse::jackhammer,0,"\
 This jackhammer runs on gasoline.  Use it (if loaded) to blast a hole in\n\
 adjacent solid terrain.");
 
-TOOL("bubblewrap","","","","","",	50,  40,';', c_ltcyan,	PLASTIC,MNULL,
+TOOL("пузырчатая пленка","","","","","",	50,  40,';', c_ltcyan,	PLASTIC,MNULL,
     2,  0, -8,  0,  0,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::set_trap,0,"\
 A sheet of plastic covered with air-filled bubbles.  Use it to set it on the\n\
 ground, creating a trap that will warn you with noise when something steps on\n\
 it.");
 
-TOOL("bear trap","","","","","",	 5, 120,';', c_cyan,	IRON,	MNULL,
+TOOL("медвежий капкан","","","","","",	 5, 120,';', c_cyan,	IRON,	MNULL,
     4, 12,  9,  1, -2,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::set_trap,0,"\
 A spring-loaded pair of steel jaws.  Use it to set it on the ground, creating\n\
 a trap that will ensnare and damage anything that steps on it.  If you are\n\
@@ -2794,64 +2794,64 @@ A machete is attached laterally to a motor, with a tripwire controlling its\n\
 throttle.  When the tripwire is pulled, the blade is swung around with great\n\
 force.  The trap forms a 3x3 area of effect.");
 
-TOOL("land mine","","","","","",	 3,2400,';', c_red,	IRON,	MNULL,
+TOOL("противопехотная мина","","","","","",	 3,2400,';', c_red,	IRON,	MNULL,
     3,  6, 10,  0, -1,  0,  0,  0,  0, AT_NULL, itm_null, &iuse::set_trap,0,"\
 An explosive that is triggered when stepped upon.  It must be partially\n\
 buried to be effective, and so you will need a shovel to use it.");
 
-TOOL("geiger ctr (off)","","","","","", 8, 300,';', c_green,	PLASTIC,STEEL,
+TOOL("счетчик гейгера (выкл)","","","","","", 8, 300,';', c_green,	PLASTIC,STEEL,
     2,  2,  2,  0,  0,100,100,  1,  0, AT_BATT,	itm_null, &iuse::geiger,0,"\
 A tool for measuring radiation.  Using it will prompt you to choose whether\n\
 to scan yourself or the terrain, or to turn it on, which will provide\n\
 continuous feedback on ambient radiation.");
 
-TOOL("geiger ctr (on)","","","","","",	0, 300, ';', c_green,	PLASTIC,STEEL,
+TOOL("счетчки гейгера (вкл)","","","","","",	0, 300, ';', c_green,	PLASTIC,STEEL,
     2,  2,  2,  0,  0,100,100,  0, 10, AT_BATT, itm_geiger_off,&iuse::geiger,0,
 "A tool for measuring radiation.  It is in continuous scan mode, and will\n\
 produce quiet clicking sounds in the presence of ambient radiation. Using it\n\
 allows you to turn it off, or scan yourself or the ground.");
 
 //	NAME		RAR VAL	SYM  COLOR	MAT1	MAT
-TOOL("teleporter","","","","","",      10,6000,';', c_magenta,	PLASTIC,STEEL,
+TOOL("телепорт","","","","","",      10,6000,';', c_magenta,	PLASTIC,STEEL,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     3, 12,  4,  0, -1, 20, 20,  1,  0, AT_PLUT,	itm_null, &iuse::teleport,0,"\
 An arcane device, powered by plutonium fuel cells.  Using it will cause you\n\
 to teleport a short distance away.");
 
-TOOL("goo canister", "","","","","",    8,3500,';', c_dkgray,  STEEL,	MNULL,
+TOOL("канистра с слизью", "","","","","",    8,3500,';', c_dkgray,  STEEL,	MNULL,
     6, 22,  7,  0,  1,  1,  1,  1,  0, AT_NULL,	itm_null, &iuse::can_goo,0,"\
 \"Warning: contains highly toxic and corrosive materials.  Contents may be\n\
  sentient.  Open at your own risk.\"");
 
-TOOL("pipe bomb","","","","","",	 4, 150,'*', c_white,	IRON,	MNULL,
+TOOL("самодельная граната","","","","","",	 4, 150,'*', c_white,	IRON,	MNULL,
     2,  3, 11,  0,  1,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::pipebomb,0,"\
 A section of a pipe filled with explosive materials.  Use this item to light\n\
 the fuse, which gives you 3 turns before it detonates.  You will need a\n\
 lighter.  It is somewhat unreliable, and may fail to detonate.");
 
-TOOL("active pipe bomb","","","","","", 0,   0,'*', c_white,	IRON,	MNULL,
+TOOL("самодельная граната (г)","","","","","", 0,   0,'*', c_white,	IRON,	MNULL,
     2,  3, 11,  0,  1,  3,  3,  0,  1, AT_NULL,	itm_null, &iuse::pipebomb_act,0,
 "This pipe bomb's fuse is lit, and it will explode any second now.  Throw it\n\
 immediately!");
 
 //	NAME		RAR VAL	SYM  COLOR	MAT1	MAT
-TOOL("grenade","","","","","",		 3, 400,'*', c_green,	IRON,	PLASTIC,
+TOOL("граната","","","","","",		 3, 400,'*', c_green,	IRON,	PLASTIC,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     1,  1, 10,  0, -1,  0,  0,  0,  0, AT_NULL, itm_null, &iuse::grenade,0,"\
 Use this item to pull the pin, turning it into an active grenade.  You will\n\
 then have five turns before it explodes; throwing it would be a good idea.");
 
-TOOL("active grenade","","","","","",	 0,   0,'*', c_green,	IRON,	PLASTIC,
+TOOL("взведенная граната","","","","","",	 0,   0,'*', c_green,	IRON,	PLASTIC,
     1,  1, 10,  0, -1,  5,  5,  0,  1, AT_NULL, itm_null, &iuse::grenade_act,0,
 "This grenade is active, and will explode any second now.  Better throw it!");
 
-TOOL("flashbang","","","","","",	 3, 380,'*', c_white,	STEEL,	PLASTIC,
+TOOL("световая граната","","","","","",	 3, 380,'*', c_white,	STEEL,	PLASTIC,
     1,  1,  8,  0, -1,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::flashbang,0,"\
 Use this item to pull the pin, turning it into an active flashbang.  You will\n\
 then have five turns before it detonates with intense light and sound,\n\
 blinding, deafening and disorienting anyone nearby.");
 
-TOOL("active flashbang","","","","","", 0,   0,'*', c_white,	STEEL,	PLASTIC,
+TOOL("взведенная световая граната","","","","","", 0,   0,'*', c_white,	STEEL,	PLASTIC,
     1,  1,  8,  0, -1,  5,  5,  0,  1, AT_NULL,	itm_null, &iuse::flashbang_act,
 0,"This flashbang is active, and will soon detonate with intense light and\n\
 sound, blinding, deafening and disorienting anyone nearby.");
@@ -2869,65 +2869,65 @@ TOOL("active EMP grenade","","","","","",0,  0,'*', c_cyan,	STEEL,	PLASTIC,
 "This EMP grenade is active, and will shortly detonate, creating a large EMP\n\
 field which damages robots and drains bionic energy.");
 
-TOOL("teargas canister","","","","","",3,  600,'*', c_yellow,	STEEL, MNULL,
+TOOL("граната со слезоточивым газом","","","","","",3,  600,'*', c_yellow,	STEEL, MNULL,
     1,  1,  6,  0, -1,  0,  0,  0,  0, AT_NULL, itm_null, &iuse::gasbomb,0,"\
 Use this item to pull the pin.  Five turns after you do that, it will begin\n\
 to expell a highly toxic gas for several turns.  This gas damages and slows\n\
 those who enter it, as well as obscuring vision and scent.");
 
 //	NAME		RAR PRC SYM  COLOR	MAT1	MAT
-TOOL("active teargas","","","","","",	0,    0,'*', c_yellow,	STEEL, MNULL,
+TOOL("слезоточивый газ","","","","","",	0,    0,'*', c_yellow,	STEEL, MNULL,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     1,  1,  6,  0, -1,  5,  5,  0,  1, AT_NULL, itm_null, &iuse::gasbomb_act,0,
 "This canister of teargas has had its pin removed, indicating that it is (or\n\
 will shortly be) expelling highly toxic gas.");
 
-TOOL("smoke bomb","","","","","",	5,  180,'*', c_dkgray,	STEEL,	MNULL,
+TOOL("дымовая граната","","","","","",	5,  180,'*', c_dkgray,	STEEL,	MNULL,
     1,  1,  5,  0, -1,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::smokebomb,0,"\
 Use this item to pull the pin.  Five turns after you do that, it will begin\n\
 to expell a thick black smoke.  This smoke will slow those who enter it, as\n\
 well as obscuring vision and scent.");
 
-TOOL("active smoke bomb","","","","","",0,  0, '*', c_dkgray,	STEEL,	MNULL,
+TOOL("взведенная дымовая граната","","","","","",0,  0, '*', c_dkgray,	STEEL,	MNULL,
     1,  1,  5,  0, -1,  0,  0,  0,  1, AT_NULL, itm_null,&iuse::smokebomb_act,0,
 "This smoke bomb has had its pin removed, indicating that it is (or will\n\
 shortly be) expelling thick smoke.");
 
-TOOL("molotov cocktail","","","","","",0,  200,'*', c_ltred,	GLASS,	COTTON,
+TOOL("коктейль молотового","","","","","",0,  200,'*', c_ltred,	GLASS,	COTTON,
     2,  2,  8,  0,  1,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::molotov,0,"\
 A bottle of flammable liquid with a rag inserted.  Use this item to light the\n\
 rag; you will, of course, need a lighter in your inventory to do this.  After\n\
 lighting it, throw it to cause fires.");
 
 //	NAME		RAR PRC SYM  COLOR	MAT1	MAT
-TOOL("molotov cocktail (lit)","","","","","",0,0,'*', c_ltred,	GLASS,	COTTON,
+TOOL("коктейль молотового (г)","","","","","",0,0,'*', c_ltred,	GLASS,	COTTON,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     2,  2,  8,  0,  1,  1,  1,  0,  0, AT_NULL,itm_molotov,&iuse::molotov_lit,0,
 "A bottle of flammable liquid with a flaming rag inserted.  Throwing it will\n\
 cause the bottle to break, spreading fire.  The flame may go out shortly if\n\
 you do not throw it.  Dropping it while lit is not safe.");
 
-TOOL("acid bomb", "","","","","",	  0,500,'*', c_yellow,	GLASS,	MNULL,
+TOOL("кислотная граната", "","","","","",	  0,500,'*', c_yellow,	GLASS,	MNULL,
      1,  1,  4,  0, -1,  0,  0,  0,  0,AT_NULL,	itm_null, &iuse::acidbomb,0,"\
 A glass vial, split into two chambers.  The divider is removable, which will\n\
 cause the chemicals to mix.  If this mixture is exposed to air (as happens\n\
 if you throw the vial) they will spill out as a pool of potent acid.");
 
-TOOL("acid bomb (active)","","","","","",0,  0,'*', c_yellow, GLASS, MNULL,
+TOOL("кислотная граната (акт)","","","","","",0,  0,'*', c_yellow, GLASS, MNULL,
     1,  1,  4,  0,  -1,  0,  0,  0,  0,AT_NULL,itm_null,&iuse::acidbomb_act,0,"\
 A glass vial, with two chemicals mixing inside.  If this mixture is exposed\n\
 to air (as happens if you throw the vial), they will spill out as a pool of\n\
 potent acid.");
 
 //	NAME		RAR PRC SYM  COLOR	MAT1	MAT
-TOOL("dynamite","","","","","",	5,  700,'*', c_red,	PLASTIC,MNULL,
+TOOL("динамит","","","","","",	5,  700,'*', c_red,	PLASTIC,MNULL,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     6, 10,  4,  0, -3,  0,  0,  0,  0, AT_NULL,	itm_null, &iuse::dynamite,0,"\
 Several sticks of explosives with a fuse attached.  Use this item to light\n\
 the fuse; you will, of course, need a lighter in your inventory to do this.\n\
 Shortly after lighting the fuse, this item will explode, so get away!");
 
-TOOL("dynamite (lit)","","","","","",	5,    0,'*', c_red,	PLASTIC,MNULL,
+TOOL("динамит (г)","","","","","",	5,    0,'*', c_red,	PLASTIC,MNULL,
     6, 10,  4,  0, -3,  0,  0,  0,  1, AT_NULL,	itm_null, &iuse::dynamite_act,0,
 "The fuse on this dynamite is lit and hissing.  It'll explode any moment now.");
 
@@ -2943,14 +2943,14 @@ TOOL("mininuke (active)","","","","","",0,   0,'*', c_ltgreen,	STEEL,	PLASTIC,
 it will soon explode.  You should probably get far away from it.");
 
 //	NAME		RAR PRC SYM  COLOR	MAT1	MAT
-TOOL("zombie pheromone","","","","","",1,  400,'*', c_yellow,	FLESH,	PLASTIC,
+TOOL("феромоны зомби","","","","","",1,  400,'*', c_yellow,	FLESH,	PLASTIC,
 // VOL WGT DAM CUT HIT MAX DEF USE SEC FUEL	REVERT	  FUNCTION
     1,  1, -5,  0, -1,  3,  3,  1,  0, AT_NULL,	itm_null, &iuse::pheromone,0,"\
 This is some kind of disgusting ball of rotting meat.  Squeezing it causes a\n\
 small cloud of pheromones to spray into the air, causing nearby zombies to\n\
 become friendly for a short period of time.");
 
-TOOL("portal generator","","","","","",2, 6600, ';', c_magenta, STEEL,	PLASTIC,
+TOOL("генератор портала","","","","","",2, 6600, ';', c_magenta, STEEL,	PLASTIC,
     2, 10,  6,  0, -1, 10, 10,  5,  0, AT_NULL,	itm_null, &iuse::portal,0,"\
 A rare and arcane device, covered in alien markings.");
 
@@ -3005,7 +3005,7 @@ TOOL("vortex stone", "","","","","",    2,3000,';',c_pink,	STONE,	MNULL,
 A stone with spirals all over it, and holes around its perimeter.  Though it\n\
 is fairly large, it weighs next to nothing.  Air seems to gather around it.");
 
-TOOL("dog food", "","","","","",        5,  60,';',c_red,     FLESH,     MNULL,
+TOOL("собачья еда", "","","","","",        5,  60,';',c_red,     FLESH,     MNULL,
     1,  2,  0,  0,  -5,  0,  0,  0,  0, AT_NULL, itm_null, &iuse::dogfood, 0, "\
 Food for dogs. It smells strange, but dogs love it.");
 
@@ -3024,7 +3024,7 @@ TOOL("C4-Explosive(armed)","","","","","",0,6000,';',c_ltcyan, PLASTIC,     STEE
 Highly explosive, use with caution. Comes with a small timer.\n\
 It's armed and ticking!");
 
-TOOL("dog whistle","","","","","",	  0,  300,';',c_white,	STEEL,	MNULL,
+TOOL("собачий свисток","","","","","",	  0,  300,';',c_white,	STEEL,	MNULL,
      0,  0,  0,  0,  0,  0,  0,  0,  0, AT_NULL, itm_null, &iuse::dog_whistle,
 0, "\
 A small whistle.  When used, it produces a high tone which causes nearby\n\

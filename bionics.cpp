@@ -1,3 +1,5 @@
+// огромное спасибо Wiseacre за перевод этого модуля
+
 #include "player.h"
 #include "game.h"
 #include "rng.h"

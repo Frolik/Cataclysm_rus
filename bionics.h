@@ -1,3 +1,5 @@
+// огромное спасибо Wiseacre за перевод этого модуля
+
 #ifndef _BIONICS_H_
 #define _BIONICS_H_
 #include <string>
@@ -72,262 +74,261 @@ const bionic_data bionics[] = {
 {"NULL bionics", false, false, 0, 0, "\
 If you're seeing this, it's a bug."},
 // NAME          ,PW_SRC, ACT ,COST, TIME,
-{"Battery System", true, false, 0, 0, "\
-You have a battery draining attachment, and thus can make use of the energy\n\
-contained in normal, everyday batteries.  Use 'E' to consume batteries."},
-{"Metabolic Interchange", true, false, 0, 0, "\
-Your digestive system and power supply are interconnected.  Any drain on\n\
-energy instead increases your hunger."},
-{"Solar Panels", true, false, 0, 0, "\
-You have a few solar panels installed.  While in direct sunlight, your power\n\
-level will slowly recharge."},
-{"Internal Furnace", true, false, 0, 0, "\
-You can burn nearly any organic material as fuel (use 'E'), recharging your\n\
-power level.  Some materials will burn better than others."},
-{"Ethanol Burner", true, false, 0, 0, "\
-You burn alcohol as fuel in an extremely efficient reaction.  However, you\n\
-will still suffer the inebriating effects of the substance."},
+{"Зарядка от батареек", true, false, 0, 0, "\
+Модуль извлекает энергию из батареек, и Вы можете получать энергию\n\
+из обычных, стандартных батареек.  Нажмите 'Е', чтобы использовать батарейки."},
+{"Зарядка от метаболизма", true, false, 0, 0, "\
+Ваше пищеварение соединяется с хранилищем энергии.  Любое использование\n\
+энергии увеличивает Ваш голод."},
+{"Солнечные батареи", true, false, 0, 0, "\
+Устанавливается несколько солнечных батарей.  Когда вы находитесь на ярком свету\n\
+Ваш уровень энергии медленно увеличивается."},
+{"Внутренняя печь", true, false, 0, 0, "\
+Вы можете сжигать любые предметы из органики, лежащие рядом, как топливо (нажмите 'E'), заряжая\n\
+хранилище энергии.  Некоторые материалы горят лучше, чем остальные."},
 
-{"Enhanced Memory Banks", false, false, 1, 0, "\
-Your memory has been enhanced with small quantum storage drives.  Any time\n\
-you start to forget a skill, you have a chance at retaining all knowledge, at\n\
-the cost of a small amount of power."},
-{"Enhanced Hearing", false, false, 0, 0, "\
-Your hearing has been drastically improved, allowing you to hear ten times\n\
-better than the average person.  Additionally, high-intensity sounds will be\n\
-automatically dampened before they can damage your hearing."},
-{"Diamond Cornea", false, false, 0, 0, "\
-Your vision is greatly enhanced, giving you a +2 bonus to perception."},
-{"Nictating Membrane", false, false, 0, 0, "\
-Your eyes have a thin membrane that closes over your eyes while underwater,\n\
-negating any vision penalties."},
-{"Targeting System", false, false, 0, 0, "\
-Your eyes are equipped with range finders, and their movement is synced with\n\
-that of your arms, to a degree.  Shots you fire will be much more accurate,\n\
-particularly at long range."},
-{"Membrane Oxygenator", false, false, 1, 0, "\
-An oxygen interchange system automatically switches on while underwater,\n\
-slowly draining your energy reserves but providing oxygen."},
-{"Air Filtration System", false, false, 1, 0, "\
-Implanted in your trachea is an advanced filtration system.  If toxins find\n\
-their way into your windpipe, the filter will attempt to remove them, at the\n\
-cost of a small amount of power."},
-{"Internal Climate Control", false, false, 0, 0, "\
-Throughout your body lies a network of thermal piping which eases the effects\n\
-of high and low ambient temperatures.  It has an operating range of 0 to 140\n\
-degrees Fahrenheit."},
-{"Internal Storage", false, false, 0, 0, "\
-Space inside your chest cavity has been converted into a storage area.  You\n\
-may carry an extra 8 units of volume."},
-{"Recycler Unit", false, false, 0, 0, "\
-Your digestive system has been outfitted with a series of filters and\n\
-processors, allowing you to reclaim waste liquid and, to a lesser degree,\n\
-nutrients.  The net effect is a greatly reduced need to eat and drink."},
-{"Expanded Digestive System", false, false, 0, 0, "\
-You have been outfitted with three synthetic stomachs and industrial-grade\n\
-intestines.  Not only can you extract much more nutrition from food, but you\n\
-are highly resistant to foodborne illness, and can sometimes eat rotten food."},
-{"Integrated Toolset", false, false, 0, 0, "\
-Implanted in your hands and fingers is a complete tool set - screwdriver,\n\
-hammer, wrench, and heating elements.  You can use this in place of many\n\
-tools when crafting."},
-{"Electroshock Unit", false, false, 1, 0, "\
-While fighting unarmed, or with a weapon that conducts electricity, there is\n\
-a chance that a successful hit will shock your opponent, inflicting extra\n\
-damage and disabling them temporarily at the cost of some energy."},
-{"Heat Drain", false, false, 1, 0, "\
-While fighting unarmed against a warm-blooded opponent, there is a chance\n\
-that a successful hit will drain body heat, inflicting a small amount of\n\
-extra damage, and increasing your power reserves slightly."},
-{"Subdermal Carbon Filament", false, false, 0, 0, "\
-Lying just beneath your skin is a thin armor made of carbon nanotubes. This\n\
-reduces bashing damage by 2 and cutting damage by 4, but also reduces your\n\
-dexterity by 2."},
-{"Alloy Plating - Head", false, false, 0, 0, "\
-The flesh on your head has been replaced by a strong armor, protecting both\n\
-your head and jaw regions, but increasing encumberance by 2 and decreasing\n\
-perception by 1."},
-{"Alloy Plating - Torso", false, false, 0, 0, "\
-The flesh on your torso has been replaced by a strong armor, protecting you\n\
-greatly, but increasing your encumberance by 2."},
-{"Alloy Plating - Arms", false, false, 0, 0, "\
-The flesh on your arms has been replaced by a strong armor, protecting you\n\
-greatly, but decreasing your dexterity by 1."},
-{"Alloy Plating - Legs", false, false, 0, 0, "\
-The flesh on your legs has been replaced by a strong armor, protecting you\n\
-greatly, but decreasing your speed by 15."},
-
-{"Cranial Flashlight", false, true, 1, 30, "\
-Mounted between your eyes is a small but powerful LED flashlight."},
-{"Implanted Night Vision", false, true, 1, 20, "\
-Your eyes have been modified to amplify existing light, allowing you to see\n\
-in the dark."},
-{"Infrared Vision", false, true, 1, 4, "\
-Your range of vision extends into the infrared, allowing you to see warm-\n\
-blooded creatures in the dark, and even through walls."},
-{"Facial Distortion", false, true, 1, 10, "\
-Your face is actually made of a compound which may be molded by electrical\n\
-impulses, making you impossible to recognize.  While not powered, however,\n\
-the compound reverts to its default shape."},
-{"Active Defense System", false, true, 1, 7, "\
-A thin forcefield surrounds your body, continually draining power.  Anything\n\
-attempting to penetrate this field has a chance of being deflected at the\n\
-cost of more energy.  Melee attacks will be stopped more often than bullets."},
-{"Offensive Defense System", false, true, 1, 6, "\
-A thin forcefield surrounds your body, continually draining power.  This\n\
-field does not deflect penetration, but rather delivers a very strong shock,\n\
-damaging unarmed attackers and those with a conductive weapon."},
-{"Olfactory Mask", false, true, 1, 8, "\
-While this system is powered, your body will produce very little odor, making\n\
-it nearly impossible for creatures to track you by scent."},
-{"Scent Vision", false, true, 1, 30, "\
-While this system is powered, you're able to visually sense your own scent,\n\
-making it possible for you to recognize your surroundings even if you can't\n\
-see it."},
-{"Cloaking System", false, true, 2, 1, "\
-This high-power system uses a set of cameras and LEDs to make you blend into\n\
-your background, rendering you fully invisible to normal vision.  However,\n\
-you may be detected by infrared, sonar, etc."},
-{"Sensory Dulling", false, true, 2, 0, "\
-Your nervous system is wired to allow you to inhibit the signals of pain,\n\
-allowing you to dull your senses at will.  However, the use of this system\n\
-may cause delayed reaction time and drowsiness."},
-{"Repair Nanobots", false, true, 5, 0, "\
-Inside your body is a fleet of tiny dormant robots.  Once charged from your\n\
-energy banks, they will flit about your body, repairing any damage."},
-{"Thermal Dissapation", false, true, 1, 6, "\
-Powerful heatsinks supermaterials are woven into your flesh.  While powered,\n\
-this system will prevent heat damage up to 2000 degrees fahrenheit.  Note\n\
-that this does not affect your internal temperature."},
-{"Sonic Resonator", false, true, 4, 0, "\
-Your entire body may resonate at very high power, creating a short-range\n\
-shockwave.  While it will not to much damage to flexible creatures, stiff\n\
-items such as walls, doors, and even robots will be severely damaged."},
-{"Time Dilation", false, true, 3, 0, "\
-At an immense cost of power, you may increase your body speed and reactions\n\
-dramatically, essentially freezing time.  You are still delicate, however,\n\
-and violent or rapid movements may damage you due to friction."},
-{"Teleportation Unit", false, true, 10, 0, "\
-This highly experimental unit folds space over short distances, instantly\n\
-transporting your body up to 25 feet at the cost of much power.  Note that\n\
-prolonged or frequent use may have dangerous side effects."},
-{"Blood Analysis", false, true, 1, 0, "\
-Small sensors have been implanted in your heart, allowing you to analyse your\n\
-blood.  This will detect many illnesses, drugs, and other conditions."},
-{"Blood Filter", false, true, 3, 0, "\
-A filtration system in your heart allows you to actively filter out chemical\n\
-impurities, primarily drugs.  It will have limited impact on viruses.  Note\n\
-that it is not a targeted filter; ALL drugs in your system will be affected."},
-{"Alarm System", false, true, 1, 400, "\
-A motion-detecting alarm system will notice almost all movement within a\n\
-fifteen-foot radius, and will silently alert you.  This is very useful during\n\
-sleep, or if you suspect a cloaked pursuer."},
-{"Aero-Evaporator", false, true, 8, 0, "\
-This unit draws moisture from the surrounding air, which then is poured from\n\
-a fingertip in the form of water.  It may fail in very dry environments."},
-{"Mini-Flamethrower", false, true, 3, 0, "\
-The index fingers of both hands have powerful fire starters which extend from\n\
-the tip."},
-{"Adamantium Claws", false, true, 3, 0, "\
-Your fingers can withdraw into your hands, allowing a set of vicious claws to\n\
-extend.  These do considerable cutting damage, but prevent you from holding\n\
-anything else."},
-{"Fusion Blaster Arm", false, true, 2, 0, "\
-Your left arm has been replaced by a heavy-duty fusion blaster!  You may use\n\
-your energy banks to fire a damaging heat ray; however, you are unable to use\n\
-or carry two-handed items, and may only fire handguns."},
-{"Finger-Mounter Laser", false, true, 2, 0, "\
-One of your fingers has a small high-powered laser embedded in it.  This long\n\
-range weapon is not incredibly damaging, but is very accurate, and has the\n\
-potential to start fires."},
-{"Directional EMP", false, true, 4, 0, "\
-Mounted in the palms of your hand are small parabolic EMP field generators.\n\
-You may use power to fire a short-ranged blast which will disable electronics\n\
-and robots."},
-{"Hydraulic Muscles", false, true, 1, 3, "\
-While activated, the muscles in your arms will be greatly enchanced,\n\
-increasing your strength by 20."},
-{"Water Extraction Unit", false, true, 2, 0, "\
-Nanotubs embedded in the palm of your hand will pump any available fluid out\n\
-of a dead body, cleanse it of impurities and convert it into drinkable water.\n\
-You must, however, have a container to store the water in."},
-{"Electromagnetic Unit", false, true, 2, 0, "\
-Embedded in your hand is a powerful electromagnet, allowing you to pull items\n\
-made of iron over short distances."},
-{"Fingerhack", false, true, 1, 0, "\
-One of your fingers has an electrohack embedded in it; an all-purpose hacking\n\
-unit used to override control panels and the like (but not computers).  Skill\n\
-in computers is important, and a failed use may damage your circuits."},
-{"Fingerpick", false, true, 1, 0, "\
-One of your fingers has an electronic lockpick embedded in it.  This auto-\n\
-matic system will quickly unlock all but the most advanced key locks without\n\
-any skill required on the part of the user."},
-{"Terranian Sonar", false, true, 1, 5, "\
-Your feet are equipped with precision sonar equipment, allowing you to detect\n\
-the movements of creatures below the ground."},
+{"Сжигание алкоголя", true, false, 0, 0, "\
+Вы используете алкоголь как топливо, в процессе чрезвычайно эффективной реакции.  Однако, Вы\n\
+всё ещё чувствуете опьянение им."},
+{"Увеличенный объем памяти", false, false, 1, 0, "\
+Ваша память была улучшена при помощи маленького квантового устройства. Как только\n\
+Вы начинаете забывать навык, у Вас есть шанс сохранить все знания, потратив\n\
+немного энергии."},
+{"Улучшенный слух", false, false, 0, 0, "\
+Ваш слух многократно улучшен, теперь вы слышите в десять раз\n\
+лучше, чем обычный человек.Кроме того, громкие звуки будут\n\
+автоматически приглушаться до того, как они повредят Ваши уши."},
+{"Алмазная роговица", false, false, 0, 0, "\
+Ваше зрение многократно улучшено, Вы получаете +2 к восприятию ."},
+{"Водонепроницаемая мембрана", false, false, 0, 0, "\
+Ваши глаза покрыты тонкой мембраной, которая защищает их по водой,\n\
+устраняя все штрафы к восприятию."},
+{"Система прицеливания", false, false, 0, 0, "\
+Ваши глаза снабжены системой поиска цели, и их движения синхронизированы с\n\
+Вашими руками.  Ваши выстрелы станут более точными,\n\
+особенно по удаленым целям."},
+{"Мембранный оксигенатор", false, false, 1, 0, "\
+Система выделения кислорода автоматически включится под водой,\n\
+постоянно расходуя небольшое количество энергии."},
+{"Система фильтрации воздуха", false, false, 1, 0, "\
+Устанавливается в Вашу трахею как дополнительный фильтр.Если будут найдены токсины\n\
+фильтр автоматически обезвредит их, потратив небольшое количество энергии"},
+{"Внутренний климат-контроль", false, false, 0, 0, "\
+В Вашем теле образуется сеть теплонесущих трубок, которые снизят влияние\n\
+слишком высоких или низких температур.  Она работает в диапазоне от 0 до 140\n\
+градусов по Фаренгейту (-18 до 60 градусов по Цельсию)."},
+{"Внутреннее хранилище", false, false, 0, 0, "\
+Свободное место у Вас в груди преобразовано в хранилище.Вы\n\
+можете нести 8 единиц объема дополнительно."},
+{"Перерабатывающее устройство", false, false, 0, 0, "\
+Ваша выделительная систама снабжена набором фильтров и\n\
+процессоров, позволяющих перерабатывать жидкие отходы и, в меньшей степени,\n\
+отходы пищеварения. Этот набор намного снизит Вашу потребность в еде и питье."},
+{"Расширенная пищеварительная система", false, false, 0, 0, "\
+Вы будете снабжены тремя исскуственными желудками и синтетическими\n\
+кишками. Вы не получите больше сытости от еды, но сильно увеличите\n\
+сопротивляемость пищевым отравлениям (иногда сможете есть гнилое)."},
+{"Встроенный набор инструментов", false, false, 0, 0, "\
+Вы встроите в Ваши пальцы и руки полный набор инструментов - отвертку,\n\
+молоток, разводной ключ и нагревательные элементы. Вы сможете использовать\n\
+их вместо обычных инструментов при сборке."},
+{"Электрошок", false, false, 1, 0, "\
+Когда Вы деретесь безоружным, или оружием, проводящим электричество,\n\
+то получаете шанс оглушить врага, нанести дополнительные повреждения\n\
+ и вырубить его на время, использовав немного энергии."},
+{"Поглотитель тепла", false, false, 1, 0, "\
+Когда Вы деретесь с теплокровным противником, есть шанс\n\
+при удачном ударе поглатить тепло его тела, нанеся небольшое\n\
+количество дополнительных повреждений и пополнив Ваш запас энергии."},
+{"Подкожный слой карбона", false, false, 0, 0, "\
+Легкая броня из карбоновых нанотрубок под Вашей кожей. Она\n\
+уменьшит повреждения от ударов на 2 и порезов на 4, но, в то\n\
+же время Ваша ловкость уменьшится на 2."},
+{"Металлическая обшивка головы", false, false, 0, 0, "\
+Плоть на Вашей голове заменена тяжелой броней, защищающей голову и челюсть,\n\
+но увеличивающей загруженность на 2 и уменьшающей Ваше\n\
+восприятие на 1."},
+{"Металлическая обшивка торса", false, false, 0, 0, "\
+Плоть на Вашем торсе заменена тяжелой броней, великолепно\n\
+защищающей Вас, но увеличивающей загруженность на 2."},
+{"Металлическая обшивка рук", false, false, 0, 0, "\
+Плоть на Вашем торсе заменена тяжелой броней, великолепно\n\
+защищающей Вас, но уменьшающей Вашу ловкость на 1."},
+{"Металлическая обшивка ног", false, false, 0, 0, "\
+Плоть на Вашем торсе заменена тяжелой броней, великолепно\n\
+защищающей Вас, но уменьшающей Вашу скорость на 15."},
+{"Фонарик в черепе", false, true, 1, 30, "\
+Расположенный между глазами, маленький, но мощный фонарь."},
+{"Встроенное ночное видение", false, true, 1, 20, "\
+Ваши глаза были модифицированы для поглощения света,\n\
+позволяя Вам лучше видеть в темноте."},
+{"Инфракрасное зрение", false, true, 1, 4, "\
+Спектр Вашего зрения расширен до инфракрасного, позволяя\n\
+Вам видеть теплокровных существ в темноте и, иногда, через стены."},
+{"Искажение лица", false, true, 1, 10, "\
+Ваше лицо покрыто сплавом, который формируется электрическими\n\
+импульсамии, при этом Вас невозможо узнать. Без электричества\n\
+сплав возвращается в нормальное состояние."},
+{"Система активной защиты", false, true, 1, 7, "\
+Энергетическое поле вокруг Вашего тела, постоянно потребляющее энергию. Всё,\n\
+пытающееся проникнуть через поле, может быть отторгнуто за увеличенное потребление\n\
+энергии. Удары останавливаются чаще, чем пули."},
+{"Система пассивной защиты", false, true, 1, 6, "\
+Энергетическое поле вокруг Вашего тела, постоянно потребляющее энергию. Это\n\
+поле не отражает проникновения, но наносит атакующим сильный электрический\n\
+удар, повреждающий безоружных противников и тех, чье оружие проводит электричество."},
+{"Маскировка запаха", false, true, 1, 8, "\
+Когда система включена, Ваше тело производит немного дезодоранта, делающего\n\
+невозможным поиск Вас по запаху для ближайших врагов."},
+{"Видимый запах", false, true, 1, 30, "\
+Когда система включена, Вы можете видеть Ваш запах, что позволяет\n\
+Вам определить возмоность Вашего обнаружения врагами, которых Вы\n\
+пока не видите."},
+{"Система сокрытия", false, true, 2, 1, "\
+Эта мощная система использует набор камер и диодов, которые снимают Ваше\n\
+окружение,и делая Вас полностью невидимым для обычного зрения.Однако,\n\
+Вас могут найти при помощи инфракрасного зрения, сонара и т.д."},
+{"Уменьшение чуствительности", false, true, 2, 0, "\
+Ваша нервная система переделана для снижения чуства боли,\n\
+позволяя уменьшать Вашу чуствительность по желанию. Однако,\n\
+использование этого может вызвать снижение реакции и сонливость."},
+{"Ремонтные наноботы", false, true, 5, 0, "\
+Внутри Вашего тела находится рой маленьких роботов. Заряженные от Вашего\n\
+хранилища энергии, они путешествуют по Вашему телу, восстанавливая поврежденные части."},
+{"Невосприимчивость к температуре", false, true, 1, 6, "\
+Мощние огнестойкие суперматериалы внедрены в Вашу плоть. Когда система\n\
+активна, она предотвращает повреждения от жара до 2000 по Фаренгейту\n\
+(1100 по Цельсию). Учтите, что она не влияет на внутреннюю температуру."},
+{"Акустический резонатор", false, true, 4, 0, "\
+Ваше темо может резонировать с очень высокой частотой, создавая ударную\n\
+волну близкого действия.  Хотя это не нанесет серьезных повреждений гибким\n\
+существам, предметы вроде стен, дверей и всех роботов будут разрушены."},
+{"Ускорение времени", false, true, 3, 0, "\
+За большое количество энергии Вы можете резко ускорить Ваше тело и реакцию,\n\
+заморозить время. Однако Вы все еще уязвимы, например, удары или просто чьи-то\n\
+медленные движения могут повредить Вас трением."},
+{"Модуль телепортации", false, true, 10, 0, "\
+Этот неотлаженный модуль может сворачивать пространство на коротких расстояниях,\n\
+перемещая Ваше тело до 25 футов и используя огромное количество энергии. Учтите,\n\
+что продолжительное или частое использование приведет к опасным побпочным эффектам."},
+{"Анализатор крови", false, true, 1, 0, "\
+Маленькие сенсоры имплантированы в Ваше сердце, постоянно анализируя Вашу\n\
+кровь. Они могут определить множество болезней, наркотиков и других состояний."},
+{"Фильтр крови", false, true, 3, 0, "\
+Система фильтрации в Вашем сердце позволяет вывести токсичные вещества,\n\
+особенно наркотики. Также он позволяет ограничить развитие болезней. Учтите,\n\
+что цель не устанавливается, ВСЕ наркотики будут выведены из организма."},
+{"Система оповещения", false, true, 1, 400, "\
+Система оповещения с детектором движения засечет любое движение в радиусе 50\n\
+футов, и тихо подаст сгнал тревоги. Это пригодится, когда Вы спите, или\n\
+подозреваете, что Вас преследует кто-то невидимый."},
+{"Система конденсации", false, true, 8, 0, "\
+Это устройство извлекает влагу из окружающего воздуха, которую затем можно налить\n\
+из пальцев в подходящую посуду. Может не сработать во время дождя."},
+{"Мини-огнемет", false, true, 3, 0, "\
+Установленное в пальцы на обеих руках, устройство позволяет поджечь любой\n\
+горючий материал."},
+{"Адамантитовые когти", false, true, 3, 0, "\
+Ваши пальцы могут втягиваться в ладони, выпуская набор смертоносных когтей.\n\
+Они наносят режущие повреждения, но сначала вы должны освободить Ваши руки\n\
+от всего остального."},
+{"Ручной фузионный бластер", false, true, 2, 0, "\
+Вашу левую руку заменит мощный фузионный бластер. Вы можетеиспользовать\n\
+Ваше хранилище энегии для стрельбы тепловым лучом. Однако, Выне сможете использовать\n\
+или нести предметы, требующие обеих рук,например, стрелять будете только из пистолетов."},
+{"Лазер в пальце", false, true, 2, 0, "\
+Один из Ваших пальцев заменен на маленький, но мощный лазер. Это оружие\n\
+для дальнего боя, не наносит больших повреждений, но очень точное и при\n\
+благоприятных условиях может поджечь цель."},
+{"Направленный ЭМИ", false, true, 4, 0, "\
+В Вашу ладонь установлен маленький параболический генератор ЭМИ.\n\
+Вы можете использовать Вашу энергию, чтобы выстрелить маленьким\n\
+зарядом ближнего действия и отключить электронику и роботов."},
+{"Гидравлические мускулы", false, true, 1, 3, "\
+Когда устройство активировано, мускулы Ваших рук наполняются\n\
+огромной силой (увеличивает силу на 20)."},
+{"Модуль извлечения воды", false, true, 2, 0, "\
+Нанотрубки, вмонтированные в Вашу ладонь, выкачивают любую жидкость из трупов\n\
+очищают её от загрязнения и превращают в питьевую воду. Ну и конечно, Вам нужна\n\
+посуда, в которую Вы нальете эту воду."},
+{"Электромагнит", false, true, 2, 0, "\
+Встроенный в Вашу ладонь, мощный электромагнит позволит Вам бросать предметы из\n\
+железа на близкие расстояния."},
+{"Хак-палец", false, true, 1, 0, "\
+Один из Ваших пальцев заменяется устройством, позволяющим Вам взламывать\n\
+все электронные устройства с пультами управления (но не компьютеры).Навык\n\
+обращения с компьютерами важен, провал может повредить Ваши модули."},
+{"Отмычка в пальце", false, true, 1, 0, "\
+Один из Ваших пальцев заменяется электронной отмычкой. Эта автоматическая \n\
+система позволит Вам быстро вскрыть любой замок, но большинство важных дверей\n\
+запираются без использования ключей. Ваши навыки не имеют значения"},
+{"Подземный сонар", false, true, 1, 5, "\
+В Ваши ступни встроен точный сонар, позволяющий обнаружить движение\n\
+под землей."},
 
 {"max_bio_start - BUG", false, false, 0, 0, "\
 This is a placeholder bionic meant to demarkate those which a new character\n\
 can start with.  If you are reading this, you have found a bug!"},
 
-{"Banishment", false, true, 40, 0, "\
-You can briefly open a one-way gate to the nether realm, banishing a single\n\
-target there permanently.  This is not without its dangers, however, as the\n\
-inhabitants of the nether world may take notice."},
-{"Gate Out", false, true, 55, 0, "\
-You can temporarily open a two-way gate to the nether realm, accessible only\n\
-by you.  This will remove you from immediate danger, but may attract the\n\
-attention of the nether world's inhabitants..."},
-{"Gate In", false, true, 35, 0, "\
-You can temporarily open a one-way gate from the nether realm.  This will\n\
-attract the attention of its horrifying inhabitants, who may begin to pour\n\
-into reality."},
-{"Artificial Night", false, true, 5, 1, "\
-Photon absorbtion panels will attract and obliterate photons within a 100'\n\
-radius, casting an area around you into pitch darkness."},
-{"Borehole Drill", false, true, 30, 0, "\
-Your legs can transform into a powerful drill which will bury you 50 feet\n\
-into the earth.  Be careful to only drill down when you know you will be able\n\
-to get out, or you'll simply dig your own tomb."},
-{"Heatwave", false, true, 45, 0, "\
-At the cost of immense power, you can cause dramatic spikes in the ambient\n\
-temperature around you.  These spikes are very short-lived, but last long\n\
-enough to ignite wood, paper, gunpowder, and other substances."},
-{"Chain Lightning", false, true, 48, 0, "\
-Powerful capacitors unleash an electrical storm at your command, sending a\n\
-chain of highly-damaging lightning through the air.  It has the power to\n\
-injure several opponents before grounding itself."},
+{"Изгнание", false, true, 40, 0, "\
+Вы можете на короткое время открыть односторонний проход в другое измерение,\n\
+навсегда изгнав одну цель.  Это небезопасно, так как жители другого измерения\n\
+могут обратить на это внимание."},
+{"Выход", false, true, 55, 0, "\
+Вы можете на короткое время открыть двусторонний проход в другое измерение,\n\
+доступный только Вам. Это спасёт Вас от текущей угрозы, но привлечет пристальное\n\
+внимание обитателей другого измерения."},
+{"Вход", false, true, 35, 0, "\
+Вы можете на короткое время открыть односторонний проход в другое измерение.\n\
+Это привлечет пристальное внимание его обитателей, которые начнут просачиваться\n\
+в наше измерение."},
+{"Искусственная ночь", false, true, 5, 1, "\
+Панели, поглощающие фотоны, поглотят или отклонят фотоны света в радиусе 100\n\
+клеток, создавая вокруг Вас область абсолютной темноты."},
+{"Скважинный бур", false, true, 30, 0, "\
+Ваши ноги трансформируются в мощный бур, который пробьет дыру в 50 футов\n\
+вертикально вниз. Будьте осторожны и используйте его только когда уверены,\n\
+что сможете найти выход. Иначе легко выроете свою могилу."},
+{"Волна жара", false, true, 45, 0, "\
+За огромное количество энергии, Вы можете вызвать резкий скачок температуры\n\
+вокруг себя. Этот скачок чрезвычайно кратковременный, но после него долго\n\
+будут гореть деревья, бумага, порох и остальное.."},
+{"Цепь молний", false, true, 48, 0, "\
+Мощные накопители разрядятся электрическим штормом по Вашей команде,\n\
+посылая цепь молний, наносящих огромные повреждения в воздух. Заряда\n\
+хватит, чтобы ранить нескольких врагов перед заземлением."},
 {"Tremor Pads", false, true, 40, 0, "\
 Using tremor pads in your feet, you can cause a miniature earthquake.  The\n\
 shockwave will damage enemies (particularly those digging underground), tear\n\
 down walls, and churn the earth."},
-{"Flashflood", false, true, 35, 0, "\
-By drawing the moisture from the air, and synthesizing water from in-air\n\
-elements, you can create a massive puddle around you.  The effects are more\n\
-powerful when used near a body of water."},
+{"Внезапное наводнение", false, true, 35, 0, "\
+Извлекая воду из воздуха, и синтезируя её из элементов воздуха, Вы можете\n\
+создать большую лужу вокруг себя. Эффект будет сильнее, если Вы во время\n\
+использования находитесь рядом с большим источником воды."},
 
 {"max_bio_good - BUG", false, false, 0, 0, "\
 This is a placeholder bionic.  If you are reading this, you have found a bug!"},
 
-{"Electrical Discharge", false, false, 0, 0, "\
-A malfunctioning bionic which occasionally discharges electricity through\n\
-your body, causing pain and brief paralysis but no damage."},
-{"Acidic Discharge", false, false, 0, 0, "\
-A malfunctioning bionic which occasionally discharges acid into your muscles,\n\
-causing sharp pain and minor damage."},
-{"Electrical Drain", false, false, 0, 0, "\
-A malfunctioning bionic.  It doesn't perform any useful function, but will\n\
-occasionally draw power from your batteries."},
-{"Noisemaker", false, false, 0, 0, "\
-A malfunctioning bionic.  It will occasionally emit a loud burst of noise."},
-{"Power Overload", false, false, 0, 0, "\
-Damaged power circuits cause short-circuiting inside your muscles when your\n\
-batteries are above 75%%%% capacity, causing greatly reduced strength.  This\n\
-has no effect if you have no internal batteries."},
-{"Wire-induced Stiffness", false, false, 0, 0, "\
-Improperly installed wires cause a physical stiffness in most of your body,\n\
-causing increased encumberance."}
+{"Электрический разряд", false, false, 0, 0, "\
+Неправильно установленный имплант, который пускает разряды через Ваше тело,\n\
+причиняя боль и парализуя, но не нанося повреждений."},
+{"Кислотный разряд", false, false, 0, 0, "\
+Неправильно установленный имплант, который пускает кислоту по Вашим мускулам,\n\
+причиняя острую боль и нанося небольшие повреждения."},
+{"Расход энергии", false, false, 0, 0, "\
+Неправильно установленный имплант. Он не выполняет полезных функций, но иногда\n\
+расходует энергию из Вашего хранилища."},
+{"Источник шума", false, false, 0, 0, "\
+Неправильно установленный имплант.  Иногда он начинает производить громкий шум."},
+{"Перегрузка", false, false, 0, 0, "\
+Поврежденные цепи могут создать короткое замыкание в Ваших мускулах, когда Ваше\n\
+хранилище энергии заполнено на более 75%%%% от объема, резко уменьшая силу. Этого\n\
+не будет, если у Вас нет хранилища энергии."},
+{"Неудобные провода", false, false, 0, 0, "\
+Неверно установленные провода создают чувство неудобства по всему Вашему телу,\n\
+увеличивая загруженность."}
 
 };
 
 #endif
+
